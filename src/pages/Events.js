@@ -1,4 +1,6 @@
 import React from "react";
+import BiologyData from "./eventsData/BiologyData";
+import styled from "styled-components";
 
 export const Events = () => {
   return (
@@ -8,10 +10,29 @@ export const Events = () => {
   );
 };
 
+const BubbleCard = styled.div`
+  background: yellow;
+  border-radius: 30px;
+  height: 400px;
+  width: 500px;
+  padding: 20px;
+  margin: 20px;
+
+  &:hover {
+    margin-top: -1px;
+    cursor: normal;
+  }
+`;
+
 export const Biology = () => {
   return (
     <div className="events">
-      <h1>Events/Events1</h1>
+      {BiologyData.map((event) => (
+        <BubbleCard>
+          <h6>{event.eventName}</h6>
+          <h8>{event.description}</h8>
+        </BubbleCard>
+      ))}
     </div>
   );
 };

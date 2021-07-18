@@ -10,13 +10,25 @@
 .home,
 .events,
 .products {
+  padding: 20px 100px 20px 100px;
   display: flex;
   height: 90vh;
-  align-items: center;
   justify-content: center;
-  font-size: 3rem;
 }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
+}
+
+.home {
+  height: 200vh;
+}
+
+h6 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h8 {
+  font-size: 20px;
 }

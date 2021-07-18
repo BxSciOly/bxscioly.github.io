@@ -13,6 +13,10 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: white;
 `;
 
 const NavIcon = styled(Link)`
