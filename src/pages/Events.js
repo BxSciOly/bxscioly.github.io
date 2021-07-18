@@ -1,6 +1,7 @@
 import React from "react";
 import BiologyData from "./eventsData/BiologyData";
 import styled from "styled-components";
+import BuildData from "./eventsData/BuildData";
 
 export const Events = () => {
   return (
@@ -17,9 +18,11 @@ const BubbleCard = styled.div`
   width: 500px;
   padding: 20px;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    margin-top: -1px;
+    margin-top: -0.5px;
     cursor: normal;
   }
 `;
@@ -40,7 +43,12 @@ export const Biology = () => {
 export const Build = () => {
   return (
     <div className="events">
-      <h1>Events/Events2</h1>
+      {BuildData.map((event) => (
+        <BubbleCard>
+          <h6>{event.eventName}</h6>
+          <h8>{event.description}</h8>
+        </BubbleCard>
+      ))}
     </div>
   );
 };

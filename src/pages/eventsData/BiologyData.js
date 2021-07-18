@@ -1,18 +1,28 @@
 const BiologyData = [
   {
-    eventName: "Astronomy",
+    eventName: "Anatomy & Physiology",
     description:
-      "In this binder based event we learn about stellar evolution and galaxies. We also learn some imaging skills as well as astrophysics to describe orbital motion.",
+      "Anatomy & Physiology is an event which tests students' knowledge about the anatomy and physiology of various systems in the human body.",
   },
   {
-    eventName: "Dynamic Planet",
+    eventName: "Cell Biology",
     description:
-      "In this event you will learn about physical and chemical oceanography by taking a look at earths oceans. You will learn about coastal features, salinity, waves, and so much more.",
+      "Cell Biology is an event in which teams answer questions and/or perform lab tasks relating to cell biology and cellular biochemistry.",
   },
   {
-    eventName: "Fossils",
+    eventName: "Disease Detectives",
     description:
-      " In this event we explore prehistoric ecosystems and species, as well as how they evolved and impact us today. There is an identification component as well as a component focusing on ecosystems.",
+      "Disease Detectives is an event in Division B and Division C that focuses on epidemiology, the study of diseases and how they spread.",
+  },
+  {
+    eventName: "Ornithology",
+    description:
+      "Ornithology is a Division B and Division C life science event revolving around the study of birds. The event revolves around competitors assessing their knowledge of information about specific species, classes, and families of birds as well as questions about general bird anatomy.",
+  },
+  {
+    eventName: "Green Generation",
+    description:
+      "Green Generation is an event that focuses on aquatic issues, air quality issues and climate change.",
   },
 ];
 
