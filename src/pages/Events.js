@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import BiologyData from "./eventsData/BiologyData";
 import styled from "styled-components";
 import BuildData from "./eventsData/BuildData";
-import Tilt from "react-parallax-tilt";
 export const Events = () => {
   return (
     <div className="events">
@@ -12,7 +11,7 @@ export const Events = () => {
 };
 
 const BubbleCard = styled.div`
-  background: yellow;
+  background: #fcce33;
   border-radius: 30px;
   height: 400px;
   width: 500px;
