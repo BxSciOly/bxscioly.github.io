@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
@@ -54,8 +54,23 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setSidebar(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
     <>
@@ -77,7 +92,7 @@ const Sidebar = () => {
             </h2>
           </NavIcon>
         </Nav>
-        <SidebarNav sidebar={sidebar}>
+        <SidebarNav ref={menuRef} sidebar={sidebar}>
           <SidebarWrap>
             <NavIcon to="#">
               <AiIcons.AiOutlineClose onClick={showSidebar} />

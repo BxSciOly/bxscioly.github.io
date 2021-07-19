@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import BiologyData from "./eventsData/BiologyData";
 import styled from "styled-components";
 import BuildData from "./eventsData/BuildData";
-
+import Tilt from "react-parallax-tilt";
 export const Events = () => {
   return (
     <div className="events">
@@ -27,9 +27,23 @@ const BubbleCard = styled.div`
   }
 `;
 
+const Cover = styled.div`
+  height: 300px;
+  width: 100%;
+  border: 2px solid #026857;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cadfcf;
+  color: #026857;
+  margin-bottom: 10px;
+  font-size: 100px;
+`;
+
 export const Biology = () => {
   return (
     <div className="events">
+      <Cover>Biology</Cover>
       {BiologyData.map((event) => (
         <BubbleCard>
           <h6>{event.eventName}</h6>
@@ -43,6 +57,7 @@ export const Biology = () => {
 export const Build = () => {
   return (
     <div className="events">
+      <Cover>Build</Cover>
       {BuildData.map((event) => (
         <BubbleCard>
           <h6>{event.eventName}</h6>

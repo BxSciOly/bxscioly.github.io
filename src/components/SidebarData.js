@@ -13,7 +13,6 @@ export const SidebarData = [
   },
   {
     title: "Events",
-    path: "/",
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
