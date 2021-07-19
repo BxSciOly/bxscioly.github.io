@@ -7,6 +7,25 @@ import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
 
+let useClickOutside = (handler) => {
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let maybeHandler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        handler();
+      }
+    };
+
+    document.addEventListener("mousedown", maybeHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", maybeHandler);
+    };
+  });
+  return menuRef;
+};
+
 const Nav = styled.div`
   border-bottom: 3px solid #026857;
   height: 80px;
@@ -56,20 +75,8 @@ const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
-  let menuRef = useRef();
-
-  useEffect(() => {
-    let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
-        setSidebar(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handler);
-
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
+  let menuRef = useClickOutside(() => {
+    setSidebar(false);
   });
 
   return (
