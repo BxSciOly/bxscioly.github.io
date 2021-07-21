@@ -17,7 +17,7 @@ const MainImage = styled.div`
 const AnnouncementsDiv = styled.div`
   width: 100%;
   height: 200px;
-  background: #026857;
+  background: #ffec00;
 `;
 
 const Header = styled.div`
@@ -30,6 +30,7 @@ const Header = styled.div`
   color: white;
   margin-top: 2px;
   font-weight: 500;
+  color: black;
 `;
 
 const Home = () => {
