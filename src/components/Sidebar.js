@@ -26,17 +26,6 @@ let useClickOutside = (handler) => {
   return menuRef;
 };
 
-const Nav = styled.div`
-  border-bottom: 3px solid #026857;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  background: white;
-`;
 
 const NavIcon = styled(Link)`
   margin-left: 2rem;
@@ -48,7 +37,8 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  background: white;
+  background: black;
+  color: white;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -60,12 +50,12 @@ const SidebarNav = styled.nav`
   z-index: 10;
 `;
 
-const Logo = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  background: #026857;
-`;
+// const Logo = styled.div`
+//   height: 50px;
+//   width: 50px;
+//   border-radius: 100%;
+//   background: #026857;
+// `;
 
 const SidebarWrap = styled.div`
   width: 100%;
@@ -74,31 +64,38 @@ const SidebarWrap = styled.div`
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+  const [navbar, setNavbar] = useState(false);
 
   let menuRef = useClickOutside(() => {
     setSidebar(false);
   });
 
+  const changeBackground = () => {
+    if (window.scrollY >= 50) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <>
-      <IconContext.Provider value={{ color: "black" }}>
-        <Nav>
+      <IconContext.Provider value={{ color: "white" }}>
+        <nav className={navbar ? "navbar active" : "navbar"}>
           <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
-          <NavIcon>
-            <Logo />
-            <h2
-              style={{
-                color: "black",
-                fontSize: "30px",
-                marginLeft: "15px",
-              }}
-            >
-              Bronx Science Olympiad
-            </h2>
-          </NavIcon>
-        </Nav>
+          <h2
+            style={{
+              fontSize: "25px",
+              marginLeft: "50px",
+            }}
+          >
+            BRONX SCIENCE OLYMPIAD
+          </h2>
+        </nav>
         <SidebarNav ref={menuRef} sidebar={sidebar}>
           <SidebarWrap>
             <NavIcon to="#">

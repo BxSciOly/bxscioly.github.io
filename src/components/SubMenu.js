@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const SidebarLink = styled(Link)`
   display: flex;
-  color: black;
+  color: white;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -24,13 +24,12 @@ const SidebarLabel = styled.span`
 `;
 
 const DropdownLink = styled(Link)`
-  background: white;
   height: 60px;
   padding-left: 3rem;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 18px;
   transition: 0.4s ease-in-out;
 
