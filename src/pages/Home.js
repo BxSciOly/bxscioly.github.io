@@ -1,38 +1,25 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { IconContext } from "react-icons/lib";
-import HomeBackground from "./3dbackground/HomeBackground";
 import "./style/Homestyle.css";
 import { gsap, Power3 } from "gsap";
+import Upcoming from "./homeComponents/Upcoming";
 
 const BackgroundDiv = styled.div`
   width: 100%;
-  height: 500px;
+  height: 400px;
+  margin-top: 30px;
+`;
+
+const HomeBackground = styled.div`
+  margin-top: 50px;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  padding: 20px;
 `;
 
 const Home = () => {
-  useEffect(() => {
-    gsap.from(".scioly", {
-      opacity: -100,
-      x: 100,
-      duration: 0.4,
-    });
-    gsap.from(".bxsci", {
-      opacity: -100,
-      x: 100,
-      duration: 0.6,
-    });
-    gsap.from(".desc", {
-      opacity: -100,
-      x: 100,
-      duration: 0.8,
-    });
-    gsap.from(".desc2", {
-      opacity: -100,
-      x: 100,
-      duration: 1,
-    });
-  });
   return (
     <>
       <IconContext.Provider value={{ color: "white" }}>
@@ -44,6 +31,9 @@ const Home = () => {
             <div className="desc 2">OF SCIENCE</div>
           </BackgroundDiv>
         </div>
+        <HomeBackground>
+          <Upcoming />
+        </HomeBackground>
       </IconContext.Provider>
     </>
   );

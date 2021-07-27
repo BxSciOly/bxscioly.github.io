@@ -4,6 +4,7 @@ body {
   background: rgb(25,74,64);
   background: linear-gradient(90deg, rgba(25,74,64,1) 0%, rgba(77,119,82,1) 53%, rgba(155,201,142,1) 100%);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,13 +14,13 @@ body {
   transition: 0.5s all;
 }
 
+
 .home,
 .events,
 .products,
 .faqs {
   padding: 20px 100px 20px 100px;
   display: flex;
-  height: 100vh;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -27,6 +28,7 @@ body {
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
+
 h6 {
   font-size: 40px;
   margin-bottom: 10px;

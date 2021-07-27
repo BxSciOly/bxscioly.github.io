@@ -37,7 +37,6 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  background: black;
   color: white;
   width: 250px;
   height: 100vh;
@@ -48,6 +47,7 @@ const SidebarNav = styled.nav`
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 350ms;
   z-index: 10;
+  background: black;
 `;
 
 // const Logo = styled.div`
