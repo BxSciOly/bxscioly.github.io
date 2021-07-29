@@ -20,29 +20,29 @@ export const SidebarData = [
     subNav: [
       {
         title: "Biology",
-        path: "/events/events1",
+        path: "/biology",
         icon: <GiIcons.GiDna2 />,
         cName: "sub-nav",
       },
       {
         title: "Build",
-        path: "/events/events2",
+        path: "/build",
         icon: <FaIcons.FaWrench />,
         cName: "sub-nav",
       },
       {
         title: "Chemistry",
-        path: "/events/events3",
+        path: "/chemistry",
         icon: <FaIcons.FaVial />,
       },
       {
         title: "Physics",
-        path: "/events/events3",
+        path: "/physics",
         icon: <GiIcons.GiMolecule />,
       },
       {
         title: "Trial",
-        path: "/events/events3",
+        path: "/trial",
         icon: <IoIcons.IoIosPaper />,
       },
     ],

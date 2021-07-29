@@ -43,7 +43,7 @@ export const Build = () => {
 export const Chemistry = () => {
   return (
     <div className="events">
-      <h1>Events/Events3</h1>
+      <h1>Events3</h1>
     </div>
   );
 };
