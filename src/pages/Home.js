@@ -30,6 +30,7 @@ const Home = () => {
           <JoinButton>JOIN US</JoinButton>
         </BackgroundDiv>
         <img
+          alt="homepage-icon"
           src={Learning}
           style={{
             position: "absolute",

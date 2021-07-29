@@ -1,12 +1,6 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  HashRouter,
-} from "react-router-dom";
+import { Switch, Route, Redirect, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import { Biology, Build, Chemistry, Physics, Trial } from "./pages/Events";
 import Team from "./pages/Team";
