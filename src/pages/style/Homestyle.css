@@ -16,7 +16,3 @@ body {
     font-size: 40px;
     color: white;
 }
-
-.animate {
-    transform: translate(120px, 0%);
-}
