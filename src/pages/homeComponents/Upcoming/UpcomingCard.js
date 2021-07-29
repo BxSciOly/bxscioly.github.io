@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
+  background: white;
   border: 2px solid #a6a6a6;
   height: 400px;
   width: 330px;
@@ -14,7 +15,7 @@ const Card = styled.div`
   margin: 0 50px 0 50px;
 
   &:hover {
-    margin-top: -20px;
+    transform: scale(1.02);
     cursor: normal;
   }
 `;
@@ -30,6 +31,7 @@ const Date = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 70px;
+  cursor: default;
 `;
 
 const UpcomingCard = (props) => {

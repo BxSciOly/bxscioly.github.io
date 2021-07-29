@@ -25,7 +25,9 @@ const Title = styled.div`
 const Upcoming = () => {
   return (
     <UpcomingDiv>
-      <Title>UPCOMING EVENTS</Title>
+      <Title>
+        <h3 style={{ background: "white" }}>UPCOMING EVENTS</h3>
+      </Title>
       <UpcomingCard month="Jul" day="12" event="Summer Scioly" />
       <UpcomingCard month="Sept" day="12" event="First Day of School" />
       <UpcomingCard day="TBA" event="First Meetings" />
