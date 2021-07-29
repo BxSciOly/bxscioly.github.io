@@ -1,5 +1,4 @@
 import "./App.css";
-import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
 import {
   BrowserRouter as Router,
@@ -11,14 +10,6 @@ import Home from "./pages/Home";
 import { Biology, Build, Chemistry, Physics, Trial } from "./pages/Events";
 import Team from "./pages/Team";
 import Faqs from "./pages/Faqs";
-
-const LoaderDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  height: 100vh;
-`;
 
 function App() {
   return (
