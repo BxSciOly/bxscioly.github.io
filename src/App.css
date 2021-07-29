@@ -53,7 +53,8 @@ h8 {
 }
 
 .navbar.active {
-  transform: translate(0px, -40 0px)
+  background: black;
+  color: white;
 }
 
 table, th, td {
