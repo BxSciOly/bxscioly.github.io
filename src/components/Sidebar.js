@@ -48,7 +48,8 @@ const Sidebar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "white" }}>
-        <nav className={navbar ? "navbar active" : "navbar"}>
+        {/* className={navbar ? "navbar active" : "navbar"} */}
+        <nav className={"navbar"}>
           <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
