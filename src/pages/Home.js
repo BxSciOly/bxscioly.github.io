@@ -41,6 +41,7 @@ const Home = () => {
             marginTop: "-100px",
             transform: `translateY(${offsetY * 0.5}px)`,
             transition: "0s all",
+            userSelect: "none",
           }}
         />
       </div>
@@ -74,13 +75,14 @@ const JoinButton = styled.button`
   width: 300px;
   height: 50px;
   font-size: 20px;
-  background: #fcce33;
+  background: #ffcd00;
   border: none;
   font-weight: 600;
 
   &:hover {
     cursor: pointer;
-    background: #ffe896;
+    -webkit-box-shadow: 5px 5px 0px 2px #000000;
+    box-shadow: 5px 5px 0px 2px #000000;
   }
 `;
 

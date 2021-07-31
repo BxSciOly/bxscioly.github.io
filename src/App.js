@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { Biology, Build, Chemistry, Physics, Trial } from "./pages/Events";
 import Team from "./pages/Team";
 import Faqs from "./pages/Faqs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/team" exact component={Team} />
         <Route path="/faqs" exact component={Faqs} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </HashRouter>
   );
 }

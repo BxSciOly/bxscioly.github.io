@@ -4,6 +4,11 @@ body {
   background: #007161;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,6 +52,12 @@ h8 {
   top: 0;
   transition: 0.2s all ease-in-out;
   z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar:hover {
+  text-shadow: 4px 4px 0px #000000;
 }
 
 .navbar.active {

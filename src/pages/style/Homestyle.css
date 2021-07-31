@@ -5,14 +5,24 @@ body {
 .scioly {
     font-size: 100px;
     color: white;
+    user-select: none;
+
+}
+
+.scioly:hover, .bxsci:hover, .desc:hover {
+    text-shadow: 4px 4px 0px #000000;
+    user-select: none;
+
 }
 
 .bxsci {
     font-size: 100px;
     color: white; 
+    user-select: none;
 }
 
 .desc {
     font-size: 40px;
     color: white;
+    user-select: none;
 }
