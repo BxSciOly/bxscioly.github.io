@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
 body {
-  background: rgb(25,74,64);
-  background: linear-gradient(90deg, rgba(25,74,64,1) 0%, rgba(77,119,82,1) 53%, rgba(155,201,142,1) 100%);
+  background: #007161;
 }
 
 * {

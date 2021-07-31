@@ -3,7 +3,8 @@ import styled from "styled-components";
 import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Schedule from "./homeComponents/Schedule/Schedule";
-import Learning from "./learning.svg";
+
+import Pattern from "./pattern.png";
 
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -31,11 +32,13 @@ const Home = () => {
         </BackgroundDiv>
         <img
           alt="homepage-icon"
-          src={Learning}
+          src={Pattern}
           style={{
             position: "absolute",
-            marginLeft: "450px",
-            zIndex: "-1",
+            height: "820px",
+            zIndex: "-2",
+            marginLeft: "700px",
+            marginTop: "-100px",
             transform: `translateY(${offsetY * 0.5}px)`,
             transition: "0s all",
           }}
