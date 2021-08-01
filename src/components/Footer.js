@@ -29,8 +29,8 @@ const Box = styled.div`
 `;
 
 const IconDiv = styled.div`
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 100%;
   background: #ffcd00;
   display: flex;
@@ -41,7 +41,7 @@ const IconDiv = styled.div`
 
 const Footer = () => {
   return (
-    <IconContext.Provider value={{ color: "black", size: "40" }}>
+    <IconContext.Provider value={{ color: "black", size: "30" }}>
       <Box>
         <div style={{ display: "flex", marginLeft: "50px" }}>
           <IconDiv>

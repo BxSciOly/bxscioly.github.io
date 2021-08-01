@@ -20,6 +20,7 @@ const Title = styled.div`
   align-items: center;
   font-weight: 600;
   margin-bottom: 30px;
+  user-select: none;
 `;
 
 const Upcoming = () => {

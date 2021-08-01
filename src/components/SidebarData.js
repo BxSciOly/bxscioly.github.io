@@ -9,11 +9,9 @@ export const SidebarData = [
   {
     title: "Home",
     path: "/home",
-    icon: <AiIcons.AiFillHome />,
   },
   {
     title: "Events",
-    icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -22,13 +20,11 @@ export const SidebarData = [
         title: "Biology",
         path: "/biology",
         icon: <GiIcons.GiDna2 />,
-        cName: "sub-nav",
       },
       {
         title: "Build",
         path: "/build",
         icon: <FaIcons.FaWrench />,
-        cName: "sub-nav",
       },
       {
         title: "Chemistry",
@@ -48,13 +44,11 @@ export const SidebarData = [
     ],
   },
   {
-    title: "Team",
-    path: "/team",
-    icon: <IoIcons.IoMdPeople />,
+    title: "Board",
+    path: "/board",
   },
   {
     title: "FAQs",
     path: "/faqs",
-    icon: <IoIcons.IoMdHelpCircle />,
   },
 ];

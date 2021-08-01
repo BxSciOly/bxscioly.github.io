@@ -5,13 +5,12 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background: white;
+  margin-left: 270px;
 `;
 
 const DaysRow = () => {
   return (
     <Wrap>
-      <Days weekday="" />
       <Days weekday="Monday" />
       <Days weekday="Tuesday" />
       <Days weekday="Wednesday" />

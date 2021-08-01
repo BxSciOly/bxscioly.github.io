@@ -52,12 +52,8 @@ h8 {
   top: 0;
   transition: 0.2s all ease-in-out;
   z-index: 5;
-  cursor: pointer;
   user-select: none;
-}
-
-.navbar:hover {
-  text-shadow: 4px 4px 0px #000000;
+  
 }
 
 .navbar.active {
@@ -69,4 +65,16 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   
+}
+
+.logo-title {
+  text-shadow: 3px 3px 0px #000000;
+  cursor: pointer;
+}
+
+.logo-title-moved {
+  text-shadow: 3px 3px 0px #000000;
+  cursor: pointer;
+  transition-delay: 20ms;
+  transform: translate(150px);
 }

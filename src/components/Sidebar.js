@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
+import * as CgIcons from "react-icons/cg";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
@@ -29,21 +29,18 @@ let useClickOutside = (handler) => {
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
-  const [navbar, setNavbar] = useState(false);
+  const [text, setText] = useState(false);
+
+  const moveText = () => setText(!text);
 
   let menuRef = useClickOutside(() => {
     setSidebar(false);
   });
 
-  const changeBackground = () => {
-    if (window.scrollY >= 50) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
+  const AllFuncts = () => {
+    moveText();
+    showSidebar();
   };
-
-  window.addEventListener("scroll", changeBackground);
 
   return (
     <>
@@ -51,9 +48,10 @@ const Sidebar = () => {
         {/* className={navbar ? "navbar active" : "navbar"} */}
         <nav className={"navbar"}>
           <NavIcon to="#">
-            <FaIcons.FaBars onClick={showSidebar} />
+            <FaIcons.FaBars onClick={AllFuncts} />
           </NavIcon>
           <h2
+            className={sidebar ? "logo-title-moved" : "logo-title"}
             style={{
               fontSize: "25px",
               marginLeft: "50px",
@@ -62,11 +60,15 @@ const Sidebar = () => {
             BRONX SCIENCE OLYMPIAD
           </h2>
         </nav>
+      </IconContext.Provider>
+      <IconContext.Provider value={{ color: "black", size: "25" }}>
         <SidebarNav ref={menuRef} sidebar={sidebar}>
           <SidebarWrap>
-            <NavIcon to="#">
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon>
+            <IconContext.Provider value={{ color: "black" }}>
+              <NavIcon to="#">
+                <CgIcons.CgCloseO onClick={AllFuncts} />
+              </NavIcon>
+            </IconContext.Provider>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
@@ -87,17 +89,18 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  color: white;
+  color: black;
   width: 250px;
   height: 100vh;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
-  transition: 350ms;
+  left: ${({ sidebar }) => (sidebar ? "0" : "-200%")};
+  transition: 270ms ease-out;
   z-index: 10;
-  background: black;
+  background: #ffcd00;
+  border-right: 3px solid black;
 `;
 
 // const Logo = styled.div`

@@ -75,9 +75,10 @@ const BubbleCard = styled.div`
   margin: 20px;
   display: flex;
   flex-direction: column;
+  color: black;
 
   &:hover {
-    margin-top: -0.5px;
+    transform: scale(1.02);
     cursor: normal;
   }
 `;

@@ -5,6 +5,8 @@ const EventDiv = styled.div`
   height: 100px;
   width: 250px;
   border: 1px solid black;
+  border-radius: 20px;
+  margin: 10px;
   color: black;
   display: flex;
   justify-content: center;

@@ -5,12 +5,13 @@ import Table from "./TableComponents/Table";
 const Title = styled.div`
   height: 100px;
   width: 100%;
-  font-size: 50px;
+  font-size: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
   color: black;
+  user-select: none;
 `;
 
 const ScheduleDiv = styled.div`
