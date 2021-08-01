@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import FaqsData from "./FaqsData";
+import FaqsData from "./otherComponents/FaqsData";
 import * as GrIcons from "react-icons/gr";
 import "./style/Homestyle.css";
 
@@ -8,7 +8,7 @@ const Faqs = () => {
   const [clicked, setClicked] = useState(false);
 
   const toggle = (index) => {
-    if (clicked == index) {
+    if (clicked === index) {
       return setClicked(null);
     }
 
@@ -75,6 +75,10 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   color: black;
+
+  @media only screen and (max-width: 400px) {
+    width: 340px;
+  }
 `;
 
 const Title = styled.h1`
