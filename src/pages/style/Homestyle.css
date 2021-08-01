@@ -26,3 +26,11 @@ body {
     color: white;
     user-select: none;
 }
+
+.rotated {
+    transform: rotate(-180deg);
+}
+
+.show-answer {
+    transform: translateY(-40px);
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BoardData from "./BoardData";
+import BoardData from "./otherComponents/BoardData";
 
 const Header = styled.div`
   height: 300px;

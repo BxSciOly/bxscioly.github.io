@@ -6,6 +6,7 @@ import { Biology, Build, Chemistry, Physics, Trial } from "./pages/Events";
 import Board from "./pages/Board";
 import Faqs from "./pages/Faqs";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Redirect exact from="/" to="/home" />
         <Route path="/home" exact component={Home} />
+        <Route path="/about" exact component={About} />
         <Route path="/biology" exact component={Biology} />
         <Route path="/build" exact component={Build} />
         <Route path="/chemistry" exact component={Chemistry} />

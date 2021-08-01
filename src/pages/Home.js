@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Schedule from "./homeComponents/Schedule/Schedule";
-
+import Pattern3 from "./pattern3.png";
 import Pattern from "./pattern.png";
 
 const Home = () => {
@@ -28,7 +28,13 @@ const Home = () => {
           <div className="bxsci">BRONX SCIENCE</div>
           <div className="desc">EXPLORING THE WORLD</div>
           <div className="desc 2">OF SCIENCE</div>
-          <JoinButton>JOIN US</JoinButton>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <JoinButton>JOIN US</JoinButton>
+          </a>
         </BackgroundDiv>
         <img
           alt="homepage-icon"
@@ -42,6 +48,19 @@ const Home = () => {
             transform: `translateY(${offsetY * 0.5}px)`,
             transition: "0s all",
             userSelect: "none",
+          }}
+        />
+        <img
+          src={Pattern3}
+          alt="homepage-icon2"
+          style={{
+            position: "absolute",
+            marginTop: "330px",
+            height: "400px",
+            left: "0",
+            zIndex: "-2",
+            transition: "0s all",
+            transform: `translateY(${offsetY * 0.5}px)`,
           }}
         />
       </div>
@@ -81,7 +100,6 @@ const JoinButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    -webkit-box-shadow: 5px 5px 0px 2px #000000;
     box-shadow: 5px 5px 0px 2px #000000;
   }
 `;

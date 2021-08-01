@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import * as FaIcons from "react-icons/fa";
 import * as RiIcons from "react-icons/ri";
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons/lib";
 const FooterDiv = styled.div`
   height: 50px;
   width: 100%;
-  background: black;
-  color: white;
+  background: #ffcd00;
+  color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,7 +15,7 @@ const FooterDiv = styled.div`
 `;
 const Box = styled.div`
   padding: 40px;
-  background: black;
+  background: #ffcd00;
   width: 100%;
   height: 90px;
   display: flex;
@@ -32,25 +31,25 @@ const IconDiv = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background: #ffcd00;
+  background: black;
   display: flex;
   justify-content: center;
-  margin-right: 50px;
+  margin-right: 30px;
   align-items: center;
 `;
 
 const Footer = () => {
   return (
-    <IconContext.Provider value={{ color: "black", size: "30" }}>
+    <IconContext.Provider value={{ color: "white", size: "30" }}>
       <Box>
-        <div style={{ display: "flex", marginLeft: "50px" }}>
+        <div style={{ display: "flex", marginLeft: "40px" }}>
           <IconDiv>
             <a
               href="https://www.instagram.com/bx_sci_oly/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaIcons.FaInstagram />
+              <AiIcons.AiFillInstagram />
             </a>
           </IconDiv>
           <IconDiv>
@@ -68,7 +67,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiIcons.AiFillFacebook />
+              <RiIcons.RiFacebookFill />
             </a>
           </IconDiv>
         </div>

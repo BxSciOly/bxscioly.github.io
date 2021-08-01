@@ -72,6 +72,13 @@ const Sidebar = () => {
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <JoinButton>Interest Form</JoinButton>
+            </a>
           </SidebarWrap>
         </SidebarNav>
       </IconContext.Provider>
@@ -96,11 +103,11 @@ const SidebarNav = styled.nav`
   justify-content: center;
   position: fixed;
   top: 0;
-  left: ${({ sidebar }) => (sidebar ? "0" : "-200%")};
-  transition: 270ms ease-out;
+  left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
+  transition: 360ms ease-in-out;
   z-index: 10;
   background: #ffcd00;
-  border-right: 3px solid black;
+  border-right: 2px solid black;
 `;
 
 // const Logo = styled.div`
@@ -112,6 +119,22 @@ const SidebarNav = styled.nav`
 
 const SidebarWrap = styled.div`
   width: 100%;
+`;
+
+const JoinButton = styled.button`
+  margin-left: 35px;
+  margin-top: 10px;
+  width: 175px;
+  height: 50px;
+  font-size: 15px;
+  border: 2px solid black;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 0px 2px #000000;
+    box-shadow: 5px 5px 0px 2px #000000;
+  }
 `;
 
 export default Sidebar;
