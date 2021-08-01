@@ -71,7 +71,6 @@ table, th, td {
 }
 
 .logo-title-moved {
-  text-shadow: 3px 3px 0px #000000;
   cursor: pointer;
   transition-delay: 100ms;
   transform: translate(150px);

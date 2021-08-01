@@ -2,7 +2,8 @@ import React from "react";
 import BiologyData from "./eventsData/BiologyData";
 import styled from "styled-components";
 import BuildData from "./eventsData/BuildData";
-
+import ChemistryData from "./eventsData/ChemistryData";
+import PhysicsData from "./eventsData/PhysicsData";
 
 export const Events = () => {
   return (
@@ -43,7 +44,13 @@ export const Build = () => {
 export const Chemistry = () => {
   return (
     <div className="events">
-      <h1>Events3</h1>
+      <Cover>Chemistry</Cover>
+      {ChemistryData.map((event) => (
+        <BubbleCard>
+          <h6>{event.eventName}</h6>
+          <h8>{event.description}</h8>
+        </BubbleCard>
+      ))}
     </div>
   );
 };
@@ -51,18 +58,17 @@ export const Chemistry = () => {
 export const Physics = () => {
   return (
     <div className="events">
-      <h1>Events/Events4</h1>
+      <Cover>Physics</Cover>
+      {PhysicsData.map((event) => (
+        <BubbleCard>
+          <h6>{event.eventName}</h6>
+          <h8>{event.description}</h8>
+        </BubbleCard>
+      ))}
     </div>
   );
 };
 
-export const Trial = () => {
-  return (
-    <div className="events">
-      <h1>Events/Events5</h1>
-    </div>
-  );
-};
 
 // styling
 

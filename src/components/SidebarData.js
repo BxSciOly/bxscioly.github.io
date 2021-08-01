@@ -39,11 +39,6 @@ export const SidebarData = [
         path: "/physics",
         icon: <GiIcons.GiMolecule />,
       },
-      {
-        title: "Trial",
-        path: "/trial",
-        icon: <IoIcons.IoIosPaper />,
-      },
     ],
   },
   {

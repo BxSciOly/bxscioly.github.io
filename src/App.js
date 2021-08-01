@@ -2,7 +2,7 @@ import "./App.css";
 import Sidebar from "./components/Sidebar";
 import { Switch, Route, Redirect, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
-import { Biology, Build, Chemistry, Physics, Trial } from "./pages/Events";
+import { Biology, Build, Chemistry, Physics } from "./pages/Events";
 import Board from "./pages/Board";
 import Faqs from "./pages/Faqs";
 import Footer from "./components/Footer";
@@ -20,7 +20,6 @@ function App() {
         <Route path="/build" exact component={Build} />
         <Route path="/chemistry" exact component={Chemistry} />
         <Route path="/physics" exact component={Physics} />
-        <Route path="/trial" exact component={Trial} />
         <Route path="/board" exact component={Board} />
         <Route path="/faqs" exact component={Faqs} />
       </Switch>
