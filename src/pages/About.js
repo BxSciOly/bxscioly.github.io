@@ -68,7 +68,6 @@ const About = () => {
           <h1
             style={{
               fontSize: "50px",
-              textShadow: "4px 4px 0px #000000",
               userSselect: "none",
             }}
           >
