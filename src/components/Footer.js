@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import * as RiIcons from "react-icons/ri";
 import * as AiIcons from "react-icons/ai";
+import * as FaIcons from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 const FooterDiv = styled.div`
   height: 50px;
@@ -70,11 +71,18 @@ const Footer = () => {
               <RiIcons.RiFacebookFill />
             </a>
           </IconDiv>
+          <IconDiv>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdIzC1T9ZwPq9FeiL4gyvtvDuHyr-uI2FbGHJp9f33Q-KfpKg/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaIcons.FaQuestion />
+            </a>
+          </IconDiv>
         </div>
       </Box>
-      <FooterDiv className="footer">
-        © 2021 BxScioly. All Rights Reserved.
-      </FooterDiv>
+      <FooterDiv className="footer">© 2021 BxScioly.</FooterDiv>
     </IconContext.Provider>
   );
 };
