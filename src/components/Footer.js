@@ -82,7 +82,9 @@ const Footer = () => {
           </IconDiv>
         </div>
       </Box>
-      <FooterDiv className="footer">© 2021 BxScioly.</FooterDiv>
+      <FooterDiv className="footer">
+        ©2021 BxScioly. All Rights Reserved.
+      </FooterDiv>
     </IconContext.Provider>
   );
 };
