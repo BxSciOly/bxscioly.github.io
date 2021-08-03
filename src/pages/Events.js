@@ -4,6 +4,7 @@ import styled from "styled-components";
 import BuildData from "./eventsData/BuildData";
 import ChemistryData from "./eventsData/ChemistryData";
 import PhysicsData from "./eventsData/PhysicsData";
+import EarthScienceData from "./eventsData/EarthScienceData";
 
 export const Events = () => {
   return (
@@ -21,6 +22,24 @@ export const Biology = () => {
         <BubbleCard>
           <h6>{event.eventName}</h6>
           <h8>{event.description}</h8>
+        </BubbleCard>
+      ))}
+    </div>
+  );
+};
+
+export const EarthScience = () => {
+  return (
+    <div className="events">
+      <Cover>Earth Science</Cover>
+      {EarthScienceData.map((event) => (
+        <BubbleCard>
+          <h6>{event.eventName}</h6>
+          <h8>{event.description}</h8>
+          <br />
+          <a href={event.links} target="_blank" rel="noopener noreferrer">
+            <h8>{event.links}</h8>
+          </a>
         </BubbleCard>
       ))}
     </div>

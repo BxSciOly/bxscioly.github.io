@@ -25,6 +25,11 @@ export const SidebarData = [
         icon: <GiIcons.GiDna2 />,
       },
       {
+        title: "Earth Science",
+        path: "/earthscience",
+        icon: <IoIcons.IoMdPlanet />,
+      },
+      {
         title: "Build",
         path: "/build",
         icon: <FaIcons.FaWrench />,
