@@ -13,19 +13,19 @@ const EventsA = () => {
       event: "3:00PM",
     },
     {
-      event: "Forensics",
+      event: "",
     },
     {
-      event: "Circuit Lab, Protein Modeling",
+      event: "",
     },
     {
-      event: "Club Meeting",
+      event: "Wright Stuff",
     },
     {
-      event: "Dynamic Planet",
+      event: "",
     },
     {
-      event: "Forensics",
+      event: "",
     },
   ];
   return (

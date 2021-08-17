@@ -111,12 +111,12 @@ const BubbleCard = styled.div`
 const Cover = styled.div`
   height: 300px;
   width: 100%;
-  border: 2px solid #026857;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #cadfcf;
-  color: #026857;
+  background: #74cc66;
+  color: black;
   margin-bottom: 10px;
   font-size: 100px;
 `;

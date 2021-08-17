@@ -3,9 +3,7 @@ import styled from "styled-components";
 import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Schedule from "./homeComponents/Schedule/Schedule";
-import Pattern from "./pattern.png";
-import Carousel from "./homeComponents/CarouselComponents/Carousel";
-import { CarouselData } from "./homeComponents/CarouselComponents/CarouselData";
+import Info from "./Info/Info";
 
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -16,8 +14,53 @@ const Home = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <>
+    <div className="page">
+      <svg
+        className="blob-1"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#48B763"
+          d="M41.6,-76.3C52.2,-65.9,57.9,-51.3,65.5,-37.9C73.2,-24.5,82.8,-12.2,80.2,-1.5C77.7,9.3,63.1,18.6,54.9,31.2C46.8,43.8,45.2,59.7,37.2,67.8C29.1,76,14.5,76.4,1.6,73.7C-11.4,71.1,-22.9,65.3,-33.8,58.7C-44.7,52.2,-55,45,-64.5,35.1C-74.1,25.1,-82.8,12.6,-86.2,-2C-89.6,-16.5,-87.6,-33,-77.5,-41.9C-67.5,-50.9,-49.2,-52.3,-34.9,-60.5C-20.7,-68.8,-10.3,-83.8,2.6,-88.3C15.5,-92.8,31,-86.6,41.6,-76.3Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <svg
+        className="blob-2"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#48B763"
+          d="M42.2,-35.3C55.8,-16.5,68.8,1.1,66.8,17.3C64.7,33.5,47.6,48.4,27.6,58.4C7.6,68.4,-15.2,73.6,-32,65.8C-48.8,57.9,-59.6,37,-60.4,18.2C-61.2,-0.6,-52,-17.4,-40.2,-35.7C-28.5,-54,-14.3,-73.9,0,-73.9C14.3,-73.9,28.5,-54,42.2,-35.3Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <svg
+        className="blob-3"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#48B763"
+          d="M40.4,-26.5C51.7,-3.8,59.7,17.6,52.4,25.9C45.1,34.2,22.5,29.4,2.1,28.2C-18.4,27,-36.8,29.4,-47.6,19.1C-58.4,8.7,-61.6,-14.4,-52.4,-35.8C-43.2,-57.3,-21.6,-77.2,-3.5,-75.1C14.6,-73.1,29.1,-49.2,40.4,-26.5Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <svg
+        className="blob-4"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#48B763"
+          d="M40.6,-24.4C54,-0.4,66.9,22.9,60.1,39.1C53.3,55.4,26.6,64.6,0.5,64.3C-25.6,64,-51.2,54.2,-62.1,35.6C-73.1,16.9,-69.3,-10.5,-56.5,-34.1C-43.7,-57.8,-21.9,-77.8,-4.1,-75.4C13.7,-73.1,27.3,-48.4,40.6,-24.4Z"
+          transform="translate(100 100)"
+        />
+      </svg>
       <div className="home">
         <BackgroundDiv
           style={{
@@ -25,8 +68,8 @@ const Home = () => {
             transition: "0s all",
           }}
         >
-          <div className="scioly">SCIENCE OLYMPIAD</div>
           <div className="bxsci">BRONX SCIENCE</div>
+          <div className="scioly">SCIENCE OLYMPIAD</div>
           <div className="desc">EXPLORING THE WORLD</div>
           <div className="desc 2">OF SCIENCE</div>
           <a
@@ -37,89 +80,29 @@ const Home = () => {
             <JoinButton>JOIN US</JoinButton>
           </a>
         </BackgroundDiv>
-        <img
-          alt="homepage-icon"
-          src={Pattern}
-          style={{
-            position: "absolute",
-            height: "820px",
-            zIndex: "-2",
-            top: "0",
-            right: "0",
-            transform: `translateY(${offsetY * 0.3}px)`,
-            transition: "0s all",
-            userSelect: "none",
-          }}
-        />
       </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        style={{ position: "absolute", top: "440px", zIndex: "-1" }}
-      >
-        <path
-          fill="#FFCD00"
-          fill-opacity="1"
-          d="M0,128L48,128C96,128,192,128,288,144C384,160,480,192,576,208C672,224,768,224,864,218.7C960,213,1056,203,1152,208C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
+      {/* <Carousel slides={CarouselData} /> */}
       <HomeBackground>
-        <Carousel slides={CarouselData} />
-        <SkewDiv>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            style={{ position: "absolute", top: "-520px" }}
-          >
-            <path
-              fill="#006851"
-              fill-opacity="1"
-              d="M0,32L48,69.3C96,107,192,181,288,224C384,267,480,277,576,266.7C672,256,768,224,864,202.7C960,181,1056,171,1152,186.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            style={{
-              position: "absolute",
-              transform: "rotate(-180deg)",
-              top: "680px",
-            }}
-          >
-            <path
-              fill="#006851"
-              fill-opacity="1"
-              d="M0,224L48,234.7C96,245,192,267,288,282.7C384,299,480,309,576,293.3C672,277,768,235,864,224C960,213,1056,235,1152,240C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-        </SkewDiv>
+        <Info />
         <Upcoming />
         <Schedule />
       </HomeBackground>
-    </>
+    </div>
   );
 };
-
-const SkewDiv = styled.div`
-  background: #006851;
-  position: absolute;
-  width: 120%;
-  margin-top: 320px;
-  transform: rotate(-5deg);
-  height: 700px;
-  z-index: 0;
-`;
 
 const BackgroundDiv = styled.div`
   width: 100%;
   height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -50px;
 `;
 
 const HomeBackground = styled.div`
-  width: 100%;
-  background-color: #ffcd00;
-  opacity: 1;
-  padding: 20px;
+  width: 80%;
   display: flex;
   flex-wrap: flex;
   flex-direction: column;
@@ -127,18 +110,16 @@ const HomeBackground = styled.div`
 `;
 
 const JoinButton = styled.button`
-  margin-top: 20px;
+  margin-top: 40px;
   width: 300px;
-  height: 50px;
+  height: 60px;
   font-size: 20px;
-  background: #ffcd00;
+  color: white;
   border: none;
+  background: black;
   font-weight: 600;
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: 5px 5px 0px 2px #000000;
-  }
+  border-radius: 30px;
+  cursor: pointer;
 `;
 
 export default Home;

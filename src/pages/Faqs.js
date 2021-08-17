@@ -68,7 +68,7 @@ const Faqs = () => {
 
 const Header = styled.div`
   height: 300px;
-  background: #ffcd00;
+  background: #74cc66;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
@@ -102,7 +102,7 @@ const Button = styled.button`
 const FaqTitle = styled.div`
   height: 80px;
   width: 100%;
-  background: white;
+  background: #ffea84;
   color: black;
   display: flex;
   justify-content: center;
@@ -111,7 +111,7 @@ const FaqTitle = styled.div`
 const Page = styled.div`
   width: 100%;
   height: 600px;
-  background: white;
+  background: rgb(255, 234, 132);
   padding: 20px;
   color: black;
   display: flex;
@@ -147,7 +147,7 @@ const AccordionTitle = styled.button`
 `;
 
 const AccordionAnswer = styled.div`
-  background: white;
+  background: #ffea84;
   z-index: 0;
   height: 50px;
   display: flex;

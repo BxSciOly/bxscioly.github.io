@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 body {
-  background: #006851;
+  background: #ffea84;
 }
 
 html, body {
@@ -42,7 +42,7 @@ h8 {
 }
 
 .navbar {
-  color: white;
+  color: black;
   /* border-bottom: 3px solid #026857; */
   height: 80px;
   display: flex;
@@ -68,10 +68,35 @@ table, th, td {
 
 .logo-title {
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.logo-title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.logo-title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .logo-title-moved {
   cursor: pointer;
-  transition-delay: 100ms;
+  transition-delay: 37ms;
   transform: translate(150px);
 }
+
+/* Modal */
+
+/* Demo Styles */
+

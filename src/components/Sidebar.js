@@ -44,7 +44,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "white" }}>
+      <IconContext.Provider value={{ color: "black" }}>
         {/* className={navbar ? "navbar active" : "navbar"} */}
         <nav className={"navbar"}>
           <NavIcon to="#">
@@ -106,7 +106,7 @@ const SidebarNav = styled.nav`
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 360ms ease-in-out;
   z-index: 10;
-  background: #ffcd00;
+  background: #ffea84;
   border-right: 2px solid black;
 `;
 

@@ -15,12 +15,14 @@ const Title = styled.div`
 `;
 
 const ScheduleDiv = styled.div`
-  height: 750px;
+  height: 650px;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  background: white;
+  border-radius: 30px;
 `;
 
 const ScheduleA = styled.div`

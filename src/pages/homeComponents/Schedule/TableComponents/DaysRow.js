@@ -5,7 +5,7 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-left: 270px;
+  margin-left: 235px;
 `;
 
 const DaysRow = () => {

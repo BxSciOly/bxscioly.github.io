@@ -1,27 +1,24 @@
 body {
-    color: white;
+    color: black;
 }
 
-.scioly {
+.bxsci {
     font-size: 100px;
-    color: white;
     user-select: none;
-
 }
 
 .scioly:hover, .bxsci:hover, .desc:hover {
     user-select: none;
 }
 
-.bxsci {
+.scioly {
     font-size: 100px;
-    color: white; 
     user-select: none;
+    margin-bottom: 20px;
 }
 
 .desc {
     font-size: 40px;
-    color: white;
     user-select: none;
 }
 
@@ -32,3 +29,48 @@ body {
 .show-answer {
     transform: translateY(-40px);
 }
+
+.blob-1 {
+    height: 500px;
+    position: absolute;
+    left: -14%;
+}
+
+.blob-4 {
+    height: 500px;
+    position: absolute;
+    left: -14%;
+    top: 1000px;
+}
+
+.blob-2 {
+    height: 500px;
+    position: absolute;
+    right: -13%;
+    bottom: 10%;
+}
+
+.blob-3 {
+    height: 500px;
+    position: absolute;
+    right: -12%;
+    top: 1200px;
+    transform: rotate(60deg);
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 400px;
+  }

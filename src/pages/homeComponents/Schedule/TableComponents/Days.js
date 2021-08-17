@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const DaysDiv = styled.div`
   height: 50px;
-  width: 250px;
-  margin: 10px;
-  border: 1px solid black;
+  width: 225px;
+  margin: 5px;
+  border: 3px solid black;
   border-radius: 20px;
   color: black;
   display: flex;

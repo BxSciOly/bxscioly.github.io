@@ -4,25 +4,26 @@ import * as RiIcons from "react-icons/ri";
 import * as AiIcons from "react-icons/ai";
 import * as FaIcons from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+
 const FooterDiv = styled.div`
   height: 50px;
   width: 100%;
-  background: #ffcd00;
-  color: black;
+  background: #ffea84;
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 999;
+  color: black;
 `;
 const Box = styled.div`
   padding: 40px;
-  background: #ffcd00;
+  background: #ffea84;
   width: 100%;
   height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-top: 100px;
   @media (max-width: 1000px) {
     padding: 70px 30px;
   }
@@ -55,7 +56,7 @@ const Footer = () => {
           </IconDiv>
           <IconDiv>
             <a
-              href="https://discord.gg/HPSZcY9V"
+              href="https://discord.gg/ntPFKrTFEC"
               target="_blank"
               rel="noopener noreferrer"
             >

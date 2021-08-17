@@ -4,7 +4,7 @@ import BoardData from "./otherComponents/BoardData";
 
 const Header = styled.div`
   height: 300px;
-  background: #ffcd00;
+  background: #48b763;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
@@ -33,11 +33,13 @@ const BoardDiv = styled.div`
 `;
 
 const Card = styled.div`
-  height: 700px;
-  width: 600px;
+  height: 600px;
+  width: 500px;
+  margin: 10px;
+  background: white;
   padding: 10px 80px;
   margin-bottom: 50px;
-  border: 2px solid black;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,13 +52,13 @@ const Board = () => {
     <>
       <Header>
         <Title>Meet the Board</Title>
-        <h3>
+        <h3 style={{ fontWeight: "200", fontSize: "20px" }}>
           We are proud to say that our team is fully led and organized by
           students.
         </h3>
-        <h3>
-          Below, are the people who make this team possible. Please do not
-          hesitate to contact us!
+        <h3 style={{ fontWeight: "200", fontSize: "20px" }}>
+          Below are the people who make SciOly possible. Please do not hesitate
+          to contact us!
         </h3>
       </Header>
       <BoardDiv>

@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const EventDiv = styled.div`
-  height: 100px;
-  width: 250px;
-  border: 1px solid black;
+  height: 90px;
+  width: 225px;
+  border: 3px solid black;
   border-radius: 20px;
-  margin: 10px;
+  margin: 5px;
   color: black;
   display: flex;
   justify-content: center;

@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import { Switch, Route, Redirect, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
@@ -13,10 +14,12 @@ import Board from "./pages/Board";
 import Faqs from "./pages/Faqs";
 import Footer from "./components/Footer";
 import About from "./pages/About";
+import Modal from "./Modal";
 
 function App() {
   return (
     <HashRouter>
+      <Modal />
       <Sidebar />
       <Switch>
         <Redirect exact from="/" to="/home" />
