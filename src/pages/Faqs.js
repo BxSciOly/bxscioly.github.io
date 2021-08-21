@@ -18,7 +18,7 @@ const Faqs = () => {
     <>
       <Header>
         <Title>Anything you want to know?</Title>
-        <h3 style={{ fontWeight: "200" }}>
+        <h3 style={{ fontWeight: "200", textAlign: "center" }}>
           Any questions or concerns submitted here will be read by the SciOly
           board. We look forward to hearing from you!
         </h3>
@@ -68,7 +68,7 @@ const Faqs = () => {
 
 const Header = styled.div`
   height: 300px;
-  background: #74cc66;
+  background: #48b763;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
@@ -76,8 +76,9 @@ const Header = styled.div`
   align-items: center;
   color: black;
 
-  @media only screen and (max-width: 400px) {
-    width: 340px;
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 20px;
   }
 `;
 
@@ -85,6 +86,13 @@ const Title = styled.h1`
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 40px;
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 `;
 
 const Button = styled.button`
@@ -98,20 +106,28 @@ const Button = styled.button`
     box-shadow: 5px 5px 0px 2px #000000;
     cursor: pointer;
   }
+
+  @media (max-width: 600px) {
+    margin-top: 20px;
+  }
 `;
 const FaqTitle = styled.div`
   height: 80px;
   width: 100%;
-  background: #ffea84;
+  background: white;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 600px) {
+    font-size: 13px;
+  }
 `;
 const Page = styled.div`
   width: 100%;
   height: 600px;
-  background: rgb(255, 234, 132);
+  background: white;
   padding: 20px;
   color: black;
   display: flex;
@@ -125,6 +141,7 @@ const QuestionsDiv = styled.div`
   height: 500px;
   width: 800px;
 `;
+
 const AccordionTitle = styled.button`
   width: 100%;
   background-color: #eee;
@@ -149,9 +166,14 @@ const AccordionTitle = styled.button`
 const AccordionAnswer = styled.div`
   background: #ffea84;
   z-index: 0;
-  height: 50px;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+
+  @media (max-width: 600px) {
+    background: white;
+  }
 `;
 
 const AccordionItem = styled.div`

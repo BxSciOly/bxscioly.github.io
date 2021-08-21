@@ -1,0 +1,43 @@
+
+  .logo-title {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    margin-left: 25px;
+    font-weight: 200;
+  }
+
+  .logo-title-moved {
+    cursor: pointer;
+    transition-delay: 37ms;
+    font-weight: 200;
+    transform: translate(200px);  
+  }
+
+  .icon-logo {
+    display: none;
+
+  }
+  
+  @media (max-width: 600px) {
+    .logo-title {
+      display: none;
+    }
+    
+    .logo-title-moved {
+        display: none;
+    }
+
+    .icon-logo {
+        display: inline-block;
+        position: relative;
+        display: initial;
+        font-size: 25px;
+        margin-left: 20px;
+        font-weight: 200;
+    }
+      
+  }
+  
+  

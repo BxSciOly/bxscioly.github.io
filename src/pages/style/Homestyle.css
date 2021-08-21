@@ -1,24 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
 body {
     color: black;
+    font-family: Roboto, sans-serif;
 }
 
 .bxsci {
     font-size: 100px;
     user-select: none;
-}
-
-.scioly:hover, .bxsci:hover, .desc:hover {
-    user-select: none;
+    font-weight: 600;
 }
 
 .scioly {
     font-size: 100px;
     user-select: none;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .desc {
     font-size: 40px;
+    user-select: none;
+}
+
+.scioly:hover, .bxsci:hover, .desc:hover {
     user-select: none;
 }
 
@@ -31,7 +36,7 @@ body {
 }
 
 .blob-1 {
-    height: 500px;
+    height: 45%;
     position: absolute;
     left: -14%;
 }
@@ -66,6 +71,11 @@ body {
     align-items: center;
 }
 
+.about-text {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
 
 .each-slide > div {
     display: flex;
@@ -74,3 +84,32 @@ body {
     background-size: cover;
     height: 400px;
   }
+
+
+@media (max-width: 600px) {
+    .bxsci{
+        font-size: 35px;
+    }
+    .scioly{
+        font-size: 35px;
+    }
+    .desc{
+        font-size: 25px;
+    }
+    .rotated {
+        font-size: 20px;
+    }
+    .show-answer {
+        font-size: 20px;
+    }
+
+    .blob-1, .blob-2, .blob-3, .blob-4 {
+        display: none;
+    }
+
+    .about-text {
+        font-size: 16px;
+        text-align: left;
+    }
+
+}

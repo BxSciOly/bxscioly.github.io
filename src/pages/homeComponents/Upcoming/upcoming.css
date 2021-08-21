@@ -1,0 +1,33 @@
+.upcoming-title {
+    margin-bottom: 20px;
+}
+
+.announcements-desc {
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+
+
+.announcements-subtitle {
+    font-weight: 200; 
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .upcoming-title{ 
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+
+    .announcements-title {
+        font-size: 25px;
+    }
+
+    .announcements-desc {
+        font-size: 15px;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+}

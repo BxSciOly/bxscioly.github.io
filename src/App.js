@@ -14,12 +14,10 @@ import Board from "./pages/Board";
 import Faqs from "./pages/Faqs";
 import Footer from "./components/Footer";
 import About from "./pages/About";
-import Modal from "./Modal";
 
 function App() {
   return (
     <HashRouter>
-      <Modal />
       <Sidebar />
       <Switch>
         <Redirect exact from="/" to="/home" />

@@ -9,12 +9,11 @@ const Info = () => {
     <Wrap>
       <Column
         icon={<BiIcons.BiBrain />}
-        desc="Learn about your favorite science topics and explore others!"
-        style={{ marginTop: "11px" }}
+        desc="Learn about your favorite science topics"
       />
       <Column
         icon={<BiIcons.BiTrophy />}
-        desc="Opportunities to participate in and win tournaments"
+        desc="Participate and win in tournaments"
       />
       <Column
         icon={<HiIcons.HiOutlineChatAlt2 />}
@@ -26,10 +25,20 @@ const Info = () => {
 
 const Wrap = styled.div`
   height: 300px;
-  background: white;
+  color: black;
   margin-bottom: 50px;
+  background: white;
   padding: 50px;
   display: flex;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    margin-top: -100px;
+    padding: 10px;
+    flex-direction: column;
+  }
 `;
 
 export default Info;

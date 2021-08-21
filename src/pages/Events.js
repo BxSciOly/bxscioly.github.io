@@ -20,8 +20,8 @@ export const Biology = () => {
       <Cover>Biology</Cover>
       {BiologyData.map((event) => (
         <BubbleCard>
-          <h6>{event.eventName}</h6>
-          <h8>{event.description}</h8>
+          <EventTitle>{event.eventName}</EventTitle>
+          <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
       ))}
     </div>
@@ -34,11 +34,11 @@ export const EarthScience = () => {
       <Cover>Earth Science</Cover>
       {EarthScienceData.map((event) => (
         <BubbleCard>
-          <h6>{event.eventName}</h6>
-          <h8>{event.description}</h8>
+          <EventTitle>{event.eventName}</EventTitle>
+          <EventDesc>{event.description}</EventDesc>
           <br />
           <a href={event.links} target="_blank" rel="noopener noreferrer">
-            <h8>{event.links}</h8>
+            <EventDesc>{event.links}</EventDesc>
           </a>
         </BubbleCard>
       ))}
@@ -52,8 +52,8 @@ export const Build = () => {
       <Cover>Build</Cover>
       {BuildData.map((event) => (
         <BubbleCard>
-          <h6>{event.eventName}</h6>
-          <h8>{event.description}</h8>
+          <EventTitle>{event.eventName}</EventTitle>
+          <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
       ))}
     </div>
@@ -66,8 +66,8 @@ export const Chemistry = () => {
       <Cover>Chemistry</Cover>
       {ChemistryData.map((event) => (
         <BubbleCard>
-          <h6>{event.eventName}</h6>
-          <h8>{event.description}</h8>
+          <EventTitle>{event.eventName}</EventTitle>
+          <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
       ))}
     </div>
@@ -80,31 +80,45 @@ export const Physics = () => {
       <Cover>Physics</Cover>
       {PhysicsData.map((event) => (
         <BubbleCard>
-          <h6>{event.eventName}</h6>
-          <h8>{event.description}</h8>
+          <EventTitle>{event.eventName}</EventTitle>
+          <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
       ))}
     </div>
   );
 };
 
-
 // styling
 
+const EventTitle = styled.h6`
+  font-size: 30px;
+`;
+
+const EventDesc = styled.h5`
+  font-size: 18px;
+  font-weight: 200;
+`;
+
 const BubbleCard = styled.div`
-  background: #fcce33;
+  background: black;
+  color: white;
   border-radius: 30px;
-  height: 400px;
   width: 500px;
   padding: 20px;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  color: black;
+  min-height: 400px;
 
   &:hover {
     transform: scale(1.02);
     cursor: normal;
+  }
+
+  @media (max-width: 600px) {
+    background: #f7b800;
+    width: 100%;
+    color: black;
   }
 `;
 
@@ -119,4 +133,9 @@ const Cover = styled.div`
   color: black;
   margin-bottom: 10px;
   font-size: 100px;
+
+  @media (max-width: 600px) {
+    font-size: 40px;
+    height: 100px;
+  }
 `;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import * as FaIcons from "react-icons/fa";
-import * as CgIcons from "react-icons/cg";
+import * as RiIcons from "react-icons/ri";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
+import "./sidebar.css";
 
 let useClickOutside = (handler) => {
   let menuRef = useRef();
@@ -48,17 +48,12 @@ const Sidebar = () => {
         {/* className={navbar ? "navbar active" : "navbar"} */}
         <nav className={"navbar"}>
           <NavIcon to="#">
-            <FaIcons.FaBars onClick={AllFuncts} />
+            <RiIcons.RiMenu2Fill onClick={AllFuncts} />
           </NavIcon>
-          <h2
-            className={sidebar ? "logo-title-moved" : "logo-title"}
-            style={{
-              fontSize: "25px",
-              marginLeft: "50px",
-            }}
-          >
+          <h2 className={sidebar ? "logo-title-moved" : "logo-title"}>
             BRONX SCIENCE OLYMPIAD
           </h2>
+          <h2 className="icon-logo">BXSCIOLY</h2>
         </nav>
       </IconContext.Provider>
       <IconContext.Provider value={{ color: "black", size: "25" }}>
@@ -66,7 +61,7 @@ const Sidebar = () => {
           <SidebarWrap>
             <IconContext.Provider value={{ color: "black" }}>
               <NavIcon to="#">
-                <CgIcons.CgCloseO onClick={AllFuncts} />
+                <RiIcons.RiMenu3Fill onClick={AllFuncts} />
               </NavIcon>
             </IconContext.Provider>
             {SidebarData.map((item, index) => {
@@ -106,8 +101,12 @@ const SidebarNav = styled.nav`
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 360ms ease-in-out;
   z-index: 10;
-  background: #ffea84;
+  background: #ffb44e;
   border-right: 2px solid black;
+
+  @media (max-width: 600px) {
+    background: white;
+  }
 `;
 
 // const Logo = styled.div`

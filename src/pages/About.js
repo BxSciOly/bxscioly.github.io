@@ -53,13 +53,7 @@ const About = () => {
             </Slide>
           </ImageDiv>
           <TextDiv>
-            <h3
-              style={{
-                fontWeight: "400",
-                fontSize: "20px",
-                textAlign: "center",
-              }}
-            >
+            <h3 className="about-text">
               The BxSci Science Olympiad Team is dedicated to exploring the
               world of science in every scientific discipline, from biology to
               mathematics to engineering. We are student-led, meaning that we do
@@ -78,7 +72,6 @@ const About = () => {
 };
 
 const Header = styled.div`
-  height: 600px;
   width: 80%;
   background: white;
   justify-content: center;
@@ -86,6 +79,13 @@ const Header = styled.div`
   color: black;
   padding: 90px;
   margin-bottom: 40px;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 20px 0 20px 0;
+  }
 `;
 
 const Title = styled.div`
@@ -102,6 +102,10 @@ const ImageDiv = styled.div`
   width: 800px;
   height: 400px;
   margin-right: 100px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const TextDiv = styled.div`
@@ -111,6 +115,12 @@ const TextDiv = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
+
+  @media (max-width: 600px) {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const Page = styled.div`

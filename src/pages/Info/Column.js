@@ -9,20 +9,28 @@ const Column = (props) => {
       <IconContext.Provider value={{ className: "icon" }}>
         {props.icon}
       </IconContext.Provider>
-      <h1 style={{ fontWeight: "200", fontSize: "20px" }}>{props.desc}</h1>
+      <h1 className="description">{props.desc}</h1>
     </Wrap>
   );
 };
 
 const Wrap = styled.div`
   height: 100%;
-  width: 260px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0 40px;
   text-align: center;
+
+  @media (max-width: 600px) {
+    height: 150px;
+    border-radius: 20px;
+    background: #f7b800;
+    margin: 0px 0 10px 0;
+    padding: 20px;
+  }
 `;
 
 export default Column;

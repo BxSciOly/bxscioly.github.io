@@ -99,6 +99,10 @@ const BackgroundDiv = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: -50px;
+
+  @media (max-width: 600px) {
+    width: 400px;
+  }
 `;
 
 const HomeBackground = styled.div`
@@ -107,6 +111,10 @@ const HomeBackground = styled.div`
   flex-wrap: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const JoinButton = styled.button`
@@ -120,6 +128,11 @@ const JoinButton = styled.button`
   font-weight: 600;
   border-radius: 30px;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    width: 200px;
+    height: 50px;
+  }
 `;
 
 export default Home;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./upcoming.css";
 
 const Announcements = [
   {
@@ -48,19 +49,11 @@ const Upcoming = () => {
   return (
     <Wrap>
       <UpcomingDiv>
-        <h1 style={{ marginBottom: "20px" }}>Upcoming Events</h1>
+        <UpcomingTitle>
+          <h1 className="upcoming-title">Upcoming Events</h1>
+        </UpcomingTitle>
         {UpcomingData.map((item) => (
           <UpcomingWrap>
-            {/* <h2
-              style={{
-                fontSize: "18px",
-                fontWeight: "200",
-                marginBottom: "10px",
-              }}
-            >
-              <span style={{ fontWeight: "700" }}>{item.event}:</span>{" "}
-              {item.date}
-            </h2> */}
             <DateDiv>
               <h1>{item.day}</h1>
               <h3 style={{ fontWeight: "200" }}>{item.month}</h3>
@@ -72,18 +65,16 @@ const Upcoming = () => {
         ))}
       </UpcomingDiv>
       <AnnouncementsDiv>
-        <h1>Announcements</h1>
-        <h3 style={{ fontWeight: "400", marginBottom: "20px" }}>
-          Check here every week for new updates!
-        </h3>
+        <AnnouncementsTitleDiv>
+          <h1 className="announcements-title">Announcements</h1>
+        </AnnouncementsTitleDiv>
+        <AnnouncementsDescDiv>
+          <h3 className="announcements-subtitle">
+            Check here every week for new updates!
+          </h3>
+        </AnnouncementsDescDiv>
         {Announcements.map((item) => (
-          <h2
-            style={{
-              fontSize: "18px",
-              fontWeight: "200",
-              marginBottom: "10px",
-            }}
-          >
+          <h2 className="announcements-desc">
             <span style={{ fontWeight: "700" }}>{item.title}:</span> {item.desc}
           </h2>
         ))}
@@ -93,7 +84,6 @@ const Upcoming = () => {
 };
 
 const Wrap = styled.div`
-  height: 600px;
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -102,6 +92,11 @@ const Wrap = styled.div`
   border-radius: 30px;
   z-index: 3;
   margin-bottom: 40px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const UpcomingDiv = styled.div`
@@ -109,12 +104,22 @@ const UpcomingDiv = styled.div`
   width: 48%;
   padding: 20px;
   border-radius: 25px;
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 `;
 const AnnouncementsDiv = styled.div`
   background: white;
   width: 48%;
   padding: 20px;
   border-radius: 25px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    background: #f7b800;
+    border-radius: 0;
+  }
 `;
 
 const UpcomingWrap = styled.div`
@@ -123,6 +128,17 @@ const UpcomingWrap = styled.div`
   display: flex;
   align-items: center;
   padding: 15px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+`;
+
+const UpcomingTitle = styled.div`
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const DateDiv = styled.div`
@@ -135,6 +151,22 @@ const DateDiv = styled.div`
 `;
 
 const EventDiv = styled.div`
-  margin-left: 20px;
+  margin-left: 27px;
+`;
+
+const AnnouncementsTitleDiv = styled.div`
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const AnnouncementsDescDiv = styled.div`
+  @media (max-width: 600px) {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+  }
 `;
 export default Upcoming;

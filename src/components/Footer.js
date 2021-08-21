@@ -8,16 +8,20 @@ import { IconContext } from "react-icons/lib";
 const FooterDiv = styled.div`
   height: 50px;
   width: 100%;
-  background: #ffea84;
+  background: #ffb44e;
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 999;
   color: black;
+
+  @media (max-width: 600px) {
+    background: #f7b800;
+  }
 `;
 const Box = styled.div`
   padding: 40px;
-  background: #ffea84;
+  background: #ffb44e;
   width: 100%;
   height: 90px;
   display: flex;
@@ -26,6 +30,7 @@ const Box = styled.div`
   margin-top: 100px;
   @media (max-width: 1000px) {
     padding: 70px 30px;
+    background: #f7b800;
   }
 `;
 
