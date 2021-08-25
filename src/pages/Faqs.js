@@ -68,7 +68,6 @@ const Faqs = () => {
 
 const Header = styled.div`
   height: 300px;
-  background: #48b763;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
@@ -164,7 +163,6 @@ const AccordionTitle = styled.button`
 `;
 
 const AccordionAnswer = styled.div`
-  background: #ffea84;
   z-index: 0;
   display: flex;
   align-items: center;

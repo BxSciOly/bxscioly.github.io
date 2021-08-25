@@ -19,7 +19,7 @@ const EventsA = () => {
       event: "",
     },
     {
-      event: "Wright Stuff",
+      event: "",
     },
     {
       event: "",

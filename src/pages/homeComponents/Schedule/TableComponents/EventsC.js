@@ -16,13 +16,13 @@ const EventsC = () => {
       event: "",
     },
     {
-      event: "Gravity Vehicle",
+      event: "",
     },
     {
-      event: "It's About Time",
+      event: "",
     },
     {
-      event: "Codebusters",
+      event: "",
     },
     {
       event: "",

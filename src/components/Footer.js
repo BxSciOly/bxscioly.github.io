@@ -4,6 +4,7 @@ import * as GrIcons from "react-icons/gr";
 import * as FaIcons from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const FooterDiv = styled.div`
   width: 70%;
@@ -47,7 +48,7 @@ const Footer = () => {
               <p>Instagram</p>
             </a>
             <a
-              href="https://discord.gg/ntPFKrTFEC"
+              href="https://www.facebook.com/Bxscioly/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -55,7 +56,7 @@ const Footer = () => {
               <p>Facebook</p>
             </a>
             <a
-              href="https://www.facebook.com/Bxscioly/"
+              href="https://discord.gg/ntPFKrTFEC"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -65,30 +66,73 @@ const Footer = () => {
           </MediaDiv>
           <EventsDiv>
             <a className="title-event">Explore Topics</a>
-            <Links>Biology</Links>
-            <Links>Build</Links>
-            <Links>Chemistry</Links>
-            <Links>Earth Science</Links>
-            <Links>Physics</Links>
+            <Link style={linkstyle} to="/biology">
+              <Links>Biology</Links>
+            </Link>
+            <Link style={linkstyle} to="/build">
+              <Links>Build</Links>
+            </Link>
+            <Link style={linkstyle} to="/chemistry">
+              <Links>Chemistry</Links>
+            </Link>
+            <Link style={linkstyle} to="/earthscience">
+              <Links>Earth Science</Links>
+            </Link>
+            <Link style={linkstyle} to="/physics">
+              <Links>Physics</Links>
+            </Link>
           </EventsDiv>
           <OtherDiv>
             <a className="title-event">Resources</a>
-            <Links>Join us</Links>
-            <Links>About us</Links>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "0" }}
+            >
+              <Links>Join us</Links>
+            </a>
+            <Link style={linkstyle} to="/about">
+              <Links>About us</Links>
+            </Link>
             <Links>Contact</Links>
-            <Links>Board</Links>
-            <Links>FAQs</Links>
+            <Link style={linkstyle} to="/board">
+              <Links>Board</Links>
+            </Link>
+            <Link style={linkstyle} to="/faqs">
+              <Links>FAQs</Links>
+            </Link>
           </OtherDiv>
           <OtherDiv>
             <a className="title-event">Support</a>
-            <Links>Technical form</Links>
-            <Links>Suggestions form</Links>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdIzC1T9ZwPq9FeiL4gyvtvDuHyr-uI2FbGHJp9f33Q-KfpKg/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "0" }}
+            >
+              <Links>Technical issues</Links>
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdEMJG5UpgZQ7wvTRR0oq0o3wdqEekVfP6d1zzqsfIMzU1iGA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "0" }}
+            >
+              <Links>Suggestions form</Links>
+            </a>
           </OtherDiv>
         </FooterDiv>
       </Box>
     </IconContext.Provider>
   );
 };
+
+const linkstyle = {
+  margin: "0",
+  width: "120px",
+};
+
 const MediaDiv = styled.div`
   display: flex;
   flex-direction: column;

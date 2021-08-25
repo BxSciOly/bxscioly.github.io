@@ -100,8 +100,7 @@ const EventDesc = styled.h5`
 `;
 
 const BubbleCard = styled.div`
-  background: black;
-  color: white;
+  border: 3px solid black;
   border-radius: 30px;
   width: 500px;
   padding: 20px;
@@ -109,6 +108,7 @@ const BubbleCard = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 400px;
+  cursor: default;
 
   &:hover {
     transform: scale(1.02);
@@ -125,11 +125,10 @@ const BubbleCard = styled.div`
 const Cover = styled.div`
   height: 300px;
   width: 100%;
-  border: 2px solid black;
+  border: 3px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #74cc66;
   color: black;
   margin-bottom: 10px;
   font-size: 100px;

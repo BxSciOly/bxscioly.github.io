@@ -64,8 +64,30 @@ const Schedule = () => {
           schedule.
         </Text>
       </Warning>
+      <SummerScheduleLink>
+        NOTE: The official season schedule has not determined yet. Please visit
+        <span>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1SOQx93un6jy2RVqUmSiDOrm4a25DmNS_87F0hmCJUkk/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "black",
+              textDecoration: "underline",
+              display: "inline",
+            }}
+          >
+            this link
+          </a>
+        </span>
+        for our summer schedule.
+      </SummerScheduleLink>
     </ScheduleDiv>
   );
 };
+
+const SummerScheduleLink = styled.h2`
+  margin-top: 20px;
+`;
 
 export default Schedule;

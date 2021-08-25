@@ -94,9 +94,28 @@ const Sidebar = () => {
             <Links to="/about">
               <SidebarItem>About</SidebarItem>
             </Links>
-            <div className="events-div">
-              <SidebarItem>Events</SidebarItem>{" "}
-              <FaIcons.FaCaretDown className="caret" />
+            <div className="dropdown">
+              <div className="dropbtn">
+                <SidebarItem>Events</SidebarItem>
+                <FaIcons.FaCaretDown className="caret" />
+              </div>
+              <div className="dropdown-content">
+                <EventLinks to="/biology">
+                  <a href="#">Biology</a>
+                </EventLinks>
+                <EventLinks to="/earthscience">
+                  <a href="#">Earth Science</a>
+                </EventLinks>
+                <EventLinks to="/build">
+                  <a href="#">Build</a>
+                </EventLinks>
+                <EventLinks to="/chemistry">
+                  <a href="#">Chemistry</a>
+                </EventLinks>
+                <EventLinks to="/physics">
+                  <a href="#">Physics</a>
+                </EventLinks>
+              </div>
             </div>
             <Links to="/board">
               <SidebarItem>Board</SidebarItem>
@@ -104,8 +123,14 @@ const Sidebar = () => {
             <Links to="faqs">
               <SidebarItem>FAQs</SidebarItem>
             </Links>
-            <NavJoinButton>Interest Form</NavJoinButton>
           </SidebarDiv>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <NavJoinButton>Interest Form</NavJoinButton>
+          </a>
         </NavBar>
       )}
     </>
@@ -116,6 +141,8 @@ const Links = styled(Link)`
   background: black;
   height: 0px;
 `;
+
+const EventLinks = styled(Link)``;
 
 const SidebarDiv = styled.div`
   height: 100%;
@@ -130,7 +157,7 @@ const SidebarItem = styled.p`
   font-size: 20px;
   margin: 15px;
   font-family: roboto, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   width: 50px;
 `;
 
@@ -192,11 +219,12 @@ const JoinButton = styled.button`
 const NavJoinButton = styled.button`
   margin-left: 20px;
   width: 175px;
-  height: 50px;
-  font-size: 15px;
+  height: 45px;
+  font-size: 20px;
   border: 2px solid black;
   background: white;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: roboto, sans-serif;
 
   &:hover {
     cursor: pointer;

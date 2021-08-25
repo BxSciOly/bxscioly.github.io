@@ -81,7 +81,6 @@ const Home = () => {
           </a>
         </BackgroundDiv>
       </div>
-      {/* <Carousel slides={CarouselData} /> */}
       <HomeBackground>
         <Info />
         <Upcoming />

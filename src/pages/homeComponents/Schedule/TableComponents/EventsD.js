@@ -13,16 +13,16 @@ const EventsD = () => {
       event: "6:00PM",
     },
     {
-      event: "GeoMapping",
+      event: "",
     },
     {
-      event: "Experimental Design",
+      event: "",
     },
     {
-      event: "Water Quality, Gravity Vehicle",
+      event: "",
     },
     {
-      event: "Wright Stuff, Designer Genes",
+      event: "",
     },
     {
       event: "",

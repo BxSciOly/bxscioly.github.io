@@ -46,15 +46,42 @@
     display: none;
 
   }
-  
-  .caret {
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
 
-  .events-div {
+  .dropbtn {
     display: flex;
     align-items: center;
   }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    min-width: 180px;
+    z-index: 1;
+    top: 100%;
+    margin-top: -5px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .dropdown-content a:hover {
+    text-decoration: underline;
+  }
+
+  .dropdown:hover .dropdown-content, .dropdown-content:hover {
+    display: block;
+  }
+  
   @media (max-width: 600px) {
     .logo-title {
       display: none;
