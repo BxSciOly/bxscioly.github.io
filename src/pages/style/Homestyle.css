@@ -1,26 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
+@font-face {
+    font-family: 'retroica';
+    src: url("./fonts/Retroica.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
 body {
     color: black;
-    font-family: Roboto, sans-serif;
 }
 
 .bxsci {
     font-size: 100px;
-    user-select: none;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: retroica;
 }
 
 .scioly {
     font-size: 100px;
-    user-select: none;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: retroica;
 }
 
 .desc {
     font-size: 40px;
-    user-select: none;
+    font-weight: 200;
+    font-family: retroica;
 }
 
 .scioly:hover, .bxsci:hover, .desc:hover {

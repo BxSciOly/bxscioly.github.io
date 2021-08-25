@@ -1,30 +1,33 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
+import { useMediaQuery } from "@react-hook/media-query";
 import { Link } from "react-router-dom";
 import * as RiIcons from "react-icons/ri";
+import * as FaIcons from "react-icons/fa";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
 import "./sidebar.css";
+import { black } from "chalk";
 
-let useClickOutside = (handler) => {
-  let menuRef = useRef();
+// let useClickOutside = (handler) => {
+//   let menuRef = useRef();
 
-  useEffect(() => {
-    let maybeHandler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
-        handler();
-      }
-    };
+//   useEffect(() => {
+//     let maybeHandler = (event) => {
+//       if (!menuRef.current.contains(event.target)) {
+//         handler();
+//       }
+//     };
 
-    document.addEventListener("mousedown", maybeHandler);
+//     document.addEventListener("mousedown", maybeHandler);
 
-    return () => {
-      document.removeEventListener("mousedown", maybeHandler);
-    };
-  });
-  return menuRef;
-};
+//     return () => {
+//       document.removeEventListener("mousedown", maybeHandler);
+//     };
+//   });
+//   return menuRef;
+// };
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -33,53 +36,103 @@ const Sidebar = () => {
 
   const moveText = () => setText(!text);
 
-  let menuRef = useClickOutside(() => {
-    setSidebar(false);
-  });
+  // let menuRef = useClickOutside(() => {
+  //   setSidebar(false);
+  // });
 
   const AllFuncts = () => {
     moveText();
     showSidebar();
   };
 
+  const isPageWide = useMediaQuery("(max-width: 600px)");
   return (
     <>
-      <IconContext.Provider value={{ color: "black" }}>
-        {/* className={navbar ? "navbar active" : "navbar"} */}
-        <nav className={"navbar"}>
-          <NavIcon to="#">
-            <RiIcons.RiMenu2Fill onClick={AllFuncts} />
-          </NavIcon>
-          <h2 className={sidebar ? "logo-title-moved" : "logo-title"}>
-            BRONX SCIENCE OLYMPIAD
-          </h2>
-          <h2 className="icon-logo">BXSCIOLY</h2>
-        </nav>
-      </IconContext.Provider>
-      <IconContext.Provider value={{ color: "black", size: "25" }}>
-        <SidebarNav ref={menuRef} sidebar={sidebar}>
-          <SidebarWrap>
-            <IconContext.Provider value={{ color: "black" }}>
+      {isPageWide ? (
+        <>
+          <IconContext.Provider value={{ color: "black" }}>
+            {/* className={navbar ? "navbar active" : "navbar"} */}
+            <nav className={"navbar"}>
               <NavIcon to="#">
-                <RiIcons.RiMenu3Fill onClick={AllFuncts} />
+                <RiIcons.RiMenu2Fill onClick={AllFuncts} />
               </NavIcon>
-            </IconContext.Provider>
-            {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />;
-            })}
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <JoinButton>Interest Form</JoinButton>
-            </a>
-          </SidebarWrap>
-        </SidebarNav>
-      </IconContext.Provider>
+              <h2 className={sidebar ? "logo-title-moved" : "logo-title"}>
+                BRONX SCIENCE OLYMPIAD
+              </h2>
+              <h2 className="icon-logo">BXSCIOLY</h2>
+            </nav>
+          </IconContext.Provider>
+          <IconContext.Provider value={{ color: "black", size: "25" }}>
+            <SidebarNav /* ref={menuRef} */ sidebar={sidebar}>
+              <SidebarWrap>
+                <IconContext.Provider value={{ color: "black" }}>
+                  <NavIcon to="#">
+                    <RiIcons.RiMenu3Fill onClick={AllFuncts} />
+                  </NavIcon>
+                </IconContext.Provider>
+                {SidebarData.map((item, index) => {
+                  return <SubMenu item={item} key={index} />;
+                })}
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <JoinButton>Interest Form</JoinButton>
+                </a>
+              </SidebarWrap>
+            </SidebarNav>
+          </IconContext.Provider>
+        </>
+      ) : (
+        <NavBar>
+          <h1 className="logo">BXSCIOLY</h1>
+          <SidebarDiv>
+            <Links to="/home">
+              <SidebarItem>Home</SidebarItem>
+            </Links>
+            <Links to="/about">
+              <SidebarItem>About</SidebarItem>
+            </Links>
+            <div className="events-div">
+              <SidebarItem>Events</SidebarItem>{" "}
+              <FaIcons.FaCaretDown className="caret" />
+            </div>
+            <Links to="/board">
+              <SidebarItem>Board</SidebarItem>
+            </Links>
+            <Links to="faqs">
+              <SidebarItem>FAQs</SidebarItem>
+            </Links>
+            <NavJoinButton>Interest Form</NavJoinButton>
+          </SidebarDiv>
+        </NavBar>
+      )}
     </>
   );
 };
+
+const Links = styled(Link)`
+  background: black;
+  height: 0px;
+`;
+
+const SidebarDiv = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+`;
+
+const SidebarItem = styled.p`
+  color: black;
+  font-size: 20px;
+  margin: 15px;
+  font-family: roboto, sans-serif;
+  font-weight: 600;
+  width: 50px;
+`;
 
 const NavIcon = styled(Link)`
   margin-left: 2rem;
@@ -134,6 +187,30 @@ const JoinButton = styled.button`
     -webkit-box-shadow: 5px 5px 0px 2px #000000;
     box-shadow: 5px 5px 0px 2px #000000;
   }
+`;
+
+const NavJoinButton = styled.button`
+  margin-left: 20px;
+  width: 175px;
+  height: 50px;
+  font-size: 15px;
+  border: 2px solid black;
+  background: white;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 0px 2px #000000;
+    box-shadow: 5px 5px 0px 2px #000000;
+  }
+`;
+
+const NavBar = styled.div`
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
 `;
 
 export default Sidebar;

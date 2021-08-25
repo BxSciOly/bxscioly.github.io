@@ -1,98 +1,118 @@
 import React from "react";
 import styled from "styled-components";
-import * as RiIcons from "react-icons/ri";
-import * as AiIcons from "react-icons/ai";
+import * as GrIcons from "react-icons/gr";
 import * as FaIcons from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import "./footer.css";
 
 const FooterDiv = styled.div`
-  height: 50px;
-  width: 100%;
-  background: #ffb44e;
+  width: 70%;
+  padding: 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   z-index: 999;
-  color: black;
+  color: white;
+  justify-content: center;
 
   @media (max-width: 600px) {
     background: #f7b800;
   }
 `;
 const Box = styled.div`
-  padding: 40px;
-  background: #ffb44e;
   width: 100%;
-  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  background: black;
+
   @media (max-width: 1000px) {
     padding: 70px 30px;
     background: #f7b800;
   }
 `;
 
-const IconDiv = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  margin-right: 30px;
-  align-items: center;
-`;
-
 const Footer = () => {
   return (
-    <IconContext.Provider value={{ color: "white", size: "30" }}>
+    <IconContext.Provider value={{ color: "white", size: "20" }}>
       <Box>
-        <div style={{ display: "flex", marginLeft: "40px" }}>
-          <IconDiv>
+        <FooterDiv className="footer">
+          <MediaDiv>
+            <a className="title">BxScioly</a>
             <a
               href="https://www.instagram.com/bx_sci_oly/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiIcons.AiFillInstagram />
+              <FaIcons.FaInstagram />
+              <p>Instagram</p>
             </a>
-          </IconDiv>
-          <IconDiv>
             <a
               href="https://discord.gg/ntPFKrTFEC"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <RiIcons.RiDiscordFill />
+              <GrIcons.GrFacebook />
+              <p>Facebook</p>
             </a>
-          </IconDiv>
-          <IconDiv>
             <a
               href="https://www.facebook.com/Bxscioly/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <RiIcons.RiFacebookFill />
+              <FaIcons.FaDiscord />
+              <p>Discord</p>
             </a>
-          </IconDiv>
-          <IconDiv>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdIzC1T9ZwPq9FeiL4gyvtvDuHyr-uI2FbGHJp9f33Q-KfpKg/viewform?usp=sf_link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaIcons.FaQuestion />
-            </a>
-          </IconDiv>
-        </div>
+          </MediaDiv>
+          <EventsDiv>
+            <a className="title-event">Explore Topics</a>
+            <Links>Biology</Links>
+            <Links>Build</Links>
+            <Links>Chemistry</Links>
+            <Links>Earth Science</Links>
+            <Links>Physics</Links>
+          </EventsDiv>
+          <OtherDiv>
+            <a className="title-event">Resources</a>
+            <Links>Join us</Links>
+            <Links>About us</Links>
+            <Links>Contact</Links>
+            <Links>Board</Links>
+            <Links>FAQs</Links>
+          </OtherDiv>
+          <OtherDiv>
+            <a className="title-event">Support</a>
+            <Links>Technical form</Links>
+            <Links>Suggestions form</Links>
+          </OtherDiv>
+        </FooterDiv>
       </Box>
-      <FooterDiv className="footer">
-        ©2021 BxScioly. All Rights Reserved.
-      </FooterDiv>
     </IconContext.Provider>
   );
 };
+const MediaDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 300px;
+  margin-right: 30px;
+`;
+
+const EventsDiv = styled.div`
+  padding: 30px;
+  margin-right: 30px;
+`;
+
+const OtherDiv = styled.div`
+  padding: 30px;
+  margin-right: 30px;
+`;
+
+const Links = styled.p`
+  margin-bottom: 15px;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
 
 export default Footer;
