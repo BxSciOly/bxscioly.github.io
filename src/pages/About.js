@@ -4,6 +4,9 @@ import { Slide } from "react-slideshow-image";
 import scioly1 from "./scioly1.jpg";
 import scioly2 from "./scioly2.jpg";
 import scioly3 from "./scioly3.jpg";
+import * as BsIcons from "react-icons/bs";
+import * as IoIcons from "react-icons/io5";
+import * as RiIcons from "react-icons/ri";
 import "react-slideshow-image/dist/styles.css";
 import "./style/Homestyle.css";
 const slideImages = [scioly1, scioly2, scioly3];
@@ -32,6 +35,17 @@ const About = () => {
             knowledge" - Carl Sagan
           </h2>
         </Title>
+        <AchievementsWrap>
+          {achievementsData.map((item) => (
+            <Card>
+              <div className="item-icon">{item.icon}</div>
+              <div className="number">{item.number}</div>
+              <div className="descript">{item.description}</div>
+              {item.break}
+              {item.break}
+            </Card>
+          ))}
+        </AchievementsWrap>
         <Header>
           <ImageDiv>
             <Slide easing="ease">
@@ -53,15 +67,18 @@ const About = () => {
             </Slide>
           </ImageDiv>
           <TextDiv>
+            <h2 className="about-title">Our Purpose</h2>
             <h3 className="about-text">
               The BxSci Science Olympiad Team is dedicated to exploring the
               world of science in every scientific discipline, from biology to
-              mathematics to engineering. We are student-led, meaning that we do
-              not rely heavily on teacher coaching and instruction and value
-              qualities such as leadership and teamwork. As an academic team, we
-              not only work towards a strong performance at annual competitions,
-              but we also help budding scientists to discover their potential
-              outside of competition, offering advice and support to students on
+              mathematics to engineering. <br />
+              <br />
+              We are student-led, meaning that we do not rely heavily on teacher
+              coaching and instruction and value qualities such as leadership
+              and teamwork. As an academic team, we not only work towards a
+              strong performance at annual competitions, but we also help
+              budding scientists to discover their potential outside of
+              competitions, offering advice and support to students on
               non-Science Olympiad related fronts.
             </h3>
           </TextDiv>
@@ -71,10 +88,44 @@ const About = () => {
   );
 };
 
+const achievementsData = [
+  {
+    icon: <BsIcons.BsPerson />,
+    number: "150+",
+    description:
+      "We have over 150 members and over 20 topics that range through all the branches of science.",
+    break: <br />,
+  },
+  {
+    icon: <IoIcons.IoTrophyOutline />,
+    number: "1st",
+    description:
+      "We won first place at the 2021 Regionals competition and 11th place in the subsequent States competition.",
+    break: <br />,
+  },
+  {
+    icon: <RiIcons.RiLineChartLine />,
+    number: "2022",
+    description:
+      "Our teams have been achieving higher placements in regional and state competitions every year. Having just qualified for States in 2018, our team has now climbed from 40th place to 11th.",
+  },
+];
+
+const Card = styled.div`
+  background: white;
+  height: 400px;
+  border: 3px solid black;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+`;
+
 const Header = styled.div`
   width: 80%;
   background: white;
-  justify-content: center;
   display: flex;
   color: black;
   padding: 90px;
@@ -86,6 +137,14 @@ const Header = styled.div`
     width: 100%;
     border-radius: 20px 0 20px 0;
   }
+`;
+
+const AchievementsWrap = styled.div`
+  height: 500px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const Title = styled.div`
@@ -109,11 +168,6 @@ const ImageDiv = styled.div`
 `;
 
 const TextDiv = styled.div`
-  width: 500px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
 
   @media (max-width: 600px) {
@@ -125,7 +179,6 @@ const TextDiv = styled.div`
 
 const Page = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 20px;

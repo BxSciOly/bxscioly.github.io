@@ -81,7 +81,6 @@ body {
 .about-text {
     font-weight: 400;
     font-size: 20px;
-    text-align: center;
 }
 
 .each-slide > div {
@@ -89,8 +88,28 @@ body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    height: 400px;
+    height: 450px;
   }
+
+.about-title {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.item-icon {
+   font-size: 55px; 
+}
+
+.number {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.descript {
+    font-size: 18px;
+    margin-top: 70px;
+    text-align: center;
+}
 
 
 @media (max-width: 600px) {

@@ -17,6 +17,7 @@
     "connected-react-router": "^6.9.1",
     "drei": "^2.2.21",
     "file-loader": "^6.2.0",
+    "firebase": "^9.0.0",
     "gsap": "^3.7.1",
     "react": "^17.0.2",
     "react-custom-scroll": "^4.3.0",
