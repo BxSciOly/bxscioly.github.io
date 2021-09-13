@@ -4,12 +4,15 @@ import { Slide } from "react-slideshow-image";
 import scioly1 from "./images/scioly1.jpg";
 import scioly2 from "./images/scioly2.jpg";
 import scioly3 from "./images/scioly3.jpg";
+import scioly4 from "./images/scioly4.jpg";
+import scioly5 from "./images/scioly5.jpg";
+import scioly6 from "./images/scioly6.jpg";
 import * as BsIcons from "react-icons/bs";
 import * as IoIcons from "react-icons/io5";
 import * as RiIcons from "react-icons/ri";
 import "react-slideshow-image/dist/styles.css";
 import "./style/Homestyle.css";
-const slideImages = [scioly1, scioly2, scioly3];
+const slideImages = [scioly1, scioly2, scioly3, scioly4, scioly5, scioly6];
 
 const About = () => {
   return (
@@ -35,17 +38,6 @@ const About = () => {
             knowledge" - Carl Sagan
           </h2>
         </Title>
-        <AchievementsWrap>
-          {achievementsData.map((item) => (
-            <Card>
-              <div className="item-icon">{item.icon}</div>
-              <div className="number">{item.number}</div>
-              <div className="descript">{item.description}</div>
-              {item.break}
-              {item.break}
-            </Card>
-          ))}
-        </AchievementsWrap>
         <Header>
           <ImageDiv>
             <Slide easing="ease">
@@ -62,6 +54,21 @@ const About = () => {
               <div className="each-slide">
                 <div
                   style={{ backgroundImage: `url(${slideImages[2]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[3]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[4]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[5]})` }}
                 ></div>
               </div>
             </Slide>
@@ -84,6 +91,17 @@ const About = () => {
             </h3>
           </TextDiv>
         </Header>
+        <AchievementsWrap>
+          {achievementsData.map((item) => (
+            <Card>
+              <div className="item-icon">{item.icon}</div>
+              <div className="number">{item.number}</div>
+              <div className="descript">{item.description}</div>
+              {item.break}
+              {item.break}
+            </Card>
+          ))}
+        </AchievementsWrap>
       </Page>
     </>
   );

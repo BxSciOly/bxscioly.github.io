@@ -54,16 +54,16 @@ const Schedule = () => {
   return (
     <ScheduleDiv>
       <Title>SCHEDULE</Title>
-      <ScheduleA>
+      {/* <ScheduleA>
         <Table />
-      </ScheduleA>
-      <Warning>
+      </ScheduleA> */}
+      {/* <Warning>
         <Text>
           Our event schedule is currently not available on mobile versions of
           our website. Please visit this page on a larger device to view the
           schedule.
         </Text>
-      </Warning>
+      </Warning> */}
       <SummerScheduleLink>
         NOTE: The official season schedule has not determined yet. Please visit
         <span>
