@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
-import scioly1 from "./scioly1.jpg";
-import scioly2 from "./scioly2.jpg";
-import scioly3 from "./scioly3.jpg";
+import scioly1 from "./images/scioly1.jpg";
+import scioly2 from "./images/scioly2.jpg";
+import scioly3 from "./images/scioly3.jpg";
 import * as BsIcons from "react-icons/bs";
 import * as IoIcons from "react-icons/io5";
 import * as RiIcons from "react-icons/ri";
@@ -71,7 +71,8 @@ const About = () => {
             <h3 className="about-text">
               The BxSci Science Olympiad Team is dedicated to exploring the
               world of science in every scientific discipline, from biology to
-              mathematics to engineering. <br />
+              mathematics to engineering. prepare students for future careers
+              <br />
               <br />
               We are student-led, meaning that we do not rely heavily on teacher
               coaching and instruction and value qualities such as leadership
@@ -91,9 +92,9 @@ const About = () => {
 const achievementsData = [
   {
     icon: <BsIcons.BsPerson />,
-    number: "150+",
+    number: "200+",
     description:
-      "We have over 150 members and over 20 topics that range through all the branches of science.",
+      "We have over 200 members and over 20 topics that range through all the branches of science.",
     break: <br />,
   },
   {
