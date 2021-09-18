@@ -31,6 +31,7 @@ const Wrap = styled.div`
   padding: 50px;
   display: flex;
   justify-content: center;
+  border-radius: 40px;
 
   @media (max-width: 600px) {
     width: 100%;

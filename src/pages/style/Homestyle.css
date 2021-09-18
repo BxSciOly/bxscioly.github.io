@@ -9,6 +9,7 @@ body {
     font-size: 100px;
     font-weight: 700;
     font-family: 'Inter';
+    color: white;
 }
 
 .scioly {
@@ -16,12 +17,14 @@ body {
     margin-bottom: 20px;
     font-weight: 700;
     font-family: 'Inter';
+    color: white;
 }
 
 .desc {
     font-size: 40px;
     font-weight: 600;
     font-family: 'Inter';
+    color: white;
 }
 
 .scioly:hover, .bxsci:hover, .desc:hover {
@@ -103,6 +106,13 @@ body {
     font-size: 18px;
     margin-top: 70px;
     text-align: center;
+}
+
+.background {
+    width: 100vw;
+    position: absolute;
+    margin-top: -300px;
+    z-index: -100;
 }
 
 

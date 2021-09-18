@@ -4,6 +4,7 @@ import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Schedule from "./homeComponents/Schedule/Schedule";
 import Info from "./Info/Info";
+import Background from "./background.mp4";
 
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -17,7 +18,10 @@ const Home = () => {
 
   return (
     <div className="page">
-      <svg
+      <video autoPlay loop muted className="background">
+        <source src={Background} type="video/mp4" />
+      </video>
+      {/* <svg
         className="blob-1"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +64,11 @@ const Home = () => {
           d="M40.6,-24.4C54,-0.4,66.9,22.9,60.1,39.1C53.3,55.4,26.6,64.6,0.5,64.3C-25.6,64,-51.2,54.2,-62.1,35.6C-73.1,16.9,-69.3,-10.5,-56.5,-34.1C-43.7,-57.8,-21.9,-77.8,-4.1,-75.4C13.7,-73.1,27.3,-48.4,40.6,-24.4Z"
           transform="translate(100 100)"
         />
-      </svg>
+      </svg> */}
       <div className="home">
         <BackgroundDiv
           style={{
-            transform: `translateY(${offsetY * 0.15}px)`,
+            transform: `translateY(${offsetY * 0.10}px)`,
             transition: "0s all",
           }}
         >
@@ -121,9 +125,9 @@ const JoinButton = styled.button`
   width: 300px;
   height: 60px;
   font-size: 20px;
-  color: white;
+  color: cp;pr;
   border: none;
-  background: black;
+  background: white;
   font-weight: 600;
   border-radius: 30px;
   cursor: pointer;

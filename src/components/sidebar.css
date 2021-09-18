@@ -1,30 +1,31 @@
-  @font-face {
-    font-family: 'jumper';
-    src: url("./Jumper.ttf");
-    font-style: normal;
-    font-weight: 100;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+  .whiteClassName {
+    color: white;
+    transition: 0s all;
+    
   }
 
-  @font-face {
-    font-family: 'bebas';
-    src: url("./Bebas.otf");
-    font-style: normal;
-    font-weight: 100;
+  .regularClassName {
+    color: black;
   }
 
-  @font-face {
-    font-family: 'retroica';
-    src: url("../pages/style/fonts/Retroica.ttf");
-    font-style: normal;
-    font-weight: 100;
-  }
-
-  .logo {
-    font-family: retroica;
+  .logoWhite {
+    color: white;
+    font-family: Inter;
     cursor: pointer;
     font-size: 37px;
-    margin-left: 20px;
   }
+
+  .logoBlack {
+    color: black;
+    font-family: Inter;
+    cursor: pointer;
+    font-size: 37px;
+  }
+
+  
 
   .logo-title {
     cursor: pointer;
@@ -50,6 +51,7 @@
   .dropdown {
     position: relative;
     display: inline-block;
+    color: white;
   }
 
   .dropbtn {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useLocation } from "react-router";
 import styled from "styled-components";
 import { useMediaQuery } from "@react-hook/media-query";
 import { Link } from "react-router-dom";
@@ -8,7 +9,6 @@ import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
 import "./sidebar.css";
-import { black } from "chalk";
 
 // let useClickOutside = (handler) => {
 //   let menuRef = useRef();
@@ -29,12 +29,13 @@ import { black } from "chalk";
 //   return menuRef;
 // };
 
+
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   const [text, setText] = useState(false);
-
   const moveText = () => setText(!text);
+  const location = useLocation();
 
   // let menuRef = useClickOutside(() => {
   //   setSidebar(false);
@@ -62,7 +63,7 @@ const Sidebar = () => {
               <h2 className="icon-logo">BXSCIOLY</h2>
             </nav>
           </IconContext.Provider>
-          <IconContext.Provider value={{ color: "black", size: "25" }}>
+          <IconContext.Provider value={{ color: "white", size: "25" }}>
             <SidebarNav /* ref={menuRef} */ sidebar={sidebar}>
               <SidebarWrap>
                 <IconContext.Provider value={{ color: "black" }}>
@@ -86,18 +87,20 @@ const Sidebar = () => {
         </>
       ) : (
         <NavBar>
-          <h1 className="logo">BXSCIOLY</h1>
+          <Link to="/home">
+            <h1 className={`${location.pathname === "/home" ? 'logoWhite' : 'logoBlack'}`}>BXSCIOLY</h1>
+          </Link>
           <SidebarDiv>
             <Links to="/home">
-              <SidebarItem>Home</SidebarItem>
+              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>Home</SidebarItem>
             </Links>
             <Links to="/about">
-              <SidebarItem>About</SidebarItem>
+              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>About</SidebarItem>
             </Links>
             <div className="dropdown">
               <div className="dropbtn">
-                <SidebarItem>Events</SidebarItem>
-                <FaIcons.FaCaretDown className="caret" />
+                <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>Events</SidebarItem>
+                <FaIcons.FaCaretDown className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`} />
               </div>
               <div className="dropdown-content">
                 <EventLinks to="/biology">
@@ -118,10 +121,10 @@ const Sidebar = () => {
               </div>
             </div>
             <Links to="/board">
-              <SidebarItem>Board</SidebarItem>
+              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>Board</SidebarItem>
             </Links>
             <Links to="faqs">
-              <SidebarItem>FAQs</SidebarItem>
+              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>FAQs</SidebarItem>
             </Links>
           </SidebarDiv>
           <a
@@ -153,7 +156,6 @@ const SidebarDiv = styled.div`
 `;
 
 const SidebarItem = styled.p`
-  color: black;
   font-size: 20px;
   margin: 15px;
   font-family: roboto, sans-serif;
