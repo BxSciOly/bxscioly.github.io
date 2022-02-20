@@ -92,10 +92,12 @@ export const Physics = () => {
 
 const EventTitle = styled.h6`
   font-size: 30px;
+  text-align: center;
+  margin-bottom: 2rem;
 `;
 
 const EventDesc = styled.h5`
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 200;
 `;
 
@@ -103,7 +105,7 @@ const BubbleCard = styled.div`
   border: 3px solid black;
   border-radius: 30px;
   width: 500px;
-  padding: 20px;
+  padding: 4rem;
   margin: 20px;
   display: flex;
   flex-direction: column;

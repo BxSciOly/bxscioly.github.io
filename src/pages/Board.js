@@ -20,11 +20,9 @@ const Board = () => {
           return (
             <Card>
               <Background src={item.background} />
-              <DescWrap>
-                <Name>{item.name}</Name>
-                <Position>{item.title}</Position>
-                <Description>{item.desc}</Description>
-              </DescWrap>
+              <Name>{item.name}</Name>
+              <Position>{item.title}</Position>
+              <Description>{item.desc}</Description>              
             </Card>
           );
         })}
@@ -65,10 +63,11 @@ const Title = styled.h1`
 const Background = styled.img`
   height: 200px;
   width: 150px;
-  margin: 0;
+  margin-bottom: 2rem;
   user-select: none;
   user-drag: none;
   border: 3px solid black;
+  border-radius: 10px;
 
   @media (max-width: 600px) {
     height: 270px;
@@ -76,30 +75,26 @@ const Background = styled.img`
   }
 `;
 
-const BoardDiv = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 30px;
-`;
-
-const DescWrap = styled.div`
-  width: 800px;
+const BoardDiv = styled.div` 
+  display: grid;
+  grid-template-areas: 
+    "p1 p2";
+  gap: 1rem 0;
+  padding: 0 15rem;
 `;
 
 const Card = styled.div`
-  height: 250px;
-  width: 1100px;
-  margin: 10px;
+
   border: 3px solid black;
   color: black;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: start;
   flex-direction: column;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 4rem;
 
   @media (max-width: 600px) {
     height: 480px;
