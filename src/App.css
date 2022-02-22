@@ -28,6 +28,10 @@ html, body {
   background-color: var(--primary-color);
 }
 
+body {
+  background-color: #000;
+}
+
 .home,
 .events,
 .products,

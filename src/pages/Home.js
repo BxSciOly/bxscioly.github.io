@@ -6,7 +6,6 @@ import Schedule from "./homeComponents/Schedule/Schedule";
 import Timeline from "./homeComponents/Timeline/Timeline";
 import Info from "./Info/Info";
 import Background from "./background.mp4";
-import Sidebar from "../components/Sidebar";
 
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -20,7 +19,6 @@ const Home = () => {
 
   return (
     <div className="page">
-      <Sidebar />
       <video autoPlay loop muted className="background">
         <source src={Background} type="video/mp4" />
       </video>
@@ -149,6 +147,7 @@ const JoinButton = styled.button`
 
 const Title = styled.h3`
   color: var(--primary-color);
+  text-shadow: 0 0 12px var(--primary-color);
 `
 
 const Image = styled.img`

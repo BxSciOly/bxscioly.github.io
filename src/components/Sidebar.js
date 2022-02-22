@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router";
 import styled from "styled-components";
 import { useMediaQuery } from "@react-hook/media-query";
@@ -156,13 +156,13 @@ const Sidebar = () => {
                   <a href="#">Earth Science</a>
                 </EventLinks>
                 <EventLinks to="/build">
-                  <a href="#">Build</a>
+                  <a>Build</a>
                 </EventLinks>
                 <EventLinks to="/chemistry">
-                  <a href="#">Chemistry</a>
+                  <a>Chemistry</a>
                 </EventLinks>
                 <EventLinks to="/physics">
-                  <a href="#">Physics</a>
+                  <a>Physics</a>
                 </EventLinks>
               </div>
             </div>
@@ -186,8 +186,9 @@ const Links = styled(Link)`
 `;
 
 const NavDiv = styled.div`
-  z-index: 999;
-  background-color: var(--secondary-color);
+  border-bottom: 2px solid #fff;
+  padding: 0 5rem;
+  background-color: #000;
 `;
 
 const EventLinks = styled(Link)``;
@@ -197,7 +198,7 @@ const SidebarDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 `;
 
 const SidebarItem = styled.p`
@@ -284,7 +285,7 @@ const NavBar = styled.div`
   height: 105px;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+
   align-items: center;
 `;
 

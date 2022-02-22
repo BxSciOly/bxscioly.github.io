@@ -15,21 +15,21 @@ import About from "./pages/About";
 
 function App() {
   return (
-    <HashRouter>
-      <Sidebar />
-      <Switch>
-        <Redirect exact from="/" to="/home" />
-        <Route path="/home" exact component={Home} />
-        <Route path="/about" exact component={About} />
-        <Route path="/biology" exact component={Biology} />
-        <Route path="/earthscience" exact component={EarthScience} />
-        <Route path="/build" exact component={Build} />
-        <Route path="/chemistry" exact component={Chemistry} />
-        <Route path="/physics" exact component={Physics} />
-        <Route path="/faqs" exact component={Faqs} />
-      </Switch>
-      <Footer />
-    </HashRouter>
+      <HashRouter>
+        <Sidebar />
+        <Switch>
+          <Redirect exact from="/" to="/home" />
+          <Route path="/home" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/biology" exact component={Biology} />
+          <Route path="/earthscience" exact component={EarthScience} />
+          <Route path="/build" exact component={Build} />
+          <Route path="/chemistry" exact component={Chemistry} />
+          <Route path="/physics" exact component={Physics} />
+          <Route path="/faqs" exact component={Faqs} />
+        </Switch>
+        <Footer />
+      </HashRouter>
   );
 }
 

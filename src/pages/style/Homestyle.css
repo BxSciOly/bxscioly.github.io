@@ -10,6 +10,7 @@ body {
     font-weight: 700;
     font-family: 'Inter';
     color: white;
+    text-shadow: 0 0 10px #fff;
 }
 
 .scioly {
@@ -114,8 +115,6 @@ body {
 .background {
     width: 100vw;
     position: absolute;
-    margin-top: -300px;
-    z-index: 0;
 }
 
 .logo {
