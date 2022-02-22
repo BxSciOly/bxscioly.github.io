@@ -12,6 +12,9 @@ import * as IoIcons from "react-icons/io5";
 import * as RiIcons from "react-icons/ri";
 import "react-slideshow-image/dist/styles.css";
 import "./style/Homestyle.css";
+
+import Board from "./otherComponents/Board/Board";
+
 const slideImages = [scioly1, scioly2, scioly3, scioly4, scioly5, scioly6];
 
 const About = () => {
@@ -102,7 +105,8 @@ const About = () => {
             </Card>
           ))}
         </AchievementsWrap>
-        <img src="/transparent.png" alt="logo" />
+        <img src="/transparent.png" alt="logo" className="logo" />
+        <Board />
       </Page>
     </>
   );

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.pfp {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;;
+}

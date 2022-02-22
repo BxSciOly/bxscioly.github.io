@@ -87,6 +87,7 @@ body {
     justify-content: center;
     background-size: cover;
     height: 450px;
+    border-radius: 30px;
   }
 
 .about-title {
@@ -115,6 +116,12 @@ body {
     position: absolute;
     margin-top: -300px;
     z-index: 0;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    margin: 3rem 0;
 }
 
 

@@ -9,7 +9,6 @@ import {
   EarthScience,
   Physics,
 } from "./pages/Events";
-import Board from "./pages/Board";
 import Faqs from "./pages/Faqs";
 import Footer from "./components/Footer";
 import About from "./pages/About";
@@ -27,7 +26,6 @@ function App() {
         <Route path="/build" exact component={Build} />
         <Route path="/chemistry" exact component={Chemistry} />
         <Route path="/physics" exact component={Physics} />
-        <Route path="/board" exact component={Board} />
         <Route path="/faqs" exact component={Faqs} />
       </Switch>
       <Footer />
