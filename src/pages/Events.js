@@ -108,7 +108,7 @@ const BubbleCard = styled.div`
   background-color: var(--secondary-color);
   border-radius: 30px;
   border: 2.5px solid var(--secondary-color);
-  width: 700px;
+  width: 600px;
   padding: 4rem;
   margin: 2rem;
   display: flex;

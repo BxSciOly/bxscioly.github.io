@@ -65,7 +65,7 @@ const Sidebar = () => {
           <IconContext.Provider value={{ color: "white", size: "25" }}>
             <SidebarNav /* ref={menuRef} */ sidebar={sidebar}>
               <SidebarWrap>
-                <IconContext.Provider value={{ color: "black" }}>
+                <IconContext.Provider value={{ color: "white" }}>
                   <NavIcon to="#">
                     <RiIcons.RiMenu3Fill onClick={AllFuncts} />
                   </NavIcon>
@@ -217,7 +217,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  color: black;
+  color: white;
   width: 250px;
   height: 100vh;
   display: flex;
