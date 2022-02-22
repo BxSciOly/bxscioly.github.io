@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Schedule from "./homeComponents/Schedule/Schedule";
+import Timeline from "./homeComponents/Timeline/Timeline";
 import Info from "./Info/Info";
 import Background from "./background.mp4";
 import Sidebar from "../components/Sidebar";
@@ -97,6 +98,7 @@ const Home = () => {
         <Info />
         <Upcoming />
       </HomeBackground>
+      <Timeline />  
       <Image src="/homeTransparent.png" alt="backLogo" />
     </div>
   );
