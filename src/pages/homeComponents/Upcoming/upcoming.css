@@ -1,12 +1,16 @@
 .upcoming-title {
     margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.announcements-title {
+    color: var(--primary-color);
 }
 
 .announcements-desc {
     font-size: 18px;
     font-weight: 200;
     margin-bottom: 10px;
-    color: #fff;
     background-color: var(--secondary-color);
 }
 

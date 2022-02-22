@@ -96,6 +96,7 @@ body {
 
 .item-icon {
    font-size: 55px; 
+   color: var(--primary-color);
 }
 
 .number {

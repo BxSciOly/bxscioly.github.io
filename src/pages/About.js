@@ -102,6 +102,7 @@ const About = () => {
             </Card>
           ))}
         </AchievementsWrap>
+        <img src="/transparent.png" alt="logo" />
       </Page>
     </>
   );
@@ -131,10 +132,8 @@ const achievementsData = [
 ];
 
 const Card = styled.div`
-  background-color: #000;
   color: #fff;
   height: 400px;
-  border: 3px solid black;
   width: 500px;
   display: flex;
   justify-content: center;
@@ -144,7 +143,6 @@ const Card = styled.div`
 `;
 
 const Header = styled.div`
-  width: 80%;
   background: #000;
   display: flex;
   color: black;
@@ -165,6 +163,8 @@ const AchievementsWrap = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 50px
 `;
 
 const Title = styled.div`
