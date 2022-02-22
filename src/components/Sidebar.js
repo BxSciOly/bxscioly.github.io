@@ -48,7 +48,7 @@ const Sidebar = () => {
 
   const isPageWide = useMediaQuery("(max-width: 600px)");
   return (
-    <>
+    <NavDiv>
       {isPageWide ? (
         <>
           <IconContext.Provider value={{ color: "black" }}>
@@ -136,13 +136,17 @@ const Sidebar = () => {
           </a>
         </NavBar>
       )}
-    </>
+    </NavDiv>
   );
 };
 
 const Links = styled(Link)`
   background: black;
   height: 0px;
+`;
+
+const NavDiv = styled.div`
+  z-index: 999;
 `;
 
 const EventLinks = styled(Link)``;
@@ -182,7 +186,7 @@ const SidebarNav = styled.nav`
   top: 0;
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 360ms ease-in-out;
-  z-index: 10;
+  z-index: 100;
   background: #ffb44e;
   border-right: 2px solid black;
 

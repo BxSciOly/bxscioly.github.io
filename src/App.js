@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import { Switch, Route, Redirect, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";

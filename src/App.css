@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html, body {
   max-width: 100%;
@@ -10,10 +11,22 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-  helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: 'Inter';
 }
 
+:root {
+  --primary-color: #ffb238;
+  --secondary-color: #121428;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
 
 .home,
 .events,
@@ -47,7 +60,6 @@ h8 {
   align-items: center;
   top: 0;
   transition: 20ms;
-  z-index: 5;
   user-select: none;
   
 }

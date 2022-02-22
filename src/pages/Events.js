@@ -134,6 +134,7 @@ const Cover = styled.div`
   color: black;
   margin-bottom: 10px;
   font-size: 100px;
+  font-weight: 700;
 
   @media (max-width: 600px) {
     font-size: 40px;

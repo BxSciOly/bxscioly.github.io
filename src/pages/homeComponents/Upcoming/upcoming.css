@@ -6,9 +6,9 @@
     font-size: 18px;
     font-weight: 200;
     margin-bottom: 10px;
+    color: #fff;
+    background-color: var(--secondary-color);
 }
-
-
 
 .announcements-subtitle {
     font-weight: 200; 

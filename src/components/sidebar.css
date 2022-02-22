@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
   .whiteClassName {
     color: white;
     transition: 0s all;
-    
   }
 
   .regularClassName {
@@ -25,8 +23,6 @@
     font-size: 37px;
   }
 
-  
-
   .logo-title {
     cursor: pointer;
     display: inline-block;
@@ -45,7 +41,6 @@
 
   .icon-logo {
     display: none;
-
   }
 
   .dropdown {
@@ -65,7 +60,7 @@
     background: white;
     border: 2px solid black;
     min-width: 180px;
-    z-index: 1;
+    z-index: 999;
     top: 100%;
     margin-top: -5px;
   }

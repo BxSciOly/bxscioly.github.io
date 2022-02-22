@@ -92,6 +92,7 @@ const Wrap = styled.div`
   border-radius: 30px;
   z-index: 3;
   margin-bottom: 40px;
+  
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -100,7 +101,8 @@ const Wrap = styled.div`
 `;
 
 const UpcomingDiv = styled.div`
-  background: white;
+  background-color: var(--secondary-color);
+  color: #fff;
   width: 48%;
   padding: 20px;
   border-radius: 25px;
@@ -109,8 +111,10 @@ const UpcomingDiv = styled.div`
     margin-bottom: 50px;
   }
 `;
+
 const AnnouncementsDiv = styled.div`
-  background: white;
+  background-color: var(--secondary-color);
+  color: #fff;
   width: 48%;
   padding: 20px;
   border-radius: 25px;
@@ -143,7 +147,8 @@ const UpcomingTitle = styled.div`
 
 const DateDiv = styled.div`
   width: 50px;
-  background: white;
+  background: var(--secondar-color);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;

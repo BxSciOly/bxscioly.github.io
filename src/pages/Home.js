@@ -5,6 +5,7 @@ import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Schedule from "./homeComponents/Schedule/Schedule";
 import Info from "./Info/Info";
 import Background from "./background.mp4";
+import Sidebar from "../components/Sidebar";
 
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -18,6 +19,7 @@ const Home = () => {
 
   return (
     <div className="page">
+      <Sidebar />
       <video autoPlay loop muted className="background">
         <source src={Background} type="video/mp4" />
       </video>
@@ -71,9 +73,15 @@ const Home = () => {
             transform: `translateY(${offsetY * 0.10}px)`,
             transition: "0s all",
           }}
-        >
+        > 
+          
           <div className="bxsci">BRONX SCIENCE</div>
-          <div className="scioly">SCIENCE OLYMPIAD</div>
+          <div className="scioly">
+            <Title>
+              SCIENCE OLYMPIAD
+            </Title>
+          </div>
+          
           <div className="desc">EXPLORING THE WORLD</div>
           <div className="desc 2">OF SCIENCE</div>
           <a
@@ -88,7 +96,7 @@ const Home = () => {
       <HomeBackground>
         <Info />
         <Upcoming />
-        <Schedule />
+        
       </HomeBackground>
     </div>
   );
@@ -115,6 +123,7 @@ const HomeBackground = styled.div`
   flex-direction: column;
   align-items: center;
 
+
   @media (max-width: 600px) {
     width: 100%;
   }
@@ -125,9 +134,7 @@ const JoinButton = styled.button`
   width: 300px;
   height: 60px;
   font-size: 20px;
-  color: cp;pr;
   border: none;
-  background: white;
   font-weight: 600;
   border-radius: 30px;
   cursor: pointer;
@@ -137,5 +144,9 @@ const JoinButton = styled.button`
     height: 50px;
   }
 `;
+
+const Title = styled.h3`
+  color: var(--primary-color);
+`
 
 export default Home;

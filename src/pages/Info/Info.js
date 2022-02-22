@@ -25,13 +25,15 @@ const Info = () => {
 
 const Wrap = styled.div`
   height: 300px;
-  color: black;
+  color: #fff;
   margin-bottom: 50px;
   background: white;
   padding: 50px;
   display: flex;
   justify-content: center;
   border-radius: 40px;
+  background-color: var(--secondary-color);
+  z-index: 0;
 
   @media (max-width: 600px) {
     width: 100%;

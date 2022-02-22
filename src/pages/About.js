@@ -131,7 +131,8 @@ const achievementsData = [
 ];
 
 const Card = styled.div`
-  background: white;
+  background-color: #000;
+  color: #fff;
   height: 400px;
   border: 3px solid black;
   width: 500px;
@@ -144,7 +145,7 @@ const Card = styled.div`
 
 const Header = styled.div`
   width: 80%;
-  background: white;
+  background: #000;
   display: flex;
   color: black;
   padding: 90px;
@@ -180,6 +181,7 @@ const ImageDiv = styled.div`
   width: 800px;
   height: 400px;
   margin-right: 100px;
+  background-color #000;
 
   @media (max-width: 600px) {
     display: none;
@@ -188,6 +190,8 @@ const ImageDiv = styled.div`
 
 const TextDiv = styled.div`
   padding: 20px;
+  background-color: #000;
+  color: #fff;
 
   @media (max-width: 600px) {
     padding: 0;
@@ -201,6 +205,8 @@ const Page = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: #000;
+  color: #fff;
 `;
 
 export default About;
