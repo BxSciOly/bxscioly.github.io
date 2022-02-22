@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Sidebar from "../components/Sidebar";
 import { Slide } from "react-slideshow-image";
 import scioly1 from "./images/scioly1.jpg";
 import scioly2 from "./images/scioly2.jpg";

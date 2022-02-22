@@ -19,7 +19,7 @@ export const Biology = () => {
     <div className="events">
       <Cover>BIOLOGY</Cover>
         {BiologyData.map((event) => (
-          <BubbleCard>
+          <BubbleCard href={event.link} target="_blank">
             <EventTitle>{event.eventName}</EventTitle>
             <EventDesc>{event.description}</EventDesc>
           </BubbleCard>
@@ -33,7 +33,7 @@ export const EarthScience = () => {
     <div className="events">
       <Cover>EARTH SCIENCE</Cover>
       {EarthScienceData.map((event) => (
-        <BubbleCard>
+        <BubbleCard href={event.link} target="_blank">
           <EventTitle>{event.eventName}</EventTitle>
           <EventDesc>{event.description}</EventDesc>
           <br />
@@ -51,7 +51,7 @@ export const Build = () => {
     <div className="events">
       <Cover>BUILD</Cover>
       {BuildData.map((event) => (
-        <BubbleCard>
+        <BubbleCard href={event.link} target="_blank">
           <EventTitle>{event.eventName}</EventTitle>
           <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
@@ -65,7 +65,7 @@ export const Chemistry = () => {
     <div className="events">
       <Cover>CHEMISTRY</Cover>
       {ChemistryData.map((event) => (
-        <BubbleCard>
+        <BubbleCard href={event.link} target="_blank">
           <EventTitle>{event.eventName}</EventTitle>
           <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
@@ -79,7 +79,7 @@ export const Physics = () => {
     <div className="events">
       <Cover>PHYSICS</Cover>
       {PhysicsData.map((event) => (
-        <BubbleCard>
+        <BubbleCard href={event.link} target="_blank">
           <EventTitle>{event.eventName}</EventTitle>
           <EventDesc>{event.description}</EventDesc>
         </BubbleCard>
@@ -104,7 +104,7 @@ const EventDesc = styled.h5`
   padding: 1rem;
 `;
 
-const BubbleCard = styled.div`
+const BubbleCard = styled.a`
   background-color: var(--secondary-color);
   border-radius: 30px;
   border: 2.5px solid var(--secondary-color);

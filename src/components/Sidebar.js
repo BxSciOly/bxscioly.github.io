@@ -187,6 +187,7 @@ const Links = styled(Link)`
 
 const NavDiv = styled.div`
   z-index: 999;
+  background-color: var(--secondary-color);
 `;
 
 const EventLinks = styled(Link)``;
