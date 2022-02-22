@@ -53,7 +53,7 @@ const Member = styled.div`
     "name"
     "desc";
   transition: 200ms ease;
-  margin: 1rem 2rem;
+  margin: 1rem  2rem;
 `;
 
 const Name = styled.p`

@@ -38,6 +38,12 @@ html, body {
   flex-wrap: wrap;
 }
 
+.events {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+}
+
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }

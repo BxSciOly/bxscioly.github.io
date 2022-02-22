@@ -96,8 +96,8 @@ const Home = () => {
       <HomeBackground>
         <Info />
         <Upcoming />
-        
       </HomeBackground>
+      <Image src="/homeTransparent.png" alt="backLogo" />
     </div>
   );
 };
@@ -147,6 +147,11 @@ const JoinButton = styled.button`
 
 const Title = styled.h3`
   color: var(--primary-color);
+`
+
+const Image = styled.img`
+  width: 600px;
+  height: 600px;
 `
 
 export default Home;

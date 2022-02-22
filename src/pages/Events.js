@@ -17,13 +17,13 @@ export const Events = () => {
 export const Biology = () => {
   return (
     <div className="events">
-      <Cover>Biology</Cover>
-      {BiologyData.map((event) => (
-        <BubbleCard>
-          <EventTitle>{event.eventName}</EventTitle>
-          <EventDesc>{event.description}</EventDesc>
-        </BubbleCard>
-      ))}
+      <Cover>BIOLOGY</Cover>
+        {BiologyData.map((event) => (
+          <BubbleCard>
+            <EventTitle>{event.eventName}</EventTitle>
+            <EventDesc>{event.description}</EventDesc>
+          </BubbleCard>
+        ))}
     </div>
   );
 };
@@ -31,7 +31,7 @@ export const Biology = () => {
 export const EarthScience = () => {
   return (
     <div className="events">
-      <Cover>Earth Science</Cover>
+      <Cover>EARTH SCIENCE</Cover>
       {EarthScienceData.map((event) => (
         <BubbleCard>
           <EventTitle>{event.eventName}</EventTitle>
@@ -49,7 +49,7 @@ export const EarthScience = () => {
 export const Build = () => {
   return (
     <div className="events">
-      <Cover>Build</Cover>
+      <Cover>BUILD</Cover>
       {BuildData.map((event) => (
         <BubbleCard>
           <EventTitle>{event.eventName}</EventTitle>
@@ -63,7 +63,7 @@ export const Build = () => {
 export const Chemistry = () => {
   return (
     <div className="events">
-      <Cover>Chemistry</Cover>
+      <Cover>CHEMISTRY</Cover>
       {ChemistryData.map((event) => (
         <BubbleCard>
           <EventTitle>{event.eventName}</EventTitle>
@@ -77,7 +77,7 @@ export const Chemistry = () => {
 export const Physics = () => {
   return (
     <div className="events">
-      <Cover>Physics</Cover>
+      <Cover>PHYSICS</Cover>
       {PhysicsData.map((event) => (
         <BubbleCard>
           <EventTitle>{event.eventName}</EventTitle>
@@ -90,31 +90,36 @@ export const Physics = () => {
 
 // styling
 
+
 const EventTitle = styled.h6`
   font-size: 30px;
   text-align: center;
   margin-bottom: 2rem;
+  padding: 1rem;
 `;
 
 const EventDesc = styled.h5`
   font-size: 25px;
   font-weight: 200;
+  padding: 1rem;
 `;
 
 const BubbleCard = styled.div`
-  border: 3px solid black;
+  background-color: var(--secondary-color);
   border-radius: 30px;
-  width: 500px;
+  border: 2.5px solid var(--secondary-color);
+  width: 700px;
   padding: 4rem;
-  margin: 20px;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 490px;
   cursor: default;
+  transition: 300ms ease;
 
   &:hover {
-    transform: scale(1.02);
-    cursor: normal;
+    border: 2.5px solid var(--primary-color);
+    cursor: pointer;
   }
 
   @media (max-width: 600px) {
@@ -124,17 +129,17 @@ const BubbleCard = styled.div`
   }
 `;
 
-const Cover = styled.div`
+
+const Cover = styled.h1`
+  color: #fff;
   height: 300px;
   width: 100%;
-  border: 3px solid black;
+  border-bottom: 3px solid var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
   margin-bottom: 10px;
   font-size: 100px;
-  font-weight: 700;
 
   @media (max-width: 600px) {
     font-size: 40px;

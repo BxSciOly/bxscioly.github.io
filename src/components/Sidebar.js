@@ -29,7 +29,6 @@ import "./sidebar.css";
 //   return menuRef;
 // };
 
-
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -88,19 +87,66 @@ const Sidebar = () => {
       ) : (
         <NavBar>
           <Link to="/home">
-            <h1 className={`${location.pathname === "/home" ? 'logoWhite' : 'logoBlack'}`}>BXSCIOLY</h1>
+            <h1
+              className={`${
+                location.pathname === "/home" ? "logoWhite" : "logoBlack"
+              }`}
+            >
+              BXSCIOLY
+            </h1>
           </Link>
           <SidebarDiv>
             <Links to="/home">
-              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>Home</SidebarItem>
+              <SidebarItem
+                className={`${
+                  location.pathname === "/home"
+                    ? "whiteClassName"
+                    : "regularClassName"
+                }`}
+              >
+                Home
+              </SidebarItem>
             </Links>
             <Links to="/about">
-              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>About</SidebarItem>
+              <SidebarItem
+                className={`${
+                  location.pathname === "/home"
+                    ? "whiteClassName"
+                    : "regularClassName"
+                }`}
+              >
+                About
+              </SidebarItem>
+            </Links>
+            <Links to="faqs">
+              <SidebarItem
+                className={`${
+                  location.pathname === "/home"
+                    ? "whiteClassName"
+                    : "regularClassName"
+                }`}
+              >
+                FAQs
+              </SidebarItem>
             </Links>
             <div className="dropdown">
               <div className="dropbtn">
-                <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>Events</SidebarItem>
-                <FaIcons.FaCaretDown className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`} />
+                <SidebarItem
+                  className={`${
+                    location.pathname === "/home"
+                      ? "whiteClassName"
+                      : "regularClassName"
+                  }`}
+                >
+                  Events
+                </SidebarItem>
+                <FaIcons.FaCaretDown
+                  className={`${
+                    location.pathname === "/home"
+                      ? "whiteClassName"
+                      : "regularClassName"
+                  }`}
+                />
               </div>
               <div className="dropdown-content">
                 <EventLinks to="/biology">
@@ -120,12 +166,6 @@ const Sidebar = () => {
                 </EventLinks>
               </div>
             </div>
-            <Links to="/board">
-              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>Board</SidebarItem>
-            </Links>
-            <Links to="faqs">
-              <SidebarItem className={`${location.pathname === "/home" ? 'whiteClassName' : 'regularClassName'}`}>FAQs</SidebarItem>
-            </Links>
           </SidebarDiv>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
