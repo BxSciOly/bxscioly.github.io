@@ -63,7 +63,6 @@ h8 {
 
 .navbar {
   color: black;
-  background-color: var(--secondary-color);
   /* border-bottom: 3px solid #026857; */
   height: 80px;
   display: flex;
@@ -72,7 +71,6 @@ h8 {
   top: 0;
   transition: 20ms;
   user-select: none;
-  
 }
 
 .navbar.active {

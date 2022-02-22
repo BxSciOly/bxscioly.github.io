@@ -5,22 +5,13 @@
     transition: 0s all;
   }
 
-  .regularClassName {
-    color: white;
-  }
-
-  .logoWhite {
+  .navLogo {
     color: var(--primary-color);
     font-family: Inter;
     cursor: pointer;
     font-size: 37px;
-  }
-
-  .logoBlack {
-    color: var(--primary-color);
-    font-family: Inter;
-    cursor: pointer;
-    font-size: 37px;
+    text-shadow: 0 0 5px var(--primary-color);
+    margin-left: auto;
   }
 
   .logo-title {

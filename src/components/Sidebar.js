@@ -78,8 +78,8 @@ const Sidebar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <JoinButton>Interest Form</JoinButton>
                 </a>
+
               </SidebarWrap>
             </SidebarNav>
           </IconContext.Provider>
@@ -87,26 +87,9 @@ const Sidebar = () => {
       ) : (
         <NavBar>
           <Link to="/home">
-            <h1
-              className={`${
-                location.pathname === "/home" ? "logoWhite" : "logoBlack"
-              }`}
-            >
-              BXSCIOLY
-            </h1>
+            <h1 className="navLogo">BXSCIOLY</h1>
           </Link>
           <SidebarDiv>
-            <Links to="/home">
-              <SidebarItem
-                className={`${
-                  location.pathname === "/home"
-                    ? "whiteClassName"
-                    : "regularClassName"
-                }`}
-              >
-                Home
-              </SidebarItem>
-            </Links>
             <Links to="/about">
               <SidebarItem
                 className={`${
@@ -172,7 +155,6 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <NavJoinButton>Interest Form</NavJoinButton>
           </a>
         </NavBar>
       )}
@@ -186,9 +168,12 @@ const Links = styled(Link)`
 `;
 
 const NavDiv = styled.div`
-  border-bottom: 0.5px solid #fff;
-  padding: 0 5rem;
+  border-bottom: 2px solid #fff;
+  border-radius: 10px;
+  padding: 0 1rem;
   background-color: #000;
+  width: 80%;
+  margin: 2rem auto;
 `;
 
 const EventLinks = styled(Link)``;
@@ -198,7 +183,7 @@ const SidebarDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin-left: auto;
 `;
 
 const SidebarItem = styled.p`
@@ -223,14 +208,12 @@ const SidebarNav = styled.nav`
   width: 250px;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  position: fixed;
+  justify-content: flex-start;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 360ms ease-in-out;
   z-index: 100;
-  background: #ffb44e;
-  border-right: 2px solid black;
+  margin-left: 2rem;
 
   @media (max-width: 600px) {
     background: white;
@@ -245,50 +228,14 @@ const SidebarNav = styled.nav`
 // `;
 
 const SidebarWrap = styled.div`
+  margin-left: 2rem;
   width: 100%;
-`;
-
-const JoinButton = styled.button`
-  margin-left: 35px;
-  margin-top: 10px;
-  width: 175px;
-  height: 50px;
-  font-size: 15px;
-  border: 2px solid black;
-  font-weight: 600;
-
-  &:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 5px 5px 0px 2px #000000;
-    box-shadow: 5px 5px 0px 2px #000000;
-  }
-`;
-
-const NavJoinButton = styled.button`
-  margin-left: 20px;
-  width: 175px;
-  height: 45px;
-  font-size: 20px;
-  border: 2px solid black;
-  background: #fff;
-  font-weight: 400;
-  font-family: roboto, sans-serif;
-  border-radius: 20px;
-  color: black;
-  transition: 200ms ease;
-
-  &:hover {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    -webkit-box-shadow: 5px 5px 0px 2px #000000;
-    box-shadow: 5px 5px 0px 2px #000000;
-  }
 `;
 
 const NavBar = styled.div`
   height: 105px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 `;
 
