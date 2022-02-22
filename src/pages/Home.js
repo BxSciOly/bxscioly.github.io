@@ -138,6 +138,12 @@ const JoinButton = styled.button`
   font-weight: 600;
   border-radius: 30px;
   cursor: pointer;
+  transition: 200ms ease;
+
+  &:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+  }
 
   @media (max-width: 600px) {
     width: 200px;

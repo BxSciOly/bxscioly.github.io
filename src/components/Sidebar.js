@@ -270,12 +270,16 @@ const NavJoinButton = styled.button`
   height: 45px;
   font-size: 20px;
   border: 2px solid black;
-  background: white;
+  background: #fff;
   font-weight: 400;
   font-family: roboto, sans-serif;
+  border-radius: 20px;
+  color: black;
+  transition: 200ms ease;
 
   &:hover {
     cursor: pointer;
+    background-color: var(--primary-color);
     -webkit-box-shadow: 5px 5px 0px 2px #000000;
     box-shadow: 5px 5px 0px 2px #000000;
   }
@@ -285,7 +289,6 @@ const NavBar = styled.div`
   height: 105px;
   display: flex;
   justify-content: space-between;
-
   align-items: center;
 `;
 
