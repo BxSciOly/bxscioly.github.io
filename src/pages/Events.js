@@ -132,7 +132,7 @@ const BubbleCard = styled.a`
 
 const Cover = styled.h1`
   color: #fff;
-  height: 300px;
+  height: 200px;
   width: 100%;
   border-bottom: 3px solid var(--primary-color);
   display: flex;

@@ -186,7 +186,7 @@ const Links = styled(Link)`
 `;
 
 const NavDiv = styled.div`
-  border-bottom: 2px solid #fff;
+  border-bottom: 0.5px solid #fff;
   padding: 0 5rem;
   background-color: #000;
 `;

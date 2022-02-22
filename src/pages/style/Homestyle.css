@@ -94,6 +94,8 @@ body {
 .about-title {
     font-size: 35px;
     margin-bottom: 50px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .item-icon {

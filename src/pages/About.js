@@ -27,20 +27,11 @@ const About = () => {
             style={{
               fontSize: "50px",
               userSselect: "none",
+              color: "var(--primary-color)"
             }}
           >
             About Us
           </h1>
-          <h2
-            style={{
-              fontWeight: "400",
-              marginTop: "20px",
-              fontFamily: "Roboto, sans-serif",
-            }}
-          >
-            "Science is a way of thinking much more than it is a body of
-            knowledge" - Carl Sagan
-          </h2>
         </Title>
         <Header>
           <ImageDiv>
@@ -106,6 +97,17 @@ const About = () => {
             </Card>
           ))}
         </AchievementsWrap>
+        <h2
+            style={{
+              fontWeight: "400",
+              marginTop: "20px",
+              fontFamily: "Roboto, sans-serif",
+              margin: "5rem 0",
+            }}
+          >
+            "Science is a way of thinking much more than it is a body of
+            knowledge" - Carl Sagan
+          </h2>
         <img src="/transparent.png" alt="logo" className="logo" />
         <Board />
       </Page>
@@ -151,8 +153,8 @@ const Header = styled.div`
   background: #000;
   display: flex;
   color: black;
-  padding: 90px;
-  margin-bottom: 40px;
+  padding: 2rem 90px;
+  margin-bottom: 8rem;
 
   @media (max-width: 600px) {
     padding: 20px;
