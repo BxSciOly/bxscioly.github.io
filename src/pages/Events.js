@@ -38,7 +38,7 @@ export const EarthScience = () => {
           <EventDesc>{event.description}</EventDesc>
           <br />
           <a href={event.links} target="_blank" rel="noopener noreferrer">
-            <EventDesc>{event.links}</EventDesc>
+            <EventLink>{event.links}</EventLink>
           </a>
         </BubbleCard>
       ))}
@@ -102,6 +102,18 @@ const EventDesc = styled.h5`
   font-size: 25px;
   font-weight: 200;
   padding: 1rem;
+`;
+
+const EventLink = styled.h5`
+  font-size: 25px;
+  font-weight: 200;
+  padding: 1rem;
+  text-decoration: underline;
+  transition: 200ms ease;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 `;
 
 const BubbleCard = styled.a`
