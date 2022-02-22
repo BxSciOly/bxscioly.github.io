@@ -138,7 +138,7 @@ const Cover = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 4rem;
   font-size: 100px;
 
   @media (max-width: 600px) {
