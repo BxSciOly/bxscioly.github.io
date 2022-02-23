@@ -5,20 +5,12 @@ import * as GrIcons from "react-icons/gr";
 import "./style/Homestyle.css";
 
 const Faqs = () => {
-  const [clicked, setClicked] = useState(false);
-
-  const toggle = (index) => {
-    if (clicked === index) {
-      return setClicked(null);
-    }
-
-    setClicked(index);
-  };
   return (
     <>
       <Page>
         <div>
           <Title>FAQ</Title>
+          <Button>Ask a question!</Button>
           <Content>
             <QuestionsDiv>
               {FaqsData.map((item, index) => {
@@ -36,7 +28,6 @@ const Faqs = () => {
           <Image src="/homeSvg.svg" alt="backLogo" />
         </ImageDiv>
       </Page>
-      <Button>Ask a Question</Button>
     </>
   );
 };
@@ -45,12 +36,10 @@ const Title = styled.h1`
   font-size: 350%;
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
-  margin: 4rem 0 12rem 0;
+  margin: 1rem 0;
 `;
 
 const Page = styled.div`
-  display: grid;
-  grid-template-areas: "left right";
   padding: 2rem;
   text-align: center;
   margin-bottom: 4rem;
@@ -62,10 +51,27 @@ const Image = styled.img`
 `;
 
 const Button = styled.button`
-  height: 40px;
+width: 300px;
+height: 60px;
+margin: 2rem 0;
+font-size: 20px;
+border: none;
+font-weight: 600;
+border-radius: 30px;
+cursor: pointer;
+transition: 200ms ease;
+
+&:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+@media (max-width: 600px) {
   width: 200px;
-  margin-top: 40px;
-  background: white;
+  height: 50px;
+  margin-bottom: 8rem;
+}
+
 
   &:hover {
     -webkit-box-shadow: 5px 5px 0px 2px #000000;
@@ -80,9 +86,8 @@ const Button = styled.button`
 
 const Content = styled.div`
   width: 100%;
-  height: 600px;
   background-color: #000;
-  padding: 20px;
+  padding: 20px 15rem;
   color: #fff;
   display: flex;
   justify-content: space-around;
@@ -90,9 +95,10 @@ const Content = styled.div`
 `;
 
 const QuestionsDiv = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-areas: "q1 q2";
+  grid-auto-columns: 1fr;
   margin: 4rem 0;
-  flex-direction: column;
   background-color: var(--secondary-color);
   padding: 4rem;
   border-radius: 20px;
@@ -107,7 +113,7 @@ const ImageDiv = styled.div`
 
 const AccordionTitle = styled.div`
   width: 100%;
-  color: #fff;
+  color: var(--primary-color);
   cursor: pointer;
   padding: 0.5rem 0;
   display: flex;
@@ -118,13 +124,11 @@ const AccordionTitle = styled.div`
   font-weight: 600;
   font-size: 150%;
   justify-content: space-between;
-  border-bottom: 2px solid var(--primary-color);
 `;
 
 const AccordionAnswer = styled.div`
-
   display: flex;
-  
+
   flex-direction: column;
   margin-top: 10px;
 
@@ -135,6 +139,7 @@ const AccordionAnswer = styled.div`
 
 const AccordionItem = styled.div`
   margin-bottom: 4rem;
+  padding: 0 3rem;
 `;
 
 export default Faqs;
