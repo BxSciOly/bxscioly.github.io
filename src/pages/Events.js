@@ -114,6 +114,11 @@ const EventLink = styled.h5`
   &:hover {
     color: var(--primary-color);
   }
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+
 `;
 
 const BubbleCard = styled.a`
@@ -136,7 +141,9 @@ const BubbleCard = styled.a`
 
   @media (max-width: 600px) {
     width: 100%;
-    color: black;
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem;
   }
 `;
 
