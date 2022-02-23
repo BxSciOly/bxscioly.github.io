@@ -50,22 +50,20 @@ const Sidebar = () => {
     <NavDiv>
       {isPageWide ? (
         <>
-          
-            {/* className={navbar ? "navbar active" : "navbar"} */}
-            <nav className={"navbar"}>
-              <NavIcon to="#">
-                <RiIcons.RiMenu2Fill onClick={AllFuncts} value={{ color: "white" }}/>
-              </NavIcon>
-            </nav>
-        
-            
-              <SidebarWrap className={sidebar ? "logo-title-moved" : "logo-title"}>
-                {SidebarData.map((item, index) => {
-                  return <SubMenu item={item} key={index} />;
-                })}
-              </SidebarWrap>
-            
-         
+          {/* className={navbar ? "navbar active" : "navbar"} */}
+          <nav className={"navbar"}>
+            <NavIcon to="#">
+              <RiIcons.RiMenu2Fill
+                onClick={AllFuncts}
+                value={{ color: "white" }}
+              />
+            </NavIcon>
+          </nav>
+          <SidebarWrap className={sidebar ? "logo-title-moved" : "logo-title"}>
+            {SidebarData.map((item, index) => {
+              return <SubMenu item={item} key={index} />;
+            })}
+          </SidebarWrap>
         </>
       ) : (
         <NavBar>
@@ -156,7 +154,7 @@ const NavDiv = styled.div`
   background-color: #000;
   width: 80%;
   margin: 1rem auto;
-  
+
   @media (max-width: 600px) {
     margin: 0;
     padding: 0;
@@ -191,38 +189,10 @@ const NavIcon = styled(Link)`
   align-items: center;
 `;
 
-const SidebarNav = styled.nav`
-  color: white;
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  top: 0;
-  left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
-  transition: 360ms ease-in-out;
-  z-index: 100;
-  margin-left: 2rem;
-
-  @media (max-width: 600px) {
-    height: 100%;
-    margin: 0;
-  }
-`;
-
-// const Logo = styled.div`
-//   height: 50px;
-//   width: 50px;
-//   border-radius: 100%;
-//   background: #026857;
-// `;
 
 const SidebarWrap = styled.div`
-  margin-left: 2rem;
+  margin: 1rem 0 3rem 0;
   width: 100%;
-
-  @media (max-width: 600px) {
-    margin: 0;
-  }
 `;
 
 const NavBar = styled.div`

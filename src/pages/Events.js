@@ -135,7 +135,6 @@ const BubbleCard = styled.a`
   }
 
   @media (max-width: 600px) {
-    background: #f7b800;
     width: 100%;
     color: black;
   }

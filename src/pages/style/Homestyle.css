@@ -116,7 +116,7 @@ body {
 
 .background {
     width: 100vw;
-    position: absolute;
+    position: absolute;  
 }
 
 .logo {
@@ -127,6 +127,10 @@ body {
 
 
 @media (max-width: 600px) {
+    .page {
+        padding: 3rem;
+    }
+
     .bxsci{
         font-size: 35px;
     }
@@ -150,6 +154,10 @@ body {
     .about-text {
         font-size: 16px;
         text-align: left;
+    }
+
+    .background {
+        display: none;
     }
 
 }

@@ -27,7 +27,6 @@ const Wrap = styled.div`
   height: 300px;
   color: #fff;
   margin-bottom: 50px;
-  background: white;
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -41,6 +40,7 @@ const Wrap = styled.div`
     margin-top: -100px;
     padding: 10px;
     flex-direction: column;
+    background-color: var(--secondary-color);
   }
 `;
 

@@ -27,7 +27,6 @@ const Wrap = styled.div`
   @media (max-width: 600px) {
     height: 150px;
     border-radius: 20px;
-    background: #f7b800;
     margin: 0px 0 10px 0;
     padding: 20px;
   }

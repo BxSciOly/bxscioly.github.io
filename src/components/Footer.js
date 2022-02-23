@@ -14,9 +14,6 @@ const FooterDiv = styled.div`
   color: white;
   justify-content: center;
 
-  @media (max-width: 600px) {
-    background: #f7b800;
-  }
 `;
 const Box = styled.div`
   width: 100%;
@@ -27,7 +24,6 @@ const Box = styled.div`
 
   @media (max-width: 1000px) {
     padding: 70px 30px;
-    background: #f7b800;
   }
 `;
 

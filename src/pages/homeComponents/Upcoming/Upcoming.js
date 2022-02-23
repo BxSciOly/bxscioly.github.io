@@ -121,8 +121,6 @@ const AnnouncementsDiv = styled.div`
 
   @media (max-width: 600px) {
     width: 100%;
-    background: #f7b800;
-    border-radius: 0;
   }
 `;
 
