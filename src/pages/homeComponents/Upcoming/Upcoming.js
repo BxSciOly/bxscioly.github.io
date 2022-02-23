@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import "./upcoming.css";
 
@@ -46,6 +46,19 @@ const UpcomingData = [
 ];
 
 const Upcoming = () => {
+  const [announcements, setAnnouncements] = useState(null);
+
+  useEffect(() => {
+    fetch('https://scioly-backend.vercel.app/announcement')
+      .then(res => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setAnnouncements(data);
+      });
+  }, [])
+
   return (
     <Wrap>
       <UpcomingDiv>
