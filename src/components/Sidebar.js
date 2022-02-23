@@ -61,7 +61,11 @@ const Sidebar = () => {
           </nav>
           <SidebarWrap className={sidebar ? "logo-title-moved" : "logo-title"}>
             {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />;
+              return (
+                <div onClick={item.title === "Events" ? null : AllFuncts}>
+                  <SubMenu item={item} key={index} />
+                </div>
+              );
             })}
           </SidebarWrap>
         </>
