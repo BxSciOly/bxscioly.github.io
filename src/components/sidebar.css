@@ -73,10 +73,11 @@
   @media (max-width: 600px) {
     .logo-title {
       display: none;
+      width: 0%;
     }
     
     .logo-title-moved {
-        display: none;
+        margin: 0;
     }
 
     .icon-logo {

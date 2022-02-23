@@ -54,17 +54,13 @@ const Sidebar = () => {
             {/* className={navbar ? "navbar active" : "navbar"} */}
             <nav className={"navbar"}>
               <NavIcon to="#">
-                <RiIcons.RiMenu2Fill onClick={AllFuncts} />
+                <RiIcons.RiMenu2Fill onClick={AllFuncts} value={{ color: "white" }}/>
               </NavIcon>
-              <h2 className={sidebar ? "logo-title-moved" : "logo-title"}>
-                BRONX SCIENCE OLYMPIAD
-              </h2>
-              <h2 className="icon-logo">BXSCIOLY</h2>
             </nav>
           </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white", size: "25" }} onClick={AllFuncts} >
+
             <SidebarNav /* ref={menuRef} */ sidebar={sidebar}>
-              <SidebarWrap>
+              <SidebarWrap className={sidebar ? "logo-title-moved" : "logo-title"}>
                 <IconContext.Provider value={{ color: "white" }}>
                 </IconContext.Provider>
                 {SidebarData.map((item, index) => {
@@ -72,7 +68,7 @@ const Sidebar = () => {
                 })}
               </SidebarWrap>
             </SidebarNav>
-          </IconContext.Provider>
+         
         </>
       ) : (
         <NavBar>
@@ -211,7 +207,8 @@ const SidebarNav = styled.nav`
   margin-left: 2rem;
 
   @media (max-width: 600px) {
-    
+    height: 100%;
+    margin: 0;
   }
 `;
 
