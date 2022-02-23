@@ -35,7 +35,7 @@ const Title = styled.h1`
   font-size: 350%;
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
-  margin: 4rem 0;
+  margin: 4rem 0 1rem 0;
   @media (max-width: 600px) {
     background-color: #000;
   }
