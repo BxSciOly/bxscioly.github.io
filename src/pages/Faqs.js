@@ -73,7 +73,7 @@ const Header = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  color: black;
+  color: #fff;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -113,8 +113,7 @@ const Button = styled.button`
 const FaqTitle = styled.div`
   height: 80px;
   width: 100%;
-  background: white;
-  color: black;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,13 +125,14 @@ const FaqTitle = styled.div`
 const Page = styled.div`
   width: 100%;
   height: 600px;
-  background: white;
+  background-color: #000;
   padding: 20px;
-  color: black;
+  color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
 `;
+
 const QuestionsDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -177,4 +177,5 @@ const AccordionAnswer = styled.div`
 const AccordionItem = styled.div`
   margin-bottom: 20px;
 `;
+
 export default Faqs;

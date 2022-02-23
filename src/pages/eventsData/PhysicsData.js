@@ -8,7 +8,7 @@ const PhysicsData = [
   {
     eventName: "It's About Time",
     description:
-      "This event tests student's knowledge of time and their skill in building a timekeeping device. The test portion covers general topics in the physics and history of time, with everything in between. The second portion involves a timekeeping device to determine the amount of time, between 10 and 300 seconds (5 minutes), with a precision of 0.1 seconds.",
+      "This event tests student's knowledge of time and their skill in building a timekeeping device. The test portion covers general topics in the physics and history of time, with everything in between. The second portion involves a timekeeping device to determine the amount of time, between 10 and 300 seconds (5 minutes), with a precision of 0.1 seconds. Please note, this is the best event in existence. It's About Time, It's About Power. We Stay Hungry. We Devour.",
     link: "https://www.soinc.org/its-about-time-c",
   },
   {
