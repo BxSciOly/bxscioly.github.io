@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 import styled from "styled-components";
 import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
@@ -10,6 +11,8 @@ const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
+  const isPageWide = useMediaQuery("(max-width: 600px)");
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -18,9 +21,11 @@ const Home = () => {
 
   return (
     <div className="page">
-      <video autoPlay loop muted className="background">
-        <source src={Background} type="video/mp4" />
-      </video>
+      {isPageWide ? null : (
+        <video autoPlay loop muted className="background">
+          <source src={Background} type="video/mp4" />
+        </video>
+      )}
       {/* <svg
         className="blob-1"
         viewBox="0 0 200 200"
@@ -68,18 +73,15 @@ const Home = () => {
       <div className="home">
         <BackgroundDiv
           style={{
-            transform: `translateY(${offsetY * 0.10}px)`,
+            transform: `translateY(${offsetY * 0.1}px)`,
             transition: "0s all",
           }}
-        > 
-          
+        >
           <div className="bxsci">BRONX SCIENCE</div>
           <div className="scioly">
-            <Title>
-              SCIENCE OLYMPIAD
-            </Title>
+            <Title>SCIENCE OLYMPIAD</Title>
           </div>
-          
+
           <div className="desc">EXPLORING THE WORLD</div>
           <div className="desc 2">OF SCIENCE</div>
           <a
@@ -95,7 +97,7 @@ const Home = () => {
         <Info />
         <Upcoming />
       </HomeBackground>
-      <Timeline />  
+      <Timeline />
     </div>
   );
 };
@@ -120,7 +122,6 @@ const HomeBackground = styled.div`
   flex-wrap: flex;
   flex-direction: column;
   align-items: center;
-
 
   @media (max-width: 600px) {
     width: 100%;
@@ -158,8 +159,6 @@ const Title = styled.h3`
     margin-top: 2rem;
     text-align: center;
   }
-`
-
-
+`;
 
 export default Home;
