@@ -106,6 +106,7 @@ const UpcomingDiv = styled.div`
   width: 48%;
   padding: 20px;
   border-radius: 25px;
+  box-shadow: 0 0 40px var(--secondary-color);
   @media (max-width: 600px) {
     width: 100%;
     margin-bottom: 50px;
@@ -118,7 +119,8 @@ const AnnouncementsDiv = styled.div`
   width: 48%;
   padding: 20px;
   border-radius: 25px;
-
+  box-shadow: 0 0 40px var(--secondary-color);
+  
   @media (max-width: 600px) {
     width: 100%;
   }

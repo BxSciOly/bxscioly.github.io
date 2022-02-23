@@ -32,6 +32,7 @@ const Wrap = styled.div`
   justify-content: center;
   border-radius: 40px;
   background-color: var(--secondary-color);
+  box-shadow: 0 0 20px var(--secondary-color);
   z-index: 0;
 
   @media (max-width: 600px) {

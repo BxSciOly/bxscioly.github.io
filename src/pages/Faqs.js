@@ -102,11 +102,12 @@ const QuestionsDiv = styled.div`
   display: grid;
   grid-template-areas: "q1 q2";
   grid-auto-columns: 1fr;
-  margin: 4rem 0;
+  margin: 2rem 0 4rem 0;
   background-color: var(--secondary-color);
   padding: 4rem;
   border-radius: 20px;
   text-align: left;
+  box-shadow: 0 0 20px var(--primary-color);
 
   @media (max-width: 600px) {
     padding: 1rem;

@@ -178,6 +178,7 @@ const AchievementsWrap = styled.div`
   align-items: center;
   background-color: var(--secondary-color);
   border-radius: 50px;
+  box-shadow: 0 0 20px var(--primary-color);
 
   @media (max-width: 600px) {
     width: 100%;

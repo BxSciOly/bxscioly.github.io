@@ -19,8 +19,6 @@ const FooterDiv = styled.div`
     grid-template-areas: 
       "d1 d2";
   }
-
-
 `;
 const Box = styled.div`
   width: 100%;
