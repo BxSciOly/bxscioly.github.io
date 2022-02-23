@@ -97,7 +97,6 @@ const Home = () => {
         <Upcoming />
       </HomeBackground>
       <Timeline />  
-      <Image src="/homeSvg.svg" alt="backLogo" />
     </div>
   );
 };
@@ -156,9 +155,6 @@ const Title = styled.h3`
   text-shadow: 0 0 12px var(--primary-color);
 `
 
-const Image = styled.img`
-  width: 600px;
-  height: 600px;
-`
+
 
 export default Home;

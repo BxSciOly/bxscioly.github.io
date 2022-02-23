@@ -12,6 +12,8 @@ import Helena from "./boardImages/Helena.png";
 import Sarjona from "./boardImages/Sarjona.png";
 import Aksha from "./boardImages/Aksha.png";
 import Julianne from "./boardImages/Julianne.png";
+import Farhan from "./boardImages/Farhan.png";
+import Chair from "./boardImages/Chair.png";
 
 const BoardData = [
   {
@@ -51,10 +53,16 @@ const BoardData = [
     background: Alison,
   },
   {
-    name: "Jake",
-    title: "Head of Logistics",
-    desc: "Hi, I am Jake  ('22), and this year I am the head of the Logistics department for Science Olympiad. I'm very excited to help our growing team, and make sure that the team runs smoothly and efficiently. I won't be competing this year, sadly, but I will behind the scenes. I'm glad that SciOly is in person this year, and I'm excited to still learn in my events, specifically Biology and Chemistry.",
-    background: Jake,
+    name: "Farhan",
+    title: "Math/Physics Director",
+    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    background: Farhan,
+  },
+  {
+    name: "Chair",
+    title: "Biology Director",
+    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    background: Chair,
   },
   {
     name: "Trisha",
@@ -97,6 +105,12 @@ const BoardData = [
     title: "Logistics",
     desc: "Hi! My name is Sarjona and I’m a rising senior (class of 2022). I’m so excited to be a part of the Logistics team this year. I know we’ll have a fun and successful season!",
     background: Sarjona,
+  },
+  {
+    name: "Jake",
+    title: "Head of Logistics",
+    desc: "Hi, I am Jake  ('22), and this year I am the head of the Logistics department for Science Olympiad. I'm very excited to help our growing team, and make sure that the team runs smoothly and efficiently. I won't be competing this year, sadly, but I will behind the scenes. I'm glad that SciOly is in person this year, and I'm excited to still learn in my events, specifically Biology and Chemistry.",
+    background: Jake,
   },
 ];
 

@@ -16,82 +16,64 @@ const Faqs = () => {
   };
   return (
     <>
-      <Header>
-        <Title>Anything you want to know?</Title>
-        <h3 style={{ fontWeight: "200", textAlign: "center" }}>
-          Any questions or concerns submitted here will be read by the SciOly
-          board. We look forward to hearing from you!
-        </h3>
-        <a
-          style={{ height: "0px" }}
-          href="https://docs.google.com/forms/d/e/1FAIpQLSf_QBEruJ5063gMhvMYIweQx6BojU854mRpgR24IGIcfLNmfA/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button>Ask a Question</Button>
-        </a>
-      </Header>
-      <FaqTitle>
-        <h1 style={{ marginTop: "40px" }}>Frequently Asked Questions</h1>
-      </FaqTitle>
       <Page>
-        <QuestionsDiv>
-          {FaqsData.map((item, index) => {
-            return (
-              <AccordionItem>
-                <AccordionTitle onClick={() => toggle(index)} key={index}>
-                  {item.question}
-                  <GrIcons.GrDown
-                    className={clicked === index ? "rotated" : ""}
-                  />
-                </AccordionTitle>
-                {clicked === index ? (
-                  <AccordionAnswer>
-                    {item.answer}&nbsp;
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.link}
-                    </a>
-                  </AccordionAnswer>
-                ) : null}
-              </AccordionItem>
-            );
-          })}
-        </QuestionsDiv>
+        <div>
+          <Title>FAQ</Title>
+          <Content>
+            <QuestionsDiv>
+              {FaqsData.map((item, index) => {
+                return (
+                  <AccordionItem>
+                    <AccordionTitle>
+                      {item.question}
+                      <GrIcons.GrDown
+                        className={clicked === index ? "rotated" : ""}
+                      />
+                    </AccordionTitle>
+                    
+                      <AccordionAnswer>
+                        {item.answer}&nbsp;
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.link}
+                        </a>
+                      </AccordionAnswer>
+                    
+                  </AccordionItem>
+                );
+              })}
+            </QuestionsDiv>
+          </Content>
+        </div>
+        <ImageDiv>
+          <Image src="/homeSvg.svg" alt="backLogo" />
+        </ImageDiv>
       </Page>
+      <Button>Ask a Question</Button>
     </>
   );
 };
 
-const Header = styled.div`
-  height: 300px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  color: #fff;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    padding: 20px;
-  }
+const Title = styled.h1`
+  font-size: 350%;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+  margin: 4rem 0 6rem 0;
 `;
 
-const Title = styled.h1`
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 40px;
+const Page = styled.div`
+  display: grid;
+  grid-template-areas: "left right";
+  padding: 2rem;
+  text-align: center;
+`;
 
-  @media (max-width: 600px) {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+const Image = styled.img`
+  width: 800px;
+  height: 800px;
 `;
 
 const Button = styled.button`
@@ -110,19 +92,8 @@ const Button = styled.button`
     margin-top: 20px;
   }
 `;
-const FaqTitle = styled.div`
-  height: 80px;
-  width: 100%;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  @media (max-width: 600px) {
-    font-size: 13px;
-  }
-`;
-const Page = styled.div`
+const Content = styled.div`
   width: 100%;
   height: 600px;
   background-color: #000;
@@ -135,16 +106,22 @@ const Page = styled.div`
 
 const QuestionsDiv = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  margin: 4rem 0;
   flex-direction: column;
-  height: 500px;
-  width: 800px;
+  background-color: var(--secondary-color);
+  padding: 3rem;
+  border-radius: 20px;
 `;
 
-const AccordionTitle = styled.button`
+const ImageDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const AccordionTitle = styled.div`
   width: 100%;
-  background-color: #eee;
-  color: #444;
+  color: #fff;
   cursor: pointer;
   padding: 18px;
   display: flex;
@@ -156,14 +133,10 @@ const AccordionTitle = styled.button`
   font-size: 14px;
   justify-content: space-between;
   z-index: 1;
-
-  &:hover, &:active {
-    background-color: #ccc;
-  }
 `;
 
 const AccordionAnswer = styled.div`
-  z-index: 0;
+
   display: flex;
   align-items: center;
   flex-direction: column;
