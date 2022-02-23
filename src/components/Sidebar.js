@@ -50,7 +50,7 @@ const Sidebar = () => {
     <NavDiv>
       {isPageWide ? (
         <>
-          <IconContext.Provider value={{ color: "black" }}>
+          <IconContext.Provider value={{ color: "white" }}>
             {/* className={navbar ? "navbar active" : "navbar"} */}
             <nav className={"navbar"}>
               <NavIcon to="#">
@@ -62,24 +62,14 @@ const Sidebar = () => {
               <h2 className="icon-logo">BXSCIOLY</h2>
             </nav>
           </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white", size: "25" }}>
+          <IconContext.Provider value={{ color: "white", size: "25" }} onClick={AllFuncts} >
             <SidebarNav /* ref={menuRef} */ sidebar={sidebar}>
               <SidebarWrap>
                 <IconContext.Provider value={{ color: "white" }}>
-                  <NavIcon to="#">
-                    <RiIcons.RiMenu3Fill onClick={AllFuncts} />
-                  </NavIcon>
                 </IconContext.Provider>
                 {SidebarData.map((item, index) => {
                   return <SubMenu item={item} key={index} />;
                 })}
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                </a>
-
               </SidebarWrap>
             </SidebarNav>
           </IconContext.Provider>
@@ -173,6 +163,12 @@ const NavDiv = styled.div`
   background-color: #000;
   width: 80%;
   margin: 1rem auto;
+  
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 `;
 
 const EventLinks = styled(Link)``;
@@ -215,7 +211,7 @@ const SidebarNav = styled.nav`
   margin-left: 2rem;
 
   @media (max-width: 600px) {
-    background: white;
+    
   }
 `;
 

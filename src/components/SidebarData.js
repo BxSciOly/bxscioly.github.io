@@ -47,10 +47,6 @@ export const SidebarData = [
     ],
   },
   {
-    title: "Board",
-    path: "/board",
-  },
-  {
     title: "FAQs",
     path: "/faqs",
   },

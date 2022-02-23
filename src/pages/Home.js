@@ -147,12 +147,18 @@ const JoinButton = styled.button`
   @media (max-width: 600px) {
     width: 200px;
     height: 50px;
+    margin-bottom: 8rem;
   }
 `;
 
 const Title = styled.h3`
   color: var(--primary-color);
   text-shadow: 0 0 12px var(--primary-color);
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+    text-align: center;
+  }
 `
 
 

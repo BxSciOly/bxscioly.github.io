@@ -108,8 +108,8 @@ const About = () => {
             "Science is a way of thinking much more than it is a body of
             knowledge" - Carl Sagan
           </h2>
-        <img src="/transparent.png" alt="logo" className="logo" />
         <Board />
+        <img src="/transparent.png" alt="logo" className="logo" />
       </Page>
     </>
   );
