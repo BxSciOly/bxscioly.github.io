@@ -8,22 +8,21 @@ const Faqs = () => {
   return (
     <>
       <Page>
-        <div>
-          <Title>FAQ</Title>
-          <Button>Ask a question!</Button>
-          <Content>
-            <QuestionsDiv>
-              {FaqsData.map((item, index) => {
-                return (
-                  <AccordionItem>
-                    <AccordionTitle>{item.question}</AccordionTitle>
-                    <AccordionAnswer>{item.answer}</AccordionAnswer>
-                  </AccordionItem>
-                );
-              })}
-            </QuestionsDiv>
-          </Content>
-        </div>
+        <Title>FAQs</Title>
+        <Button>Ask a question!</Button>
+        <Content>
+          <QuestionsDiv>
+            {FaqsData.map((item, index) => {
+              return (
+                <AccordionItem>
+                  <AccordionTitle>{item.question}</AccordionTitle>
+                  <AccordionAnswer>{item.answer}</AccordionAnswer>
+                </AccordionItem>
+              );
+            })}
+          </QuestionsDiv>
+        </Content>
+
         <ImageDiv>
           <Image src="/homeSvg.svg" alt="backLogo" />
         </ImageDiv>
@@ -36,51 +35,52 @@ const Title = styled.h1`
   font-size: 350%;
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
-  margin: 1rem 0;
+  margin: 4rem 0;
+  @media (max-width: 600px) {
+    background-color: #000;
+  }
 `;
 
 const Page = styled.div`
   padding: 2rem;
   text-align: center;
   margin-bottom: 4rem;
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
 `;
 
 const Image = styled.img`
   width: 800px;
   height: 800px;
+
+  @media (max-width: 600px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 const Button = styled.button`
-width: 300px;
-height: 60px;
-margin: 2rem 0;
-font-size: 20px;
-border: none;
-font-weight: 600;
-border-radius: 30px;
-cursor: pointer;
-transition: 200ms ease;
-
-&:hover {
-  background-color: var(--primary-color);
-  box-shadow: 0 0 10px var(--primary-color);
-}
-
-@media (max-width: 600px) {
-  width: 200px;
-  height: 50px;
-  margin-bottom: 8rem;
-}
-
+  width: 300px;
+  height: 60px;
+  margin: 2rem 0;
+  font-size: 20px;
+  border: none;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 200ms ease;
 
   &:hover {
-    -webkit-box-shadow: 5px 5px 0px 2px #000000;
-    box-shadow: 5px 5px 0px 2px #000000;
-    cursor: pointer;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
   }
 
   @media (max-width: 600px) {
-    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin: 1rem 0;
   }
 `;
 
@@ -92,6 +92,10 @@ const Content = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 const QuestionsDiv = styled.div`
@@ -103,6 +107,11 @@ const QuestionsDiv = styled.div`
   padding: 4rem;
   border-radius: 20px;
   text-align: left;
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+    margin: 2rem 0;
+  }
 `;
 
 const ImageDiv = styled.div`
@@ -124,6 +133,10 @@ const AccordionTitle = styled.div`
   font-weight: 600;
   font-size: 150%;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    font-size: 110%;
+  }
 `;
 
 const AccordionAnswer = styled.div`
@@ -133,13 +146,17 @@ const AccordionAnswer = styled.div`
   margin-top: 10px;
 
   @media (max-width: 600px) {
-    background: white;
+    font-size: 95%;
   }
 `;
 
 const AccordionItem = styled.div`
   margin-bottom: 4rem;
   padding: 0 3rem;
+
+  @media (max-width: 600px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 export default Faqs;

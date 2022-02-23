@@ -93,10 +93,7 @@ a {
 }
 
 @media (max-width: 600px) {
-  body {
-    background-color: white;
-  }
-  
+
   .events {
     padding: 15px;
   }
