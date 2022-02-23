@@ -14,6 +14,7 @@ import Aksha from "./boardImages/Aksha.png";
 import Julianne from "./boardImages/Julianne.png";
 import Farhan from "./boardImages/Farhan.png";
 import Chair from "./boardImages/Chair.png";
+import Serena from "./boardImages/Serena.png";
 
 const BoardData = [
   {
@@ -63,6 +64,12 @@ const BoardData = [
     title: "Biology Director",
     desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
     background: Chair,
+  },
+  {
+    name: "Serena",
+    title: "Tech Specialist",
+    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    background: Serena,
   },
   {
     name: "Trisha",

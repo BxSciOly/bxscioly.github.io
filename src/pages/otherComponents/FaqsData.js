@@ -15,7 +15,7 @@ const FaqsData = [
   {
     question: "What events are there?",
     answer:
-      "All events are listed on our website as well as the official Scioly website at:",
+      "All events are listed on our website! You can also find the official pages for each event there as well.",
     link: "https://www.soinc.org/",
   },
   {

@@ -24,24 +24,8 @@ const Faqs = () => {
               {FaqsData.map((item, index) => {
                 return (
                   <AccordionItem>
-                    <AccordionTitle>
-                      {item.question}
-                      <GrIcons.GrDown
-                        className={clicked === index ? "rotated" : ""}
-                      />
-                    </AccordionTitle>
-                    
-                      <AccordionAnswer>
-                        {item.answer}&nbsp;
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {item.link}
-                        </a>
-                      </AccordionAnswer>
-                    
+                    <AccordionTitle>{item.question}</AccordionTitle>
+                    <AccordionAnswer>{item.answer}</AccordionAnswer>
                   </AccordionItem>
                 );
               })}
@@ -61,7 +45,7 @@ const Title = styled.h1`
   font-size: 350%;
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
-  margin: 4rem 0 6rem 0;
+  margin: 4rem 0 12rem 0;
 `;
 
 const Page = styled.div`
@@ -69,6 +53,7 @@ const Page = styled.div`
   grid-template-areas: "left right";
   padding: 2rem;
   text-align: center;
+  margin-bottom: 4rem;
 `;
 
 const Image = styled.img`
@@ -109,8 +94,9 @@ const QuestionsDiv = styled.div`
   margin: 4rem 0;
   flex-direction: column;
   background-color: var(--secondary-color);
-  padding: 3rem;
+  padding: 4rem;
   border-radius: 20px;
+  text-align: left;
 `;
 
 const ImageDiv = styled.div`
@@ -123,22 +109,22 @@ const AccordionTitle = styled.div`
   width: 100%;
   color: #fff;
   cursor: pointer;
-  padding: 18px;
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   border-none;
   outline: none;
   transition: background-color 0.6s ease;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 150%;
   justify-content: space-between;
-  z-index: 1;
+  border-bottom: 2px solid var(--primary-color);
 `;
 
 const AccordionAnswer = styled.div`
 
   display: flex;
-  align-items: center;
+  
   flex-direction: column;
   margin-top: 10px;
 
@@ -148,7 +134,7 @@ const AccordionAnswer = styled.div`
 `;
 
 const AccordionItem = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
 `;
 
 export default Faqs;
