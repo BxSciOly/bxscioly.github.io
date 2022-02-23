@@ -2,51 +2,24 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import "./upcoming.css";
 
-const Announcements = [
-  {
-    title: "📃 Attendance",
-    desc: [
-      "On Wednesdays, sign in to attendance on the official meeting attendance form and use the same form to sign out after your last event. ",
-      "On all other days, sign in and out of each event. Event managers will reuse their forms. (WE WILL CONTINUE USING THIS SYSTEM OVER THE SUMMER).",
-    ],
-  },
-  {
-    title: "⏲ Official meeting structure",
-    desc: "As of July 12, meetings will occur at 3:00PM and end at 4:00PM. Announcements take place at 3:00PM-3:15PM. Breakout rooms for work in individual events will take place after.",
-  },
-  {
-    title: "📩 Emails",
-    desc: "Please stay tuned for any SciOly related emails. You may use the interest form to join the mailing list if you have not joined yet.",
-  },
-  {
-    title: "🎉 CONGRATS",
-    desc: "Congratulations to our graduating seniors, best of luck in college!",
-  },
-  {
-    title:
-      "On behalf of the entire board have a happy and restful break! (and don't forget to study for regionals ;)",
-  },
-];
-
-const UpcomingData = [
-  {
-    event: "Start of SciOly summer meetings",
-    month: "Jul",
-    day: "12",
-  },
-  {
-    event: "First day of school",
-    month: "Sept",
-    day: "13",
-  },
-  {
-    event: "First meeting of the official season",
-    day: "TBA",
-  },
-];
-
+const months = {
+  "1" : "Jan",
+  "2" : "Feb",
+  "3" : "Mar",
+  "4" : "Apr",
+  "5" : "May",
+  "6" : "Jun",
+  "7" : "Jul",
+  "8" : "Aug",
+  "9" : "Sep",
+  "10" : "Oct",
+  "11" : "Nov",
+  "12" : "Dec",
+}
+// 
 const Upcoming = () => {
   const [announcements, setAnnouncements] = useState(null);
+  const [events, setEvents] = useState(null)
 
   useEffect(() => {
     fetch('https://scioly-backend.vercel.app/announcement')
@@ -54,10 +27,21 @@ const Upcoming = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setAnnouncements(data);
       });
   }, [])
+
+  useEffect(() => {
+    fetch('https://scioly-backend.vercel.app/event')
+      .then(res => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setEvents(data);
+      });
+  }, [])
+
 
   return (
     <Wrap>
@@ -65,14 +49,14 @@ const Upcoming = () => {
         <UpcomingTitle>
           <h1 className="upcoming-title">Upcoming Events</h1>
         </UpcomingTitle>
-        {UpcomingData.map((item) => (
+        {events && events.map((item) => (
           <UpcomingWrap>
             <DateDiv>
-              <h1>{item.day}</h1>
-              <h3 style={{ fontWeight: "200" }}>{item.month}</h3>
+              <h1>{item.date.split("/")[1]}</h1>
+              <h3 style={{ fontWeight: "200" }}>{months[item.date.split("/")[0]]}</h3>
             </DateDiv>
             <EventDiv>
-              <h3 style={{ fontWeight: "200" }}>{item.event}</h3>
+              <h3 style={{ fontWeight: "200" }}>{item.name}</h3>
             </EventDiv>
           </UpcomingWrap>
         ))}
