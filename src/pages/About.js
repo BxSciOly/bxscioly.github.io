@@ -147,6 +147,12 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 50px;
+  
+  @media (max-width: 600px) {
+    height: 100%;
+    width: 100%;
+  }
+
 `;
 
 const Header = styled.div`
@@ -158,7 +164,7 @@ const Header = styled.div`
 
   @media (max-width: 600px) {
     padding: 20px;
-    margin-top: 30px;
+    margin: 2rem 0;
     width: 100%;
     border-radius: 20px 0 20px 0;
   }
@@ -171,7 +177,14 @@ const AchievementsWrap = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: var(--secondary-color);
-  border-radius: 50px
+  border-radius: 50px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
 `;
 
 const Title = styled.div`
@@ -214,6 +227,10 @@ const Page = styled.div`
   padding: 20px;
   background-color: #000;
   color: #fff;
+ 
+  @media (max-width: 600px) {
+    padding: 2rem;
+  }
 `;
 
 export default About;

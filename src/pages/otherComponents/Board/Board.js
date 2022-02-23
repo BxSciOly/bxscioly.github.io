@@ -28,6 +28,14 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3rem;
+
+  @media (max-width: 600px) {
+    padding: 2rem;
+    display: grid;
+    grid-template-areas:
+      "p1 p2";
+    
+  }
 `;
 
 const Image = styled.img`
@@ -54,7 +62,11 @@ const Member = styled.div`
     "name"
     "desc";
   transition: 200ms ease;
-  margin: 1rem  2rem;
+  margin: 1rem 2rem;
+
+  @media (max-width: 600px) {
+    margin: 1rem 0.5rem;
+  }
 `;
 
 const Name = styled.p`

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "./style/Homestyle.css";
 import Upcoming from "./homeComponents/Upcoming/Upcoming";
-import Schedule from "./homeComponents/Schedule/Schedule";
 import Timeline from "./homeComponents/Timeline/Timeline";
 import Info from "./Info/Info";
 import Background from "./background.mp4";
