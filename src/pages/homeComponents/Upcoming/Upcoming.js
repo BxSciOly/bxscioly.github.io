@@ -89,6 +89,8 @@ const Upcoming = () => {
         {announcements && announcements.map((item) => (
           <h2 className="announcements-desc">
             <span style={{ fontWeight: "700" }}>{item.title}:</span> {item.desc}
+            <br />
+            <span style={{ fontSize: "95%", fontWeight: "300", color: "var(--primary-color)" }}>Posted {item.date}</span>
           </h2>
         ))}
       </AnnouncementsDiv>
