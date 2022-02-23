@@ -65,32 +65,14 @@ const BoardData = [
   {
     name: "Farhan",
     title: "Math/Physics Director",
-    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    desc: "",
     background: Farhan,
   },
   {
     name: "Chair",
     title: "Biology Director",
-    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    desc: "",
     background: Chair,
-  },
-  {
-    name: "Serena",
-    title: "Tech Specialist",
-    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
-    background: Serena,
-  },
-  {
-    name: "Trisha",
-    title: "Outreach Director",
-    desc: "As your Outreach Director, I help to promote the club through social media and develop new content such as videos to post about our achievements. I also reach out to new freshmen that may be interested in joining our Science Olympiad family. Feel free to DM me on Discord or Instagram if you want to say hello! :)",
-    background: Trisha,
-  },
-  {
-    name: "Jiayi",
-    title: "Head of Marketing",
-    desc: "Hello everyone! My name is Jiayi Pang and I'm part of class 2022. I am also the the head of marketing for Bronx Science's Science Olympiad team. Some facts about me: I joined Science Olympiad as a sophomore, I'm a Capricorn, one of my favorite hobbies is dance, and if I could have any superpower, it would be to be able to teleport.",
-    background: Jiayi,
   },
   {
     name: "Julianne",
@@ -99,22 +81,16 @@ const BoardData = [
     background: Julianne,
   },
   {
-    name: "Edita",
-    title: "Invitationals Director",
-    desc: "Hi! My name is Edita Cosovic and I'm a rising Junior in the graduating class of 2023. I am currently the Invitationals Director for Science Olympiad, which means I am in charge of finding invitationals and setting up teams for competitions. Aside from Science Olympiad, I enjoy playing soccer in my free time!",
-    background: Edita,
+    name: "Serena",
+    title: "Tech Specialist",
+    desc: "",
+    background: Serena,
   },
   {
-    name: "Aksha",
-    title: "Marketing",
-    desc: "Hi, my name is Aksha Mia. I am in the unspecialized marketing position of Science Olympiad. I will be graduating in 2023.",
-    background: Aksha,
-  },
-  {
-    name: "Helena",
-    title: "Treasurer",
-    desc: "Treasurer/Funding Director, Class of 2022",
-    background: Helena,
+    name: "Jake",
+    title: "Head of Logistics",
+    desc: "Hi, I am Jake  ('22), and this year I am the head of the Logistics department for Science Olympiad. I'm very excited to help our growing team, and make sure that the team runs smoothly and efficiently. I won't be competing this year, sadly, but I will behind the scenes. I'm glad that SciOly is in person this year, and I'm excited to still learn in my events, specifically Biology and Chemistry.",
+    background: Jake,
   },
   {
     name: "Sarjona",
@@ -134,11 +110,36 @@ const BoardData = [
     desc: "",
     background: Arnab,
   },
+  
   {
-    name: "Jake",
-    title: "Head of Logistics",
-    desc: "Hi, I am Jake  ('22), and this year I am the head of the Logistics department for Science Olympiad. I'm very excited to help our growing team, and make sure that the team runs smoothly and efficiently. I won't be competing this year, sadly, but I will behind the scenes. I'm glad that SciOly is in person this year, and I'm excited to still learn in my events, specifically Biology and Chemistry.",
-    background: Jake,
+    name: "Jiayi",
+    title: "Head of Marketing",
+    desc: "Hello everyone! My name is Jiayi Pang and I'm part of class 2022. I am also the the head of marketing for Bronx Science's Science Olympiad team. Some facts about me: I joined Science Olympiad as a sophomore, I'm a Capricorn, one of my favorite hobbies is dance, and if I could have any superpower, it would be to be able to teleport.",
+    background: Jiayi,
+  },
+  {
+    name: "Aksha",
+    title: "Marketing",
+    desc: "Hi, my name is Aksha Mia. I am in the unspecialized marketing position of Science Olympiad. I will be graduating in 2023.",
+    background: Aksha,
+  },
+  {
+    name: "Trisha",
+    title: "Outreach Director",
+    desc: "As your Outreach Director, I help to promote the club through social media and develop new content such as videos to post about our achievements. I also reach out to new freshmen that may be interested in joining our Science Olympiad family. Feel free to DM me on Discord or Instagram if you want to say hello! :)",
+    background: Trisha,
+  },
+  {
+    name: "Edita",
+    title: "Invitationals Director",
+    desc: "Hi! My name is Edita Cosovic and I'm a rising Junior in the graduating class of 2023. I am currently the Invitationals Director for Science Olympiad, which means I am in charge of finding invitationals and setting up teams for competitions. Aside from Science Olympiad, I enjoy playing soccer in my free time!",
+    background: Edita,
+  },
+  {
+    name: "Helena",
+    title: "Treasurer",
+    desc: "Treasurer/Funding Director, Class of 2022",
+    background: Helena,
   },
 ];
 
