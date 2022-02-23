@@ -13,6 +13,13 @@ const FooterDiv = styled.div`
   z-index: 999;
   color: white;
   justify-content: center;
+  
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-areas: 
+      "d1 d2";
+  }
+
 
 `;
 const Box = styled.div`
@@ -23,7 +30,7 @@ const Box = styled.div`
   background: black;
 
   @media (max-width: 1000px) {
-    padding: 70px 30px;
+    padding: 20px 30px;
   }
 `;
 
@@ -33,7 +40,7 @@ const Footer = () => {
       <Box>
         <FooterDiv className="footer">
           <MediaDiv>
-            <a className="title">BxScioly</a>
+            <h3 className="title">BxScioly</h3>
             <a
               href="https://www.instagram.com/bx_sci_oly/?hl=en"
               target="_blank"
@@ -60,7 +67,7 @@ const Footer = () => {
             </a>
           </MediaDiv>
           <EventsDiv>
-            <a className="title-event">Explore Topics</a>
+            <h3 className="title-event">Explore Topics</h3>
             <Link style={linkstyle} to="/biology">
               <Links>Biology</Links>
             </Link>
@@ -78,7 +85,7 @@ const Footer = () => {
             </Link>
           </EventsDiv>
           <OtherDiv>
-            <a className="title-event">Resources</a>
+            <h3 className="title-event">Resources</h3>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
               target="_blank"
@@ -90,16 +97,12 @@ const Footer = () => {
             <Link style={linkstyle} to="/about">
               <Links>About us</Links>
             </Link>
-            <Links>Contact</Links>
-            <Link style={linkstyle} to="/board">
-              <Links>Board</Links>
-            </Link>
             <Link style={linkstyle} to="/faqs">
               <Links>FAQs</Links>
             </Link>
           </OtherDiv>
           <OtherDiv>
-            <a className="title-event">Support</a>
+            <h3 className="title-event">Support</h3>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdIzC1T9ZwPq9FeiL4gyvtvDuHyr-uI2FbGHJp9f33Q-KfpKg/viewform?usp=sf_link"
               target="_blank"
@@ -134,16 +137,30 @@ const MediaDiv = styled.div`
   padding: 20px;
   height: 300px;
   margin-right: 30px;
+  
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 25px;
+  }
+
 `;
 
 const EventsDiv = styled.div`
   padding: 30px;
   margin-right: 30px;
+
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 25px;
+  }
+
 `;
 
 const OtherDiv = styled.div`
   padding: 30px;
   margin-right: 30px;
+
+  
 `;
 
 const Links = styled.p`

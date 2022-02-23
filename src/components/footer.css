@@ -19,10 +19,13 @@ p:hover {
 .title {
     font-size: 30px;
     font-weight: 600;
+    margin: 10px;
 }
 
 .title-event {
     font-weight: 600;
     font-size: 20px;
+    margin: 10px;
     margin-bottom: 20px;
+    
 }
