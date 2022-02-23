@@ -169,11 +169,10 @@ const Links = styled(Link)`
 
 const NavDiv = styled.div`
   border-bottom: 2px solid #fff;
-  border-radius: 10px;
-  padding: 0 1rem;
+  padding: 0 2rem;
   background-color: #000;
   width: 80%;
-  margin: 2rem auto;
+  margin: 1rem auto;
 `;
 
 const EventLinks = styled(Link)``;

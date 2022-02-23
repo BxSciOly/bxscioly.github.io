@@ -97,7 +97,7 @@ const Home = () => {
         <Upcoming />
       </HomeBackground>
       <Timeline />  
-      <Image src="/homeTransparent.png" alt="backLogo" />
+      <Image src="/homeSvg.svg" alt="backLogo" />
     </div>
   );
 };
