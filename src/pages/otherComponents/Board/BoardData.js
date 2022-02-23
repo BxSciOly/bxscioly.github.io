@@ -15,6 +15,9 @@ import Julianne from "./boardImages/Julianne.png";
 import Farhan from "./boardImages/Farhan.png";
 import Chair from "./boardImages/Chair.png";
 import Serena from "./boardImages/Serena.png";
+import Boris from "./boardImages/Boris.png";
+import Samuel from "./boardImages/Samuel.jpg";
+import Arnab from "./boardImages/Arnab.jpg";
 
 const BoardData = [
   {
@@ -40,6 +43,12 @@ const BoardData = [
     title: "Build Director",
     desc: "Hi everyone! I am a rising senior and am continuing as one of the Build Directors this year! Outside of Science Olympiad, I am a research intern, biker, lover of photography, and I love to explore the city and the outdoors. I can't wait to get back to school next year so we can actually build in person, and I am excited to continue this journey with you all! ",
     background: Bhaskar,
+  },
+  {
+    name: "Boris",
+    title: "Build Director",
+    desc: "",
+    background: Boris,
   },
   {
     name: "Lela",
@@ -112,6 +121,18 @@ const BoardData = [
     title: "Logistics",
     desc: "Hi! My name is Sarjona and I’m a rising senior (class of 2022). I’m so excited to be a part of the Logistics team this year. I know we’ll have a fun and successful season!",
     background: Sarjona,
+  },
+  {
+    name: "Samuel",
+    title: "Logistics",
+    desc: "",
+    background: Samuel,
+  },
+  {
+    name: "Arnab",
+    title: "Logistics",
+    desc: "",
+    background: Arnab,
   },
   {
     name: "Jake",
