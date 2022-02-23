@@ -50,24 +50,21 @@ const Sidebar = () => {
     <NavDiv>
       {isPageWide ? (
         <>
-          <IconContext.Provider value={{ color: "white" }}>
+          
             {/* className={navbar ? "navbar active" : "navbar"} */}
             <nav className={"navbar"}>
               <NavIcon to="#">
                 <RiIcons.RiMenu2Fill onClick={AllFuncts} value={{ color: "white" }}/>
               </NavIcon>
             </nav>
-          </IconContext.Provider>
-
-            <SidebarNav /* ref={menuRef} */ sidebar={sidebar}>
+        
+            
               <SidebarWrap className={sidebar ? "logo-title-moved" : "logo-title"}>
-                <IconContext.Provider value={{ color: "white" }}>
-                </IconContext.Provider>
                 {SidebarData.map((item, index) => {
                   return <SubMenu item={item} key={index} />;
                 })}
               </SidebarWrap>
-            </SidebarNav>
+            
          
         </>
       ) : (
@@ -222,6 +219,10 @@ const SidebarNav = styled.nav`
 const SidebarWrap = styled.div`
   margin-left: 2rem;
   width: 100%;
+
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 `;
 
 const NavBar = styled.div`
