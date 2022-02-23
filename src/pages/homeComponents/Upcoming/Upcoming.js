@@ -86,7 +86,7 @@ const Upcoming = () => {
             Check here every week for new updates!
           </h3>
         </AnnouncementsDescDiv>
-        {Announcements.map((item) => (
+        {announcements && announcements.map((item) => (
           <h2 className="announcements-desc">
             <span style={{ fontWeight: "700" }}>{item.title}:</span> {item.desc}
           </h2>
