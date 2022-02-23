@@ -63,6 +63,7 @@ const Member = styled.div`
     "desc";
   transition: 200ms ease;
   margin: 1rem 2rem;
+  width: 10rem;
 
   @media (max-width: 600px) {
     margin: 1rem 0.5rem;

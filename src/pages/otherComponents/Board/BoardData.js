@@ -10,7 +10,6 @@ import Jiayi from "./boardImages/Jiayi.png";
 import Edita from "./boardImages/Edita.png";
 import Helena from "./boardImages/Helena.png";
 import Sarjona from "./boardImages/Sarjona.png";
-import Aksha from "./boardImages/Aksha.png";
 import Julianne from "./boardImages/Julianne.png";
 import Farhan from "./boardImages/Farhan.png";
 import Chair from "./boardImages/Chair.png";
@@ -116,12 +115,6 @@ const BoardData = [
     title: "Head of Marketing",
     desc: "Hello everyone! My name is Jiayi Pang and I'm part of class 2022. I am also the the head of marketing for Bronx Science's Science Olympiad team. Some facts about me: I joined Science Olympiad as a sophomore, I'm a Capricorn, one of my favorite hobbies is dance, and if I could have any superpower, it would be to be able to teleport.",
     background: Jiayi,
-  },
-  {
-    name: "Aksha",
-    title: "Marketing",
-    desc: "Hi, my name is Aksha Mia. I am in the unspecialized marketing position of Science Olympiad. I will be graduating in 2023.",
-    background: Aksha,
   },
   {
     name: "Trisha",
