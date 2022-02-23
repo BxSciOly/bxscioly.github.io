@@ -2,7 +2,7 @@ const BuildData = [
   {
     eventName: "Bridges",
     description:
-      "Bridges is an event in which participant build a bridge that is very lightweight and capable of holding a designated weight.",
+      "Bridges is an event in which participants build bridges that are lightweight and capable of holding as much weight as possible.",
     link: "https://www.soinc.org/bridge-c",
   },
   {
