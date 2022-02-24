@@ -77,7 +77,7 @@ export const Chemistry = () => {
 export const Physics = () => {
   return (
     <div className="events">
-      <Cover>PHYSICS</Cover>
+      <Cover>MATH & PHYSICS</Cover>
       {PhysicsData.map((event) => (
         <BubbleCard href={event.link} target="_blank">
           <EventTitle>{event.eventName}</EventTitle>

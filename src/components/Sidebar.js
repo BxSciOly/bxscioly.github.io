@@ -130,7 +130,7 @@ const Sidebar = () => {
                   <a>Chemistry</a>
                 </EventLinks>
                 <EventLinks to="/physics">
-                  <a>Physics</a>
+                  <a>Math/Physics</a>
                 </EventLinks>
               </div>
             </div>
