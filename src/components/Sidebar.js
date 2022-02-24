@@ -75,6 +75,17 @@ const Sidebar = () => {
             <h1 className="navLogo">BXSCIOLY</h1>
           </Link>
           <SidebarDiv>
+            <Links to="/home">
+              <SidebarItem
+                className={`${
+                  location.pathname === "/home"
+                    ? "whiteClassName"
+                    : "regularClassName"
+                }`}
+              >
+                Home
+              </SidebarItem>
+            </Links>
             <Links to="/about">
               <SidebarItem
                 className={`${
@@ -139,8 +150,7 @@ const Sidebar = () => {
             href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
             target="_blank"
             rel="noopener noreferrer"
-          >
-          </a>
+          ></a>
         </NavBar>
       )}
     </NavDiv>
@@ -150,12 +160,14 @@ const Sidebar = () => {
 const Links = styled(Link)`
   background: black;
   height: 0px;
+  z-index: 999;
 `;
 
 const NavDiv = styled.div`
   border-bottom: 2px solid #fff;
   padding: 0 2rem;
-  background-color: #000;
+  background: none;
+  z-index: 999;
   width: 80%;
   margin: 1rem auto;
 
@@ -163,6 +175,7 @@ const NavDiv = styled.div`
     margin: 0;
     padding: 0;
     width: 100%;
+    z-index: 999;
   }
 `;
 
@@ -171,6 +184,7 @@ const EventLinks = styled(Link)``;
 const SidebarDiv = styled.div`
   height: 100%;
   display: flex;
+  z-index: 999;
   justify-content: center;
   align-items: center;
   margin-left: auto;
@@ -182,6 +196,7 @@ const SidebarItem = styled.p`
   font-family: roboto, sans-serif;
   font-weight: 400;
   width: 50px;
+  z-index: 999;
 `;
 
 const NavIcon = styled(Link)`
@@ -191,8 +206,8 @@ const NavIcon = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  z-index: 999;
 `;
-
 
 const SidebarWrap = styled.div`
   margin: 1rem 0 3rem 0;
@@ -204,6 +219,7 @@ const NavBar = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  z-index: 999;
 `;
 
 export default Sidebar;
