@@ -8,8 +8,12 @@ const Faqs = () => {
   return (
     <>
       <Page>
-        <Title>FAQs</Title>
-        <Button>Ask a question!</Button>
+        <Title>Frequently Asked Questions</Title>
+        <Button>
+          <Anchor href="https://forms.gle/TnaZtBrx5rp2QnDJ9" target="_blank">
+            Ask a question!
+          </Anchor>
+        </Button>
         <Content>
           <QuestionsDiv>
             {FaqsData.map((item, index) => {
@@ -59,6 +63,14 @@ const Image = styled.img`
     width: 350px;
     height: 350px;
   }
+`;
+
+const Anchor = styled.a`
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Button = styled.button`
@@ -124,7 +136,6 @@ const ImageDiv = styled.div`
 const AccordionTitle = styled.div`
   width: 100%;
   color: var(--primary-color);
-  cursor: pointer;
   padding: 0.5rem 0;
   display: flex;
   align-items: center;
