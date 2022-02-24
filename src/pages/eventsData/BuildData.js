@@ -8,7 +8,7 @@ const BuildData = [
   {
     eventName: "Detector Building",
     description:
-      "Detector Building is an event that requires participants to build a temperature-sensing device that accurately measures and displays temperatures from 0 °C to 75 °C using a microcontroller board such as the TI Innovator, Arduino, or Raspberry Pi.",
+      "In this event, you use arduino and resistors to build a temperature sensor as well as taking a short test on building detectors.",
     link: "https://www.soinc.org/detector-building-c",
   },
   {
@@ -32,7 +32,7 @@ const BuildData = [
   {
     eventName: "Ping Pong Parachute",
     description:
-      "Ping pong parachute is an engineering-based event hosted by Science Olympiad where students are tasked to build and test a bottle rocket indoors that deploys a parachute that holds a ping pong ball. The objective to achieve the highest time aloft for the ping pong ball. These concepts also apply to Indoor Bottle Rocket, another event held by Science Olympiad. ",
+      "In this event, you and a partner work together to build a rocket using a 1L bottle that will release your parachute as it is launched. The goal is to keep your parachute—and the ping pong ball attached to it—in the air as long as possible.",
     link: "https://www.soinc.org/ping-pong-parachute-c",
   },
   {
