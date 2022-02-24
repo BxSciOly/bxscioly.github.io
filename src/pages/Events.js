@@ -18,12 +18,21 @@ export const Biology = () => {
   return (
     <div className="events">
       <Cover>BIOLOGY</Cover>
+      <Link
+        href="https://www.soinc.org/sites/default/files/2021-09/Science_Olympiad_Div_C_2022_Rules_Manual_Web_1.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Want more information? Click here for the event manual!
+      </Link>
+      <CardDiv>
         {BiologyData.map((event) => (
           <BubbleCard href={event.link} target="_blank">
             <EventTitle>{event.eventName}</EventTitle>
             <EventDesc>{event.description}</EventDesc>
           </BubbleCard>
         ))}
+      </CardDiv>
     </div>
   );
 };
@@ -32,16 +41,25 @@ export const EarthScience = () => {
   return (
     <div className="events">
       <Cover>EARTH SCIENCE</Cover>
-      {EarthScienceData.map((event) => (
-        <BubbleCard href={event.link} target="_blank">
-          <EventTitle>{event.eventName}</EventTitle>
-          <EventDesc>{event.description}</EventDesc>
-          <br />
-          <a href={event.links} target="_blank" rel="noopener noreferrer">
-            <EventLink>{event.links}</EventLink>
-          </a>
-        </BubbleCard>
-      ))}
+      <Link
+        href="https://www.soinc.org/sites/default/files/2021-09/Science_Olympiad_Div_C_2022_Rules_Manual_Web_1.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Want more information? Click here for the event manual!
+      </Link>
+      <CardDiv>
+        {EarthScienceData.map((event) => (
+          <BubbleCard href={event.link} target="_blank">
+            <EventTitle>{event.eventName}</EventTitle>
+            <EventDesc>{event.description}</EventDesc>
+            <br />
+            <a href={event.links} target="_blank" rel="noopener noreferrer">
+              <EventLink>{event.links}</EventLink>
+            </a>
+          </BubbleCard>
+        ))}
+      </CardDiv>
     </div>
   );
 };
@@ -50,12 +68,21 @@ export const Build = () => {
   return (
     <div className="events">
       <Cover>BUILD</Cover>
-      {BuildData.map((event) => (
-        <BubbleCard href={event.link} target="_blank">
-          <EventTitle>{event.eventName}</EventTitle>
-          <EventDesc>{event.description}</EventDesc>
-        </BubbleCard>
-      ))}
+      <Link
+        href="https://www.soinc.org/sites/default/files/2021-09/Science_Olympiad_Div_C_2022_Rules_Manual_Web_1.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Want more information? Click here for the event manual!
+      </Link>
+      <CardDiv>
+        {BuildData.map((event) => (
+          <BubbleCard href={event.link} target="_blank">
+            <EventTitle>{event.eventName}</EventTitle>
+            <EventDesc>{event.description}</EventDesc>
+          </BubbleCard>
+        ))}
+      </CardDiv>
     </div>
   );
 };
@@ -64,12 +91,21 @@ export const Chemistry = () => {
   return (
     <div className="events">
       <Cover>CHEMISTRY</Cover>
-      {ChemistryData.map((event) => (
-        <BubbleCard href={event.link} target="_blank">
-          <EventTitle>{event.eventName}</EventTitle>
-          <EventDesc>{event.description}</EventDesc>
-        </BubbleCard>
-      ))}
+      <Link
+        href="https://www.soinc.org/sites/default/files/2021-09/Science_Olympiad_Div_C_2022_Rules_Manual_Web_1.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Want more information? Click here for the event manual!
+      </Link>
+      <CardDiv>
+        {ChemistryData.map((event) => (
+          <BubbleCard href={event.link} target="_blank">
+            <EventTitle>{event.eventName}</EventTitle>
+            <EventDesc>{event.description}</EventDesc>
+          </BubbleCard>
+        ))}
+      </CardDiv>
     </div>
   );
 };
@@ -78,18 +114,47 @@ export const Physics = () => {
   return (
     <div className="events">
       <Cover>MATH & PHYSICS</Cover>
-      {PhysicsData.map((event) => (
-        <BubbleCard href={event.link} target="_blank">
-          <EventTitle>{event.eventName}</EventTitle>
-          <EventDesc>{event.description}</EventDesc>
-        </BubbleCard>
-      ))}
+      <Link
+        href="https://www.soinc.org/sites/default/files/2021-09/Science_Olympiad_Div_C_2022_Rules_Manual_Web_1.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Want more information? Click here for the event manual!
+      </Link>
+      <CardDiv>
+        {PhysicsData.map((event) => (
+          <BubbleCard href={event.link} target="_blank">
+            <EventTitle>{event.eventName}</EventTitle>
+            <EventDesc>{event.description}</EventDesc>
+          </BubbleCard>
+        ))}
+      </CardDiv>
     </div>
   );
 };
 
 // styling
 
+const CardDiv = styled.div`
+  padding: 20px 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    padding: 20px 0;
+  }
+`;
+
+const Link = styled.a`
+  font-size: 220%;
+  text-decoration: underline;
+
+  @media (max-width: 600px) {
+    text-align: center;
+    font-size: 150%;
+  }
+`;
 
 const EventTitle = styled.h6`
   font-size: 30px;
@@ -118,7 +183,6 @@ const EventLink = styled.h5`
   @media (max-width: 600px) {
     padding: 0;
   }
-
 `;
 
 const BubbleCard = styled.a`
@@ -146,7 +210,6 @@ const BubbleCard = styled.a`
     margin: 1rem;
   }
 `;
-
 
 const Cover = styled.h1`
   color: #fff;
