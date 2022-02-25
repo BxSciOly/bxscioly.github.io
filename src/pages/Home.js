@@ -8,7 +8,6 @@ import Info from "./Info/Info";
 import Background from "./background.mp4";
 
 
-
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -55,7 +54,6 @@ const Home = () => {
         <Info />
         <Upcoming />
       </HomeBackground>
-      <Timeline />
     </div>
   );
 };

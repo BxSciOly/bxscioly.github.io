@@ -40,7 +40,7 @@ const Footer = () => {
           <MediaDiv>
             <h3 className="title">BxScioly</h3>
             <a
-              href="https://www.instagram.com/bx_sci_oly/?hl=en"
+              href="https://www.instagram.com/bxscioly/"
               target="_blank"
               rel="noopener noreferrer"
             >

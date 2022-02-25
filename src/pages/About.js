@@ -101,9 +101,9 @@ const About = () => {
             style={{
               fontWeight: "400",
               marginTop: "20px",
-              fontFamily: "Roboto, sans-serif",
-              margin: "5rem 0",
-            }}
+              fontFamily: "Roboto, sans-serif",    
+              margin: "5rem 0",    
+            }}   
           >
             "Science is a way of thinking much more than it is a body of
             knowledge" - Carl Sagan

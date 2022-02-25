@@ -136,7 +136,7 @@ export const Physics = () => {
 // styling
 
 const CardDiv = styled.div`
-  padding: 20px 100px;
+  padding: 20px 5px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -222,9 +222,11 @@ const Cover = styled.h1`
   align-items: center;
   margin-bottom: 4rem;
   font-size: 100px;
+  margin: 0 10rem 4rem 10rem;
 
   @media (max-width: 600px) {
-    font-size: 40px;
+    font-size: 35px;
     height: 100px;
+    margin: 3rem 1rem 4rem 1rem;
   }
 `;
