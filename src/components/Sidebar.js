@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router";
+import { useLocation, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { useMediaQuery } from "@react-hook/media-query";
-import { NavLink } from "react-router-dom";
 import * as RiIcons from "react-icons/ri";
 import * as FaIcons from "react-icons/fa";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
-import { IconContext } from "react-icons/lib";
 import "./sidebar.css";
 
 // let useClickOutside = (handler) => {
@@ -136,11 +134,6 @@ const Sidebar = () => {
               </div>
             </div>
           </SidebarDiv>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
         </NavBar>
       )}
     </NavDiv>
