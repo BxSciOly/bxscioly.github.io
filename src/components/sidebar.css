@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
   .whiteClassName {
-    color: white;
     transition: 0s all;
   }
 
   .navLogo {
     color: var(--primary-color);
-    font-family: Inter;
     cursor: pointer;
-    font-size: 37px;
-    text-shadow: 0 0 5px var(--primary-color);
+    font-size: 30px;
+    z-index: 999;
     margin-left: auto;
   }
 
@@ -36,35 +34,30 @@
   .dropdown {
     position: relative;
     display: inline-block;
-    color: white;
   }
 
   .dropbtn {
     display: flex;
     align-items: center;
+    color: var(--primary-color);
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background: var(--secondary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 5%;
+    background: var(--primary-color);
     min-width: 180px;
     z-index: 999;
+    padding: 0;
     top: 100%;
     margin-top: -5px;
     transition: 200ms ease;
   }
 
   .dropdown-content a {
-    color: var(--primary-color);
     font-size: 20px;
     font-weight: 400;
-  }
-
-  .dropdown-content a:hover {
-    text-decoration: underline;
+    color: black;
   }
 
   .dropdown:hover .dropdown-content, .dropdown-content:hover {
