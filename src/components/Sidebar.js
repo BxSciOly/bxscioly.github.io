@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router";
 import styled from "styled-components";
 import { useMediaQuery } from "@react-hook/media-query";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import * as RiIcons from "react-icons/ri";
 import * as FaIcons from "react-icons/fa";
 import { SidebarData } from "./SidebarData";
@@ -71,9 +71,9 @@ const Sidebar = () => {
         </>
       ) : (
         <NavBar>
-          <Link to="/home">
-            <h1 className="navLogo">BXSCIOLY</h1>
-          </Link>
+          <NavLink to="/home">
+            <h1 className="navLogo">BSSO</h1>
+          </NavLink>
           <SidebarDiv>
             <Links to="/home">
               <SidebarItem
@@ -128,21 +128,11 @@ const Sidebar = () => {
                 />
               </div>
               <div className="dropdown-content">
-                <EventLinks to="/biology">
-                  <a href="#">Biology</a>
-                </EventLinks>
-                <EventLinks to="/earthscience">
-                  <a href="#">Earth Science</a>
-                </EventLinks>
-                <EventLinks to="/build">
-                  <a>Build</a>
-                </EventLinks>
-                <EventLinks to="/chemistry">
-                  <a>Chemistry</a>
-                </EventLinks>
-                <EventLinks to="/physics">
-                  <a>Math/Physics</a>
-                </EventLinks>
+                <EventLinks to="/biology">Biology</EventLinks>
+                <EventLinks to="/earthscience">Earth Science</EventLinks>
+                <EventLinks to="/build">Build</EventLinks>
+                <EventLinks to="/chemistry">Chemistry</EventLinks>
+                <EventLinks to="/physics">Math/Physics</EventLinks>
               </div>
             </div>
           </SidebarDiv>
@@ -157,18 +147,15 @@ const Sidebar = () => {
   );
 };
 
-const Links = styled(Link)`
-  background: black;
+const Links = styled(NavLink)`
   height: 0px;
   z-index: 999;
 `;
 
 const NavDiv = styled.div`
-  border-bottom: 2px solid #fff;
-  padding: 0 2rem;
   background: none;
   z-index: 999;
-  width: 80%;
+  width: 81%;
   margin: 1rem auto;
 
   @media (max-width: 600px) {
@@ -179,7 +166,9 @@ const NavDiv = styled.div`
   }
 `;
 
-const EventLinks = styled(Link)``;
+const EventLinks = styled(NavLink)`
+  color: white;
+`;
 
 const SidebarDiv = styled.div`
   height: 100%;
@@ -193,13 +182,12 @@ const SidebarDiv = styled.div`
 const SidebarItem = styled.p`
   font-size: 20px;
   margin: 15px;
-  font-family: roboto, sans-serif;
   font-weight: 400;
   width: 50px;
   z-index: 999;
 `;
 
-const NavIcon = styled(Link)`
+const NavIcon = styled(NavLink)`
   margin-left: 2rem;
   font-size: 2rem;
   height: 80px;
@@ -215,6 +203,7 @@ const SidebarWrap = styled.div`
 `;
 
 const NavBar = styled.div`
+  z-index: 900;
   height: 105px;
   display: flex;
   justify-content: flex-start;
