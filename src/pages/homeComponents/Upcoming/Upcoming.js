@@ -19,29 +19,28 @@ const months = {
 // 
 const Upcoming = () => {
   const [announcements, setAnnouncements] = useState(null);
-  const [events, setEvents] = useState(null)
+  const [events, setEvents] = useState(null);
 
   useEffect(() => {
-    fetch('https://scioly-backend.vercel.app/announcement')
-      .then(res => {
+    fetch("https://scioly-backend.vercel.app/announcement")
+      .then((res) => {
         return res.json();
       })
       .then((data) => {
         setAnnouncements(data);
       });
-  }, [])
+  }, []);
 
   useEffect(() => {
-    fetch('https://scioly-backend.vercel.app/event')
-      .then(res => {
+    fetch("https://scioly-backend.vercel.app/event")
+      .then((res) => {
         return res.json();
       })
       .then((data) => {
         console.log(data);
         setEvents(data);
       });
-  }, [])
-
+  }, []);
 
   return (
     <Wrap>
@@ -49,17 +48,20 @@ const Upcoming = () => {
         <UpcomingTitle>
           <h1 className="upcoming-title">Upcoming Events</h1>
         </UpcomingTitle>
-        {events && events.map((item) => (
-          <UpcomingWrap>
-            <DateDiv>
-              <h1>{item.date.split("/")[1]}</h1>
-              <h3 style={{ fontWeight: "200" }}>{months[item.date.split("/")[0]]}</h3>
-            </DateDiv>
-            <EventDiv>
-              <h3 style={{ fontWeight: "200" }}>{item.name}</h3>
-            </EventDiv>
-          </UpcomingWrap>
-        ))}
+        {events &&
+          events.map((item) => (
+            <UpcomingWrap>
+              <DateDiv>
+                <h1>{item.date.split("/")[1]}</h1>
+                <h3 style={{ fontWeight: "200" }}>
+                  {months[item.date.split("/")[0]]}
+                </h3>
+              </DateDiv>
+              <EventDiv>
+                <h3 style={{ fontWeight: "200" }}>{item.name}</h3>
+              </EventDiv>
+            </UpcomingWrap>
+          ))}
       </UpcomingDiv>
       <AnnouncementsDiv>
         <AnnouncementsTitleDiv>
@@ -70,13 +72,17 @@ const Upcoming = () => {
             Check here every week for new updates!
           </h3>
         </AnnouncementsDescDiv>
-        {announcements && announcements.map((item) => (
-          <h2 className="announcements-desc">
-            <span style={{ fontWeight: "700" }}>{item.title}:</span> {item.desc}
-            <br />
-            <span style={{ fontSize: "95%", fontWeight: "300", color: "var(--primary-color)" }}>Posted {item.date}</span>
-          </h2>
-        ))}
+        {announcements &&
+          announcements.map((item) => (
+            <h2 className="announcements-desc">
+              <span style={{ fontWeight: "700" }}>{item.title}:</span>{" "}
+              {item.desc}
+              <br />
+              <span style={{ fontSize: "95%", fontWeight: "300" }}>
+                Posted {item.date}
+              </span>
+            </h2>
+          ))}
       </AnnouncementsDiv>
     </Wrap>
   );
@@ -88,10 +94,8 @@ const Wrap = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 20px;
-  border-radius: 30px;
   z-index: 3;
   margin-bottom: 40px;
-  
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -100,12 +104,11 @@ const Wrap = styled.div`
 `;
 
 const UpcomingDiv = styled.div`
-  background-color: var(--secondary-color);
-  color: #fff;
+  background: white;
+  color: black;
   width: 48%;
-  padding: 20px;
-  border-radius: 25px;
-  box-shadow: 0 0 40px var(--secondary-color);
+  padding: 40px;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 4%);
   @media (max-width: 600px) {
     width: 100%;
     margin-bottom: 50px;
@@ -113,13 +116,11 @@ const UpcomingDiv = styled.div`
 `;
 
 const AnnouncementsDiv = styled.div`
-  background-color: var(--secondary-color);
-  color: #fff;
+  background: white;
+  color: black;
   width: 48%;
-  padding: 20px;
-  border-radius: 25px;
-  box-shadow: 0 0 40px var(--secondary-color);
-  
+  padding: 40px;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 4%);
   @media (max-width: 600px) {
     width: 100%;
   }
@@ -147,7 +148,6 @@ const UpcomingTitle = styled.div`
 const DateDiv = styled.div`
   width: 50px;
   background: var(--secondar-color);
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
