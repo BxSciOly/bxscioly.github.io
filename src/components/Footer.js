@@ -7,17 +7,17 @@ import "./footer.css";
 import { Link } from "react-router-dom";
 
 const FooterDiv = styled.div`
-  width: 70%;
+  width: 100%;
   padding: 20px;
   display: flex;
   z-index: 999;
   color: white;
+  background: #070a0e;
   justify-content: center;
-  
+
   @media (max-width: 600px) {
     display: grid;
-    grid-template-areas: 
-      "d1 d2";
+    grid-template-areas: "d1 d2";
   }
 `;
 const Box = styled.div`
@@ -25,7 +25,6 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
 
   @media (max-width: 1000px) {
     padding: 20px 30px;
@@ -135,12 +134,11 @@ const MediaDiv = styled.div`
   padding: 20px;
   height: 300px;
   margin-right: 30px;
-  
+
   @media (max-width: 600px) {
     margin: 0;
     padding: 25px;
   }
-
 `;
 
 const EventsDiv = styled.div`
@@ -151,20 +149,16 @@ const EventsDiv = styled.div`
     margin: 0;
     padding: 25px;
   }
-
 `;
 
 const OtherDiv = styled.div`
   padding: 30px;
   margin-right: 30px;
-
-  
 `;
 
 const Links = styled.p`
   margin-bottom: 15px;
   &:hover {
-    text-decoration: underline;
     cursor: pointer;
   }
 `;
