@@ -12,7 +12,7 @@ p {
 }
 
 p:hover {
-    text-decoration: underline;
+    color: #f28d35;
     cursor: pointer;
 }
 
