@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Slide } from "react-slideshow-image";
 import scioly1 from "./images/scioly1.jpg";
 import scioly2 from "./images/scioly2.jpg";
 import scioly3 from "./images/scioly3.jpg";
@@ -12,12 +11,16 @@ import * as IoIcons from "react-icons/io5";
 import * as RiIcons from "react-icons/ri";
 import "react-slideshow-image/dist/styles.css";
 import "./style/Homestyle.css";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Board from "./otherComponents/Board/Board";
-
-const slideImages = [scioly1, scioly2, scioly3, scioly4, scioly5, scioly6];
-
 const About = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <>
       <Page>
@@ -25,49 +28,59 @@ const About = () => {
           <h1
             style={{
               fontSize: "50px",
-              userSselect: "none",
               color: "var(--primary-color)",
-              textShadow: "0 0 5px var(--primary-color)"
             }}
           >
             About Us
           </h1>
         </Title>
         <Header>
-          <ImageDiv>
-            <Slide easing="ease">
-              <div className="each-slide">
-                <div
-                  style={{ backgroundImage: `url(${slideImages[0]})` }}
-                ></div>
-              </div>
-              <div className="each-slide">
-                <div
-                  style={{ backgroundImage: `url(${slideImages[1]})` }}
-                ></div>
-              </div>
-              <div className="each-slide">
-                <div
-                  style={{ backgroundImage: `url(${slideImages[2]})` }}
-                ></div>
-              </div>
-              <div className="each-slide">
-                <div
-                  style={{ backgroundImage: `url(${slideImages[3]})` }}
-                ></div>
-              </div>
-              <div className="each-slide">
-                <div
-                  style={{ backgroundImage: `url(${slideImages[4]})` }}
-                ></div>
-              </div>
-              <div className="each-slide">
-                <div
-                  style={{ backgroundImage: `url(${slideImages[5]})` }}
-                ></div>
-              </div>
-            </Slide>
-          </ImageDiv>
+          <Wrapper>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={scioly3}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={scioly2}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={scioly1}
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={scioly5}
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={scioly4}
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={scioly6}
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </Wrapper>
           <TextDiv>
             <h2 className="about-title">Our Purpose</h2>
             <h3 className="about-text">
@@ -98,16 +111,16 @@ const About = () => {
           ))}
         </AchievementsWrap>
         <h2
-            style={{
-              fontWeight: "400",
-              marginTop: "20px",
-              fontFamily: "Roboto, sans-serif",    
-              margin: "5rem 0",    
-            }}   
-          >
-            "Science is a way of thinking much more than it is a body of
-            knowledge" - Carl Sagan
-          </h2>
+          style={{
+            fontWeight: "400",
+            marginTop: "20px",
+            fontFamily: "Roboto, sans-serif",
+            margin: "5rem 0",
+          }}
+        >
+          "Science is a way of thinking much more than it is a body of
+          knowledge" - Carl Sagan
+        </h2>
         <Board />
         <img src="/transparent.png" alt="logo" className="logo" />
       </Page>
@@ -147,16 +160,20 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  
+
   @media (max-width: 600px) {
     height: 100%;
     width: 100%;
   }
+`;
 
+const Wrapper = styled.div`
+  width: 200rem;
+  height: 100%;
 `;
 
 const Header = styled.div`
-  background: #000;
+  width: 90%;
   display: flex;
   color: black;
   padding: 2rem 90px;
@@ -178,14 +195,12 @@ const AchievementsWrap = styled.div`
   align-items: center;
   background-color: var(--secondary-color);
   border-radius: 50px;
-  box-shadow: 0 0 20px var(--primary-color);
 
   @media (max-width: 600px) {
     width: 100%;
     height: 100%;
     flex-direction: column;
   }
-
 `;
 
 const Title = styled.div`
@@ -202,7 +217,6 @@ const ImageDiv = styled.div`
   width: 800px;
   height: 400px;
   margin-right: 100px;
-  background-color #000;
 
   @media (max-width: 600px) {
     display: none;
@@ -210,8 +224,7 @@ const ImageDiv = styled.div`
 `;
 
 const TextDiv = styled.div`
-  padding: 20px;
-  background-color: #000;
+  padding: 40px;
   color: #fff;
 
   @media (max-width: 600px) {
@@ -226,9 +239,8 @@ const Page = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #000;
   color: #fff;
- 
+
   @media (max-width: 600px) {
     padding: 2rem;
   }
