@@ -98,7 +98,6 @@ const Button = styled.button`
 
 const Content = styled.div`
   width: 100%;
-  background-color: #000;
   padding: 20px 15rem;
   color: #fff;
   display: flex;
