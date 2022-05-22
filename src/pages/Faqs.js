@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FaqsData from "./otherComponents/FaqsData";
+import * as GrIcons from "react-icons/gr";
 import "./style/Homestyle.css";
 
 const Faqs = () => {
@@ -37,7 +38,6 @@ const Faqs = () => {
 const Title = styled.h1`
   font-size: 350%;
   color: var(--primary-color);
-  text-shadow: 0 0 5px var(--primary-color);
   margin: 4rem 0 1rem 0;
   @media (max-width: 600px) {
     background-color: #000;
@@ -66,7 +66,7 @@ const Image = styled.img`
 
 const Anchor = styled.a`
   text-decoration: none;
-  color: black;
+  color: black !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +98,7 @@ const Button = styled.button`
 const Content = styled.div`
   width: 100%;
   padding: 20px 15rem;
-  color: #fff;
+  color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -113,11 +113,10 @@ const QuestionsDiv = styled.div`
   grid-template-areas: "q1 q2";
   grid-auto-columns: 1fr;
   margin: 2rem 0 4rem 0;
-  background-color: var(--secondary-color);
+  background-color: #f9fafc;
+  color: black;
   padding: 4rem;
-  border-radius: 20px;
   text-align: left;
-  box-shadow: 0 0 20px var(--primary-color);
 
   @media (max-width: 600px) {
     padding: 1rem;
@@ -133,7 +132,7 @@ const ImageDiv = styled.div`
 
 const AccordionTitle = styled.div`
   width: 100%;
-  color: var(--primary-color);
+  color: black;
   padding: 0.5rem 0;
   display: flex;
   align-items: center;

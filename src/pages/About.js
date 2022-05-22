@@ -91,7 +91,7 @@ const About = () => {
           </div>
         </TextDiv>
       </Header>
-
+      <Divider />
       <Title>Our Achievements</Title>
       <AchievementsWrap>
         <Grid />

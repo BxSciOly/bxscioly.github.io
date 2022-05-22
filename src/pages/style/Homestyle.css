@@ -98,6 +98,22 @@ body {
     width: 100%;
 }
 
+.accordion {
+    width: 100%;
+}
+
+.accordion-header {
+    outline: none;
+}
+
+.accordion-body {
+    color: black;
+}
+
+.accordion-item {
+
+}
+
 
 @media (max-width: 600px) {
     .page {
