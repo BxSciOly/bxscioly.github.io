@@ -60,6 +60,25 @@
     color: black;
   }
 
+  .links {
+    height: 0px;
+    z-index: 999;
+  }
+
+  .eventlinks {
+    color: white;
+  }
+
+  .navIcon {
+    margin-left: 2rem;
+    font-size: 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 999;
+  }
+
   .dropdown:hover .dropdown-content, .dropdown-content:hover {
     display: block;
   }

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-
-const SidebarLink = styled(Link)`
+const SidebarLink = styled(NavLink)`
   display: flex;
   color: white;
   justify-content: space-between;
@@ -24,7 +23,7 @@ const SidebarLabel = styled.span`
   margin-left: 16px;
 `;
 
-const DropdownLink = styled(Link)`
+const DropdownLink = styled(NavLink)`
   height: 60px;
   padding-left: 3rem;
   display: flex;
@@ -44,10 +43,14 @@ const SubMenu = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
-  
+
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
+      <SidebarLink
+        to={item.path}
+        onClick={item.subNav && showSubnav}
+        className="sidebarLink"
+      >
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
