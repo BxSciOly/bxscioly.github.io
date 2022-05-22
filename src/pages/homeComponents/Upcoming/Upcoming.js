@@ -52,13 +52,15 @@ const Upcoming = () => {
           events.map((item) => (
             <UpcomingWrap>
               <DateDiv>
-                <h1>{item.date.split("/")[1]}</h1>
-                <h3 style={{ fontWeight: "200" }}>
+                <h1 style={{ fontSize: "25px" }}>{item.date.split("/")[1]}</h1>
+                <h3 style={{ fontWeight: "200", fontSize: "20px" }}>
                   {months[item.date.split("/")[0]]}
                 </h3>
               </DateDiv>
               <EventDiv>
-                <h3 style={{ fontWeight: "200" }}>{item.name}</h3>
+                <h3 style={{ fontWeight: "200", fontSize: "20px" }}>
+                  {item.name}
+                </h3>
               </EventDiv>
             </UpcomingWrap>
           ))}
@@ -75,10 +77,12 @@ const Upcoming = () => {
         {announcements &&
           announcements.map((item) => (
             <h2 className="announcements-desc">
-              <span style={{ fontWeight: "700" }}>{item.title}:</span>{" "}
+              <span style={{ fontWeight: "700", fontSize: "20px" }}>
+                {item.title}:
+              </span>{" "}
               {item.desc}
               <br />
-              <span style={{ fontSize: "95%", fontWeight: "300" }}>
+              <span style={{ fontSize: "18px", fontWeight: "300" }}>
                 Posted {item.date}
               </span>
             </h2>

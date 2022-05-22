@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import scioly1 from "./images/scioly1.jpg";
 import scioly2 from "./images/scioly2.jpg";
@@ -16,115 +16,110 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Board from "./otherComponents/Board/Board";
 const About = () => {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
   return (
-    <>
-      <Page>
-        <Title>
-          <h1
-            style={{
-              fontSize: "50px",
-              color: "var(--primary-color)",
-            }}
-          >
-            About Us
-          </h1>
-        </Title>
-        <Header>
-          <Wrapper>
-            <Carousel>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={scioly3}
-                  alt="First slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={scioly2}
-                  alt="Second slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={scioly1}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={scioly5}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={scioly4}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={scioly6}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-            </Carousel>
-          </Wrapper>
-          <TextDiv>
-            <h2 className="about-title">Our Purpose</h2>
+    <Page>
+      <Header>
+        <TextDiv>
+          <h2 className="about-title">
+            The Bronx Science Science Olympiad team is dedicated to exploring
+            the{" "}
+            <span style={{ color: "var(--secondary-color)" }}>
+              world of science
+            </span>{" "}
+            in every scientific discipline, ranging from biology to mathematics
+            to engineering.
+          </h2>
+          <div className="innerdiv">
             <h3 className="about-text">
-              The BxSci Science Olympiad Team is dedicated to exploring the
-              world of science in every scientific discipline, from biology to
-              mathematics to engineering. prepare students for future careers
-              <br />
-              <br />
-              We are student-led, meaning that we do not rely heavily on teacher
-              coaching and instruction and value qualities such as leadership
-              and teamwork. As an academic team, we not only work towards a
-              strong performance at annual competitions, but we also help
-              budding scientists to discover their potential outside of
+              Our goal is to prepare students for their future careers in STEM.
+              We are a student-led club, meaning that we do not rely heavily on
+              teacher coaching and instruction and value qualities such as
+              leadership and teamwork. As an academic team, we not only work
+              towards a strong performance at annual competitions, but we also
+              help budding scientists to discover their potential outside of
               competitions, offering advice and support to students on
-              non-Science Olympiad related fronts.
+              non-Science Olympiad related fronts. Our community is one of the
+              most tight-knit, dedicated, and collaborative communities in Bronx
+              Science.
             </h3>
-          </TextDiv>
-        </Header>
-        <AchievementsWrap>
-          {achievementsData.map((item) => (
-            <Card>
-              <div className="item-icon">{item.icon}</div>
-              <div className="number">{item.number}</div>
-              <div className="descript">{item.description}</div>
-              {item.break}
-              {item.break}
-            </Card>
-          ))}
-        </AchievementsWrap>
-        <h2
-          style={{
-            fontWeight: "400",
-            marginTop: "20px",
-            fontFamily: "Roboto, sans-serif",
-            margin: "5rem 0",
-          }}
-        >
-          "Science is a way of thinking much more than it is a body of
-          knowledge" - Carl Sagan
-        </h2>
-        <Board />
-        <img src="/transparent.png" alt="logo" className="logo" />
-      </Page>
-    </>
+            <Wrapper>
+              <Carousel>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={scioly3}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={scioly2}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={scioly1}
+                    alt="Third slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={scioly5}
+                    alt="Third slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={scioly4}
+                    alt="Third slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={scioly6}
+                    alt="Third slide"
+                  />
+                </Carousel.Item>
+              </Carousel>
+            </Wrapper>
+          </div>
+        </TextDiv>
+      </Header>
+
+      <Title>Our Achievements</Title>
+      <AchievementsWrap>
+        <Grid />
+        {achievementsData.map((item) => (
+          <Card>
+            <div className="item-icon">{item.icon}</div>
+            <div className="number">{item.number}</div>
+            <div className="descript">{item.description}</div>
+          </Card>
+        ))}
+      </AchievementsWrap>
+      <h2
+        style={{
+          fontWeight: "300",
+          marginTop: "50px",
+          marginBottom: "50px",
+          textAlign: "center",
+          fontSize: "25px",
+        }}
+      >
+        "Science is a way of thinking much more than it is a body of knowledge"
+        - Carl Sagan
+      </h2>
+      <Divider />
+      <Title>Meet the board</Title>
+      <Board />
+      <img src="/transparent.png" alt="logo" className="logo" />
+    </Page>
   );
 };
 
@@ -133,68 +128,31 @@ const achievementsData = [
     icon: <BsIcons.BsPerson />,
     number: "200+",
     description:
-      "We have over 200 members and over 20 topics that range through all the branches of science.",
+      "We have over 200 members and over 20 events that cover all the branches of science.",
     break: <br />,
   },
   {
     icon: <IoIcons.IoTrophyOutline />,
     number: "1st",
     description:
-      "We won first place at the 2021 Regionals competition and 11th place in the subsequent States competition.",
+      "We won first place at Regionals in 2020 and 11th place in States.",
     break: <br />,
   },
   {
     icon: <RiIcons.RiLineChartLine />,
     number: "2022",
     description:
-      "Our teams have been achieving higher placements in regional and state competitions every year. Having just qualified for States in 2018, our team has now climbed from 40th place to 11th.",
+      "Having just qualified for States in 2018, our team has now climbed from 40th place to 11th.",
   },
 ];
 
-const Card = styled.div`
-  color: #fff;
-  height: 400px;
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px;
-
-  @media (max-width: 600px) {
-    height: 100%;
-    width: 100%;
-  }
-`;
-
-const Wrapper = styled.div`
-  width: 200rem;
-  height: 100%;
-`;
-
-const Header = styled.div`
-  width: 90%;
+const AchievementsWrap = styled.div`
+  position: relative;
+  width: 100%;
   display: flex;
   color: black;
-  padding: 2rem 90px;
-  margin-bottom: 8rem;
-
-  @media (max-width: 600px) {
-    padding: 20px;
-    margin: 2rem 0;
-    width: 100%;
-    border-radius: 20px 0 20px 0;
-  }
-`;
-
-const AchievementsWrap = styled.div`
-  height: 500px;
-  width: 80%;
-  display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--secondary-color);
-  border-radius: 50px;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -203,29 +161,74 @@ const AchievementsWrap = styled.div`
   }
 `;
 
-const Title = styled.div`
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-  flex-direction: column;
+const Title = styled.h2`
+  border-top: 3px solid var(--secondary-color);
+  padding-top: 20px;
+  align-self: flex-start;
+  margin-bottom: 50px;
 `;
 
-const ImageDiv = styled.div`
-  width: 800px;
-  height: 400px;
-  margin-right: 100px;
+const Grid = styled.div`
+  display: block;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: -20px;
+  left: -28px;
+  background-image: radial-gradient(#444444 2px, #070a0f 2px);
+  background-size: 20px 20px;
+  z-index: 0;
+  background-position: 0px 78px;
+`;
+
+const Divider = styled.hr`
+  background: 2px solid white;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+`;
+const Card = styled.div`
+  min-height: 450px;
+  z-index: 90;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 50px;
+  margin: 20px;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+  }
 
   @media (max-width: 600px) {
-    display: none;
+    height: 100%;
+    width: 100%;
   }
 `;
 
+const Wrapper = styled.div`
+  width: 50%;
+`;
+
+const Header = styled.div`
+  display: flex;
+  color: black;
+  margin-bottom: 4rem;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+    margin: 2rem 0;
+    width: 100%;
+    border-radius: 20px 0 20px 0;
+  }
+`;
 const TextDiv = styled.div`
-  padding: 40px;
   color: #fff;
+  margin-top: 50px;
 
   @media (max-width: 600px) {
     padding: 0;
@@ -235,11 +238,14 @@ const TextDiv = styled.div`
 `;
 
 const Page = styled.div`
+  background: #070a0f;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 0;
   color: #fff;
+  width: 80%;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
 
   @media (max-width: 600px) {
     padding: 2rem;

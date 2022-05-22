@@ -1,5 +1,6 @@
 .upcoming-title {
     margin-bottom: 20px;
+    font-size: 25px;
 }
 .announcements-desc {
     font-size: 18px;
@@ -7,9 +8,14 @@
     margin-bottom: 1.5rem;
 }
 
+.announcements-title {
+    font-size: 25px;
+}
+
 .announcements-subtitle {
     font-weight: 200; 
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 @media (max-width: 600px) {

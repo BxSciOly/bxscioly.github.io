@@ -9,7 +9,6 @@ const Event = (props) => {
   let ev = props.dataSet.find(
     (item) => `/${props.subject}/` + item.path === location.pathname
   );
-  console.log(location.pathname);
   return (
     <>
       {isMainPage ? (

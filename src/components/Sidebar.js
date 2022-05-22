@@ -7,7 +7,6 @@ import * as RiIcons from "react-icons/ri";
 import * as FaIcons from "react-icons/fa";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
-import { IconContext } from "react-icons/lib";
 import "./sidebar.css";
 
 // let useClickOutside = (handler) => {
@@ -72,7 +71,7 @@ const Sidebar = () => {
       ) : (
         <NavBar>
           <NavLink to="/home">
-            <h1 className="navLogo">BSSO</h1>
+            <img src="/transparent.png" alt="logo" className="navLogo" />
           </NavLink>
           <SidebarDiv>
             <Links to="/home">

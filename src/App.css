@@ -2,9 +2,10 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   opacity: 1;
-  background-image: radial-gradient(#444444 2px, #070A0E 2px);
-  background-size: 160px 160px;
-  background-position: 0px 78px;
+  background-color: #070a0f;
+  opacity: 1;
+  background-image: radial-gradient(#000000 0.5px, #070a0f 0.5px);
+  background-size: 10px 10px;
 }
 
 * {

@@ -29,8 +29,10 @@ body {
 }
 
 .about-text {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
+    width: 40%;
+    line-height: 1.4;
 }
 
 .each-slide > div {
@@ -43,15 +45,21 @@ body {
   }
 
 .about-title {
-    font-size: 35px;
-    margin-bottom: 50px;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
+    font-size: 40px;
+    padding-bottom: 4rem;
+    font-weight: 400;
+    width: 70%;
+}
+
+.innerdiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .item-icon {
    font-size: 55px; 
-   color: var(--primary-color);
+   color: black;
 }
 
 .number {

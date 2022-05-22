@@ -4,20 +4,17 @@ import BoardData from "./BoardData";
 
 const Board = () => {
   return (
-    <>
-      <Title>BOARD</Title>
-      <Container>
-        {BoardData.map((member, i) => (
-          <Member>
-            <div>
-              <Image src={member.background} alt={member.name} />
-            </div>
-            <Name>{member.name}</Name>
-            <Pos>{member.title}</Pos>
-          </Member>
-        ))}
-      </Container>
-    </>
+    <Container>
+      {BoardData.map((member, i) => (
+        <Member>
+          <div>
+            <Image src={member.background} alt={member.name} />
+          </div>
+          <Name>{member.name}</Name>
+          <Pos>{member.title}</Pos>
+        </Member>
+      ))}
+    </Container>
   );
 };
 
@@ -27,14 +24,10 @@ const Container = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
-
   @media (max-width: 600px) {
     padding: 2rem;
     display: grid;
-    grid-template-areas:
-      "p1 p2";
-    
+    grid-template-areas: "p1 p2";
   }
 `;
 
@@ -44,13 +37,6 @@ const Image = styled.img`
   height: 100px;
   border-radius: 50%;
   margin-bottom: 1rem;
-`;
-
-const Title = styled.h1`
-  color: #fff;
-  font-size: 350%;
-  padding: 2rem;
-  border-bottom: 2px solid var(--primary-color);
 `;
 
 const Member = styled.div`

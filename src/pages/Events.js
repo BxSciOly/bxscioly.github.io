@@ -27,7 +27,8 @@ export const Biology = () => {
         rel="noreferrer"
         className="info"
       >
-        Want more information? Click here for the event manual!
+        Want more information? Click here for the official Science Olympiad
+        event manual!
       </Link>
       <div className="wrap">
         <div className="links">
@@ -218,11 +219,16 @@ const EventAnchor = styled((props) => <NavLink {...props} />)`
     color: var(--secondary-color);
   }
 `;
-const CardDiv = styled.div``;
 
 const Link = styled.a`
-  font-size: 220%;
-  text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  flex-basis: auto;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
 
   @media (max-width: 600px) {
     text-align: center;
