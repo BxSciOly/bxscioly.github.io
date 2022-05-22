@@ -210,7 +210,7 @@ export const Physics = () => {
 
 // styling
 
-const EventAnchor = styled(NavLink)`
+const EventAnchor = styled((props) => <NavLink {...props} />)`
   padding: 0;
   margin: 0;
 
