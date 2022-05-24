@@ -22,13 +22,13 @@ import EarthScienceData from "./pages/eventsData/EarthScienceData";
 import PhysicsData from "./pages/eventsData/PhysicsData";
 import ChemistryData from "./pages/eventsData/ChemistryData";
 import BuildData from "./pages/eventsData/BuildData";
-import PageNotFound from "./404/PageNotFound";
 
 function App() {
   return (
     <Router>
       <Sidebar />
       <Routes>
+        <Route path="*" element={<Navigate replace to="/home" />} />
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" exact element={<Home />} />
         <Route path="/about" exact element={<About />} />
@@ -58,8 +58,6 @@ function App() {
           ))}
         </Route>
         <Route path="/faqs" exact element={<Faqs />} />
-        <Route path="/404" element={<PageNotFound />} />
-        <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
       <Footer />
     </Router>
