@@ -30,8 +30,6 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/404" element={<PageNotFound />} />
-        <Route path="*" element={<Navigate replace to="/404" />} />
         <Route path="/home" exact element={<Home />} />
         <Route path="/about" exact element={<About />} />
         <Route path="/biology" exact element={<Biology />}>
@@ -60,6 +58,8 @@ function App() {
           ))}
         </Route>
         <Route path="/faqs" exact element={<Faqs />} />
+        <Route path="/404" element={<PageNotFound />} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
       <Footer />
     </Router>
