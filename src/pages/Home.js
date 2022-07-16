@@ -26,46 +26,47 @@ const Home = () => {
 
   return (
     <>
-      <div className="m-auto z-50 flex w-4/5 flex-col">
+      <div className="m-auto flex flex-col bg-slate-200 px-48 py-12">
         <video autoPlay loop muted className="background">
-          <source src={background} type="video/mp4" />
+          <source src={background} type="video/mp4" className="-z-10" />
         </video>
-        <BackgroundDiv>
-          <MainTitle>
+        <div className="flex z-40 justify-center flex-col mt-14 mb-52">
+          <div className="mb-4 text-white text-6xl font-semibold">
             The Bronx High School of{" "}
             <span className="text-yellow-400">Science</span>
             <br />
             <span className="text-yellow-400">Science</span> Olympiad
-          </MainTitle>
-          <TextTransition className="text-white font-semibold text-x;" text={TEXTS[index % TEXTS.length]}>
+          </div>
+          <TextTransition
+            className="text-white font-semibold text-x;"
+            text={TEXTS[index % TEXTS.length]}
+          >
             Exploring the world of science
           </TextTransition>
-          <p className="wrap">
+          <p className="flex w-full">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                margin: "0",
-                display: "flex",
-                flexBasis: "auto",
-              }}
+              className="m-0 flex basis-auto"
             >
-              <JoinButton>
-                <p className="join">JOIN US</p>
+              <button className=" mt-10 bg-none flex items-center border-none cursor-pointer duration-200 text-yellow-400 text-mg font-semibold hover:translate-x-1">
+                <p className="m-0 text-yellow-400 duration-200 hover:text-yellow-500">JOIN US</p>
                 <img
                   src={arrow}
                   style={{ height: "15px", marginLeft: "15px" }}
+                  alt="join"
                 />
-              </JoinButton>
+              </button>
             </a>
           </p>
-        </BackgroundDiv>
+        </div>
+        <div className="flex mt-56 flex-wrap w-full flex-col items-center">
+          <Info />
+          <Upcoming />
+        </div>
       </div>
-      <HomeBackground>
-        <Info />
-        <Upcoming />
-      </HomeBackground>
+      
     </>
   );
 };
