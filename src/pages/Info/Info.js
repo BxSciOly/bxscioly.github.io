@@ -24,7 +24,7 @@ const Info = () => {
   return (
     <div className="relative w-full group">
       <div className=" p-[50px]  absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
-      <div className="relative z-0 flex justify-center text-white bg-[#141313]g shadow-lg rounded-xl">
+      <div className="relative z-0 flex justify-center text-white bg-[#141313] shadow-lg rounded-xl">
         {data.map((desc, i) => (
           <div>
             <Column key={i} icon={desc.image} desc={desc.desc} />
