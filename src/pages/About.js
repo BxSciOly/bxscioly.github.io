@@ -93,12 +93,15 @@ const About = () => {
       </Header>
       <Divider />
       <h1 className="text-4xl font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">Our Achievements</h1>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 gap-32">
         {achievementsData.map((item) => (
-          <div className="w-[500px] text-center text-white flex justify-around flex-col items-center p-[50px] m-[20px] bg-gray-900 rounded-lg">
-            <div className="text-7xl mb-4">{item.icon}</div>
-            <div className="text-4xl mb-5 text-yellow-400">{item.number}</div>
-            <div className="text-lg">{item.description}</div>
+          <div className="relative group">
+            <div className="w-[505px] p-[50px] m-[20px] absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
+            <div className="relative w-[500px] text-center text-white flex justify-around flex-col items-center p-[50px] m-[20px] bg-black rounded-lg">
+              <div className="text-7xl mb-4">{item.icon}</div>
+              <div className="text-4xl mb-5 text-yellow-400">{item.number}</div>
+              <div className="text-lg">{item.description}</div>
+            </div>
           </div>
         ))}
       </div>
