@@ -26,19 +26,18 @@ const Home = () => {
 
   return (
     <>
-      <div className="page">
+      <div className="m-auto z-50 flex w-4/5 flex-col">
         <video autoPlay loop muted className="background">
           <source src={background} type="video/mp4" />
         </video>
         <BackgroundDiv>
           <MainTitle>
             The Bronx High School of{" "}
-            <span style={{ color: "#f2d30a" }}>Science</span>
+            <span className="text-yellow-400">Science</span>
             <br />
-            <span style={{ color: "#f2d30a" }}>Science</span> Olympiad
+            <span className="text-yellow-400">Science</span> Olympiad
           </MainTitle>
-
-          <TextTransition className="desc" text={TEXTS[index % TEXTS.length]}>
+          <TextTransition className="text-white font-semibold text-x;" text={TEXTS[index % TEXTS.length]}>
             Exploring the world of science
           </TextTransition>
           <p className="wrap">
