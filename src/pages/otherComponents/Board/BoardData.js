@@ -20,32 +20,41 @@ import Arnab from "./boardImages/Arnab.jpg";
 
 const BoardData = [
   {
+    name: "Julianne",
+    title: "Co-Captain",
+    desc: "I'm Julianne, and I'm a rising junior excited to serve as your Knowledge Director this season. I've been a member of the team since freshman year, and my favorite events are Astronomy and Dynamic Planet. Outside of Science Olympiad, I enjoy doing competitive math, practicing the flute, and playing tennis.",
+    background: Julianne,
+    color: "#1abc9c"
+  },
+  {
+    name: "Alison",
+    title: "Co-Captain",
+    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    background: Alison,
+    color: "#1abc9c"
+  },
+  {
+    name: "Matthew",
+    title: "Co-Captain",
+    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    background: Matthew,
+    color: "#1abc9c"
+  },
+  {
     name: "Boris",
     title: "Build Director",
     desc: "",
     background: Boris,
   },
   {
-    name: "Alison",
-    title: "Chemistry Director",
-    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
-    background: Alison,
-  },
-  {
-    name: "Chair",
-    title: "Biology Director",
+    name: "Enes",
+    title: "Assistant Build Director",
     desc: "",
     background: Chair,
   },
   {
-    name: "Julianne",
-    title: "Knowledge Director",
-    desc: "I'm Julianne, and I'm a rising junior excited to serve as your Knowledge Director this season. I've been a member of the team since freshman year, and my favorite events are Astronomy and Dynamic Planet. Outside of Science Olympiad, I enjoy doing competitive math, practicing the flute, and playing tennis.",
-    background: Julianne,
-  },
-  {
-    name: "Serena",
-    title: "Tech Specialist",
+    name: "Ruixin",
+    title: "Assistant Build Director",
     desc: "",
     background: Serena,
   },

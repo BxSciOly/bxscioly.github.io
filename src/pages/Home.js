@@ -8,6 +8,9 @@ import TextTransition from "react-text-transition";
 import scioly2 from "../images/scioly2.jpg";
 import scioly3 from "../images/scioly3.jpg";
 import { achievementsData } from "./otherComponents/AchievementData";
+import BoardData from "./otherComponents/Board/BoardData";
+import { Fragment } from "react";
+import { Tab } from "@headlessui/react";
 import Board from "./otherComponents/Board/Board";
 
 const TEXTS = [
