@@ -43,8 +43,8 @@ const Upcoming = () => {
   }, []);
 
   return (
-    <Wrap>
-      <UpcomingDiv>
+    <div className="grid grid-cols-2 mt-[20px] mb-[40px]">
+      <div className="bg-slate-50 p-12 shadow-lg rounded-xl mr-2">
         <UpcomingTitle>
           <h1 className="upcoming-title">Upcoming Events</h1>
         </UpcomingTitle>
@@ -64,8 +64,8 @@ const Upcoming = () => {
               </EventDiv>
             </UpcomingWrap>
           ))}
-      </UpcomingDiv>
-      <AnnouncementsDiv>
+      </div>
+      <div className="bg-slate-50 p-12 shadow-lg rounded-xl ml-2">
         <AnnouncementsTitleDiv>
           <h1 className="announcements-title">Announcements</h1>
         </AnnouncementsTitleDiv>
@@ -87,8 +87,8 @@ const Upcoming = () => {
               </span>
             </h2>
           ))}
-      </AnnouncementsDiv>
-    </Wrap>
+      </div>
+    </div>
   );
 };
 

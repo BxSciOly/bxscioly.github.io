@@ -6,40 +6,39 @@ import friends from "./assets/friends.svg";
 import subjects from "./assets/subjects.svg";
 
 const Info = () => {
-  const style = {
-    height: "60px",
-    marginBottom: "20px",
-  };
 
   const data = [
     {
       desc: "Learn about a variety of STEM topics",
-      image: subjects
+      image: subjects,
     },
     {
       desc: "Participate and win in tournaments",
-      image: trophy
+      image: trophy,
     },
     {
       desc: "Participate and win in tournaments",
-      image: friends
-    }
-  ]
+      image: friends,
+    },
+  ];
 
   return (
-    <div className="h-[300px] text-black bg-slate-50 p-[50px] flex justify-center z-0 mt-[-200px] shadow-md rounded-lg">
-      {
-        data.map((desc, i) => (
-          <div>
-            <Column
-              key={i}
-              icon={<img src={desc.image} className="h-[60px] mb-[20px]" />}
-              desc={desc.desc}
-            />
-          </div>
-        ))
-      }
-
+    <div className="h-[300px] text-black bg-slate-50 p-[50px] flex justify-center z-0 mt-[-200px] shadow-lg rounded-lg mb-4">
+      {data.map((desc, i) => (
+        <div>
+          <Column
+            key={i}
+            icon={
+              <img
+                src={desc.image}
+                className="h-[60px] mb-[20px]"
+                alt={desc.desc}
+              />
+            }
+            desc={desc.desc}
+          />
+        </div>
+      ))}
     </div>
   );
 };
