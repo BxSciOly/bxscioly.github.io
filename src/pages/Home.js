@@ -120,9 +120,7 @@ const Home = () => {
         <div className="text-4xl mt-36 font-bold border-t-4 text-white border-yellow-400 pt-[20px] mb-[50px] self-start">
           Meet the board
         </div>
-        <div className="text-white">
-          <Board />
-        </div>
+        <Board />
       </div>
     </>
   );

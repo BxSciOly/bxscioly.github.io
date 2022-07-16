@@ -1,23 +1,82 @@
 import React from "react";
 import styled from "styled-components";
 import BoardData from "./BoardData";
+import { Fragment } from "react";
+import { Tab } from "@headlessui/react";
 
 const Board = () => {
   return (
-    <div className="grid grid-cols-6 gap-10">
-      {BoardData.map((member, i) => (
-        <div className="text-center flex flex-col  items-center justify-center mb-2">
-          <div>
-            <img
-              src={member.background}
-              className="text-center w-[100px] h-[100px] rounded-full mb-4"
-              alt={member.name}
-            />
-          </div>
-          <h1 className="text-xl mb-2">{member.name}</h1>
-          <h1 className="text-sm">{member.title}</h1>
-        </div>
-      ))}
+    <div className="text-white">
+      <Tab.Group>
+        <Tab.List className="flex items-center justify-center p-1 mb-8 rounded-xl bg-gray-700/20">
+          <Tab as={Fragment}>
+            {({ selected }) => (
+              <button
+                className={`w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
+                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                ${
+                  selected
+                    ? "bg-white shadow"
+                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                }`}
+              >
+                Board
+              </button>
+            )}
+          </Tab>
+          <Tab as={Fragment}>
+            {({ selected }) => (
+              <button
+                className={`w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
+                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                ${
+                  selected
+                    ? "bg-yellow-400 shadow"
+                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                }`}
+              >
+                Tab 2
+              </button>
+            )}
+          </Tab>
+          <Tab as={Fragment}>
+            {({ selected }) => (
+              <button
+                className={`w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
+                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                ${
+                  selected
+                    ? "bg-white shadow"
+                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                }`}
+              >
+                Tab 3
+              </button>
+            )}
+          </Tab>
+        </Tab.List>
+        <Tab.Panels>
+          <Tab.Panel>
+            <div className="grid grid-cols-6 gap-10">
+            {BoardData.map((member, i) => (
+              <div className="flex flex-col items-center justify-center mb-2 text-center">
+                <div>
+                  <img
+                    src={member.background}
+                    className="text-center w-[100px] h-[100px] rounded-full mb-4"
+                    alt={member.name}
+                  />
+                </div>
+                <h1 className="mb-2 text-xl">{member.name}</h1>
+                <h1 className="text-sm">{member.title}</h1>
+              </div>
+            ))}
+            </div>
+          </Tab.Panel>
+          <Tab.Panel>Content 2</Tab.Panel>
+          <Tab.Panel>Content 3</Tab.Panel>
+        </Tab.Panels>
+      </Tab.Group>
     </div>
   );
 };
