@@ -8,6 +8,7 @@ import TextTransition from "react-text-transition";
 import scioly2 from "../images/scioly2.jpg";
 import scioly3 from "../images/scioly3.jpg";
 import { achievementsData } from "./otherComponents/AchievementData";
+import Board from "./otherComponents/Board/Board";
 
 const TEXTS = [
   "Exploring the world of science",
@@ -30,7 +31,7 @@ const Home = () => {
       <div className="flex items-start justify-center flex-col bg-[#0e0e0f] px-40 py-12">
         <div className="z-40 flex flex-col justify-center mb-24 mt-14">
           <div className="mt-8 mb-4 text-6xl font-bold text-white">
-            The Bronx High School of
+            The Bronx High School of Science
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
               Science{" "}
@@ -102,10 +103,10 @@ const Home = () => {
         <h1 className="text-5xl text-white font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">
           Our Achievements
         </h1>
-        <div className="grid grid-cols-3 gap-2 mb-6">
+        <div className="grid grid-cols-3 gap-2">
           {achievementsData.map((item) => (
             <div className="relative group">
-              <div className="p-[50px] h-full m-[20px] absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
+              <div className="p-[50px] h-full m-[20px] absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-yellow-600 rounded-lg blur-md opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
               <div className="relative h-full text-center text-white flex justify-around flex-col items-center p-[50px] m-[20px] bg-black rounded-lg">
                 <div className="mb-4 text-7xl">{item.icon}</div>
                 <div className="mb-5 text-4xl text-yellow-400">
@@ -116,68 +117,15 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <div className="text-4xl mt-36 font-bold border-t-4 text-white border-yellow-400 pt-[20px] mb-[50px] self-start">
+          Meet the board
+        </div>
+        <div className="text-white">
+          <Board />
+        </div>
       </div>
     </>
   );
 };
 
-const MainTitle = styled.h2`
-  z-index: 100;
-  font-size: 4rem;
-  color: white;
-  font-weight: 700;
-  margin-bottom: 10px;
-`;
-
-const BackgroundDiv = styled.div`
-  z-index: 100;
-  height: 700px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: -50px;
-
-  @media (max-width: 600px) {
-    width: 400px;
-  }
-`;
-
-const HomeBackground = styled.div`
-  z-index: 800;
-  display: flex;
-  flex-wrap: flex;
-  width: 100%;
-  background: #f9fafb;
-  padding-top: 150px;
-  padding-bottom: 100px;
-  flex-direction: column;
-  align-items: center;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-`;
-
-const JoinButton = styled.button`
-  margin-top: 40px;
-  background: none;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  border: none;
-  color: var(--secondary-color);
-  font-weight: 600;
-  cursor: pointer;
-  transition: 200ms ease;
-
-  &:hover {
-    transform: translate(5px, 0);
-  }
-
-  @media (max-width: 600px) {
-    width: 200px;
-    height: 50px;
-    margin-bottom: 8rem;
-  }
-`;
 export default Home;
