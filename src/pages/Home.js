@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 import styled from "styled-components";
 import "./style/Homestyle.css";
-import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Info from "./Info/Info";
 import arrow from "./arrow.svg";
 import TextTransition from "react-text-transition";
 import scioly2 from "../images/scioly2.jpg";
+import scioly3 from "../images/scioly3.jpg";
 
 const TEXTS = [
   "Exploring the world of science",
@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex items-start justify-center flex-col bg-[#0e0e0f] px-48 py-12">
+      <div className="flex items-start justify-center flex-col bg-[#0e0e0f] px-40 py-12">
         <div className="flex z-40 justify-center flex-col mt-14 mb-24">
           <div className="mb-4 mt-8 text-white text-6xl font-bold">
             The Bronx High School of
@@ -64,34 +64,37 @@ const Home = () => {
             </a>
           </p>
         </div>
-        <div className="flex flex-wrap w-full flex-col items-center mb-16">
+        <div className="flex flex-wrap w-full flex-col items-center mb-32">
           <Info />
         </div>
         <div className="mt-16 flex items-center justify-center flex-row">
-          <div className="h-3/5 w-full m-0 -rotate-3 relative group">
-            <div className="p-24 absolute -inset-0.5 bg-gradient-to-r from-cyan-600 to-cyan-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
+          <div className="h-4/5 w-full -rotate-3 relative group">
+            <div className=" absolute -inset-0.5 bg-gradient-to-r from-cyan-600 to-green-400 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
             <img src={scioly2} className="relative rounded-xl" />
           </div>
-          <div>
-            <h1 className="text-white text-xl ml-20">
+          <div className="ml-20 text-white text-right">
+            <h1 className="text-3xl mb-6 font-bold ">Always exploring.</h1>
+            <h1 className="text-lg text-gray-400 font-mono">
               We are a team dedicated to exploring the world of science in every
               scientific discipline, ranging from biology to mathematics to
               engineering.
             </h1>
-          </div> 
+          </div>
         </div>
 
         <div className="mt-48 flex items-center justify-center flex-row">
-          <div>
-            <h1 className="text-white text-xl mr-20">
-              We are a team dedicated to exploring the world of science in every
-              scientific discipline, ranging from biology to mathematics to
-              engineering.
+          <div className="mr-20 text-white text-left">
+            <h1 className="text-3xl mb-6 font-bold ">A womderful community.</h1>
+            <h1 className="text-lg text-gray-400 font-mono">
+              Whenever we do something, we do it together. From spamming each
+              other cat pictures to supporting each other on the front lines of
+              competiton, our community is one of the most tight-knit,
+              dedicated, and collaborative communities in Bronx Science.
             </h1>
           </div>
-          <div className="h-3/5 w-full m-0 rotate-3 relative group">
-            <div className="p-24 absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-pink-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
-            <img src={scioly2} className="relative rounded-xl" />
+          <div className="h-4/5 w-full rotate-3 relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
+            <img src={scioly3} className="relative rounded-xl" />
           </div>
         </div>
       </div>
