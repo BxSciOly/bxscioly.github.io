@@ -6,9 +6,7 @@ import styled from "styled-components";
 // import scioly4 from "./images/scioly4.jpg";
 // import scioly5 from "./images/scioly5.jpg";
 // import scioly6 from "./images/scioly6.jpg";
-import * as BsIcons from "react-icons/bs";
-import * as IoIcons from "react-icons/io5";
-import * as RiIcons from "react-icons/ri";
+
 import "react-slideshow-image/dist/styles.css";
 import "./style/Homestyle.css";
 import Carousel from "react-bootstrap/Carousel";
@@ -93,18 +91,18 @@ const About = () => {
       </Header>
       <Divider />
       <h1 className="text-4xl font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">Our Achievements</h1>
-      <div className="grid grid-cols-3 gap-2 mb-6">
+      {/* <div className="grid grid-cols-3 gap-2 mb-6">
         {achievementsData.map((item) => (
           <div className="relative group">
             <div className="p-[50px] h-full m-[20px] absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
             <div className="relative h-full text-center text-white flex justify-around flex-col items-center p-[50px] m-[20px] bg-black rounded-lg">
-              <div className="text-7xl mb-4">{item.icon}</div>
-              <div className="text-4xl mb-5 text-yellow-400">{item.number}</div>
+              <div className="mb-4 text-7xl">{item.icon}</div>
+              <div className="mb-5 text-4xl text-yellow-400">{item.number}</div>
               <div className="text-lg">{item.description}</div>
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <h2
         style={{
           fontWeight: "300",
@@ -125,28 +123,6 @@ const About = () => {
   );
 };
 
-const achievementsData = [
-  {
-    icon: <BsIcons.BsPerson />,
-    number: "200+",
-    description:
-      "We have over 200 members and over 20 events that cover all the branches of science.",
-    break: <br />,
-  },
-  {
-    icon: <IoIcons.IoTrophyOutline />,
-    number: "1st",
-    description:
-      "We won first place at Regionals in 2020 and 11th place in States.",
-    break: <br />,
-  },
-  {
-    icon: <RiIcons.RiLineChartLine />,
-    number: "2022",
-    description:
-      "Having just qualified for States in 2018, our team has now climbed from 40th place to 11th.",
-  },
-];
 
 const AchievementsWrap = styled.div`
   position: relative;
