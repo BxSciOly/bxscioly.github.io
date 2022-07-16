@@ -6,7 +6,7 @@ import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Info from "./Info/Info";
 import arrow from "./arrow.svg";
 import TextTransition from "react-text-transition";
-import background from "./background.mp4";
+
 
 const TEXTS = [
   "Exploring the world of science",
@@ -26,12 +26,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="m-auto flex flex-col bg-slate-200 px-48 py-12">
-        <video autoPlay loop muted className="w-screen absolute top-0 left-0 object-cover h-[790px]">
-          <source src={background} type="video/mp4" className="-z-10" />
-        </video>
+      <div className="m-auto flex flex-col bg-[#0e0e0f] px-48 py-12">
         <div className="flex z-40 justify-center flex-col mt-14 mb-52">
-          <div className="mb-4 text-white text-6xl font-semibold">
+          <div className="mb-4 mt-8 text-white text-6xl font-bold">
             The Bronx High School of{" "}
             <span className="text-yellow-400">Science</span>
             <br />
@@ -43,7 +40,7 @@ const Home = () => {
           >
             Exploring the world of science
           </TextTransition>
-          <p className="flex w-full">
+          <p className="flex w-full mb-12">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
               target="_blank"
@@ -61,9 +58,8 @@ const Home = () => {
             </a>
           </p>
         </div>
-        <div className="flex mt-56 flex-wrap w-full flex-col items-center">
+        <div className="flex flex-wrap w-full flex-col items-center">
           <Info />
-          <Upcoming />
         </div>
       </div>
       

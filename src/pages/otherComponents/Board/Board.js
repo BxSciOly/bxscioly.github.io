@@ -4,11 +4,15 @@ import BoardData from "./BoardData";
 
 const Board = () => {
   return (
-    <div className="grid grid-cols-6">
+    <div className="grid grid-cols-6 gap-10">
       {BoardData.map((member, i) => (
-        <div className="py-2 px-4 text-center flex flex-col mx-12 items-center justify-center mb-2">
+        <div className="text-center flex flex-col  items-center justify-center mb-2">
           <div>
-            <img src={member.background} className="text-center w-[100px] h-[100px] rounded-full mb-4" alt={member.name} />
+            <img
+              src={member.background}
+              className="text-center w-[100px] h-[100px] rounded-full mb-4"
+              alt={member.name}
+            />
           </div>
           <h1 className="text-xl mb-2">{member.name}</h1>
           <h1 className="text-sm">{member.title}</h1>

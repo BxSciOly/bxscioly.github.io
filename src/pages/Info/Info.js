@@ -1,42 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import Column from "./Column";
-import trophy from "./assets/trophy.svg";
-import friends from "./assets/friends.svg";
-import subjects from "./assets/subjects.svg";
+import { MdOutlineScience } from "react-icons/md";
+import { BiTrophy } from "react-icons/bi";
+import { FaUserFriends } from "react-icons/fa";
 
 const Info = () => {
-
   const data = [
     {
       desc: "Learn about a variety of STEM topics",
-      image: subjects,
+      image: <MdOutlineScience className="text-6xl text-yellow-400" />,
     },
     {
       desc: "Participate and win in tournaments",
-      image: trophy,
+      image: <BiTrophy className="text-6xl text-yellow-400" />,
     },
     {
-      desc: "Participate and win in tournaments",
-      image: friends,
+      desc: "Meet new people and make friends!",
+      image: <FaUserFriends className="text-6xl text-yellow-400" />,
     },
   ];
 
   return (
-    <div className="h-[300px] text-black bg-slate-50 p-[50px] flex justify-center z-0 mt-[-200px] shadow-lg rounded-lg mb-4">
+    <div className="h-[300px] text-white bg-[#1E1E21] p-[50px] flex justify-center z-0 mt-[-200px] shadow-lg rounded-lg mb-4">
       {data.map((desc, i) => (
         <div>
-          <Column
-            key={i}
-            icon={
-              <img
-                src={desc.image}
-                className="h-[60px] mb-[20px]"
-                alt={desc.desc}
-              />
-            }
-            desc={desc.desc}
-          />
+          <Column key={i} icon={desc.image} desc={desc.desc} />
         </div>
       ))}
     </div>

@@ -5,10 +5,8 @@ import { IconContext } from "react-icons/lib";
 const Column = (props) => {
   return (
     <div style={props.style} className="flex-col px-10 my-0 text-center h-full w-full flex justify-center items-center">
-      <IconContext.Provider value={{ className: "h-[100px] mb-[30px]" }}>
         {props.icon}
-      </IconContext.Provider>
-      <h1 className=" text-lg w-full">{props.desc}</h1>
+      <h1 className=" text-lg w-full mt-6">{props.desc}</h1>
     </div>
   );
 };
