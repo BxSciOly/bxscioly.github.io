@@ -6,7 +6,7 @@ import Upcoming from "./homeComponents/Upcoming/Upcoming";
 import Info from "./Info/Info";
 import arrow from "./arrow.svg";
 import TextTransition from "react-text-transition";
-
+import scioly2 from "../images/scioly2.jpg";
 
 const TEXTS = [
   "Exploring the world of science",
@@ -31,8 +31,12 @@ const Home = () => {
           <div className="mb-4 mt-8 text-white text-6xl font-bold">
             The Bronx High School of
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">Science </span> 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-400">Olympiad</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
+              Science{" "}
+            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-400">
+              Olympiad
+            </span>
           </div>
           <TextTransition
             className="text-white font-semibold text-xl"
@@ -48,7 +52,9 @@ const Home = () => {
               className="m-0 flex basis-auto"
             >
               <button className="mt-10 bg-none flex items-center border-none cursor-pointer duration-200 text-yellow-400 text-mg font-semibold hover:translate-x-1">
-                <p className="m-0 text-yellow-400 duration-200 hover:text-yellow-500 text-xl">JOIN US</p>
+                <p className="m-0 text-yellow-400 duration-200 hover:text-yellow-500 text-xl">
+                  JOIN US
+                </p>
                 <img
                   src={arrow}
                   style={{ height: "15px", marginLeft: "15px" }}
@@ -58,11 +64,37 @@ const Home = () => {
             </a>
           </p>
         </div>
-        <div className="flex flex-wrap w-full flex-col items-center">
+        <div className="flex flex-wrap w-full flex-col items-center mb-16">
           <Info />
         </div>
+        <div className="mt-16 flex items-center justify-center flex-row">
+          <div className="h-3/5 w-full m-0 -rotate-3 relative group">
+            <div className="p-24 absolute -inset-0.5 bg-gradient-to-r from-cyan-600 to-cyan-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
+            <img src={scioly2} className="relative rounded-xl" />
+          </div>
+          <div>
+            <h1 className="text-white text-xl ml-20">
+              We are a team dedicated to exploring the world of science in every
+              scientific discipline, ranging from biology to mathematics to
+              engineering.
+            </h1>
+          </div> 
+        </div>
+
+        <div className="mt-48 flex items-center justify-center flex-row">
+          <div>
+            <h1 className="text-white text-xl mr-20">
+              We are a team dedicated to exploring the world of science in every
+              scientific discipline, ranging from biology to mathematics to
+              engineering.
+            </h1>
+          </div>
+          <div className="h-3/5 w-full m-0 rotate-3 relative group">
+            <div className="p-24 absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-pink-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
+            <img src={scioly2} className="relative rounded-xl" />
+          </div>
+        </div>
       </div>
-      
     </>
   );
 };

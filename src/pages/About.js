@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import scioly1 from "./images/scioly1.jpg";
-import scioly2 from "./images/scioly2.jpg";
-import scioly3 from "./images/scioly3.jpg";
-import scioly4 from "./images/scioly4.jpg";
-import scioly5 from "./images/scioly5.jpg";
-import scioly6 from "./images/scioly6.jpg";
+// import scioly1 from "./images/scioly1.jpg";
+// import scioly2 from "./images/scioly2.jpg";
+// import scioly3 from "./images/scioly3.jpg";
+// import scioly4 from "./images/scioly4.jpg";
+// import scioly5 from "./images/scioly5.jpg";
+// import scioly6 from "./images/scioly6.jpg";
 import * as BsIcons from "react-icons/bs";
 import * as IoIcons from "react-icons/io5";
 import * as RiIcons from "react-icons/ri";
@@ -42,7 +42,7 @@ const About = () => {
               most tight-knit, dedicated, and collaborative communities in Bronx
               Science.
             </h3>
-            <Wrapper>
+            {/* <Wrapper>
               <Carousel>
                 <Carousel.Item>
                   <img
@@ -87,7 +87,7 @@ const About = () => {
                   />
                 </Carousel.Item>
               </Carousel>
-            </Wrapper>
+            </Wrapper> */}
           </div>
         </TextDiv>
       </Header>
