@@ -16,7 +16,7 @@ const TEXTS = [
   "Established in 2010",
   "5x States qualifiers",
   "It's about time, It's about power!",
-  "We stay hungry, we devour!"
+  "We stay hungry, we devour!",
 ];
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex items-start justify-center flex-col bg-[#0e0e0f] px-40 py-12">
+      <div className=" bg-[#0e0e0f] px-40 py-12">
         <div className="z-40 flex flex-col justify-center mb-16 mt-14">
           <div className="mt-8 mb-4 text-6xl font-bold text-white">
             The Bronx High School of Science
@@ -47,27 +47,25 @@ const Home = () => {
             text={TEXTS[index % TEXTS.length]}
           >
             Exploring the world of science
-          </TextTransition>
-          <p className="flex w-full">
-            <a
+          </TextTransition>     
+        </div>
+        <button className="p-0 mx-0 duration-150 hover:translate-x-4">
+          <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex m-0 basis-auto"
+              className="m-0"
             >
-              <button className="flex items-center mt-10 font-semibold text-yellow-400 duration-200 border-none cursor-pointer bg-none text-mg hover:translate-x-1">
-                <p className="m-0 text-xl text-yellow-400 duration-200 hover:text-yellow-500">
-                  JOIN US
-                </p>
-                <img
-                  src={arrow}
-                  style={{ height: "15px", marginLeft: "15px" }}
-                  alt="join"
-                />
-              </button>
-            </a>
-          </p>
-        </div>
+              <p className="inline ml-0 mr-4 text-xl text-yellow-400 duration-200 hover:text-yellow-500">
+                JOIN US
+              </p>
+              <img
+                src={arrow}
+                className=" h-[30px] w-[30px]"
+                alt="join"
+              />
+            </a>  
+            </button>
         <div className="flex flex-col flex-wrap items-center w-full mb-20">
           <Info />
         </div>
@@ -102,7 +100,7 @@ const Home = () => {
           </div>
         </div>
 
-        <h1 className="text-5xl text-white font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">
+        <h1 className="text-5xl text-white font-bold border-t-[0.5px] border-yellow-800 py-[50px] mb-[50px] self-start">
           Our Achievements
         </h1>
         <div className="grid grid-cols-3 gap-2">
@@ -119,12 +117,11 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="text-4xl mt-36 font-bold border-t-4 text-white border-yellow-400 pt-[20px] mb-[50px] self-start">
+        <div className="text-4xl mt-36 font-bold  text-white border-t-[0.5px] border-yellow-800 pt-[50px] mb-[50px] self-start">
           Meet the board
         </div>
         <Board />
-        <div className="flex items-center justify-center">
-        </div>
+        <div className="flex items-center justify-center"></div>
       </div>
     </>
   );
