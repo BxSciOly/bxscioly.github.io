@@ -26,12 +26,6 @@ const BoardData = [
     background: Gemma,
   },
   {
-    name: "Matthew",
-    title: "Co-Captain",
-    background: Matthew,
-    desc: "My name is Matthew Kadaev and I am in the class of 2023. I am currently the Co-Captain of the team and I am really excited for the upcoming year of competitions. I am mainly interested in engineering and chemistry, which is what my events consist of. Outside of academics I enjoy being outside and staying active by playing sports.",
-  },
-  {
     name: "Priscilla",
     title: "Secretary",
     desc: "Hi everyone! I'm Priscilla and your SciOly secretary for the 2021-2022 school year. This is my third year in SciOly and I'm so excited to be working with everyone. I like learning about the spread of disease and how it can be contained as well as conducting experiments under a limited amount of time. When I'm not focusing on SciOly, I like to play sports and explore different areas of the city",

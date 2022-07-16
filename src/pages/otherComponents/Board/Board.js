@@ -4,17 +4,17 @@ import BoardData from "./BoardData";
 
 const Board = () => {
   return (
-    <Container>
+    <div className="grid grid-cols-6">
       {BoardData.map((member, i) => (
-        <Member>
+        <div className="py-2 px-4 text-center flex flex-col mx-12 items-center justify-center mb-2">
           <div>
-            <Image src={member.background} alt={member.name} />
+            <img src={member.background} className="text-center w-[100px] h-[100px] rounded-full mb-4" alt={member.name} />
           </div>
-          <Name>{member.name}</Name>
-          <Pos>{member.title}</Pos>
-        </Member>
+          <h1 className="text-xl mb-2">{member.name}</h1>
+          <h1 className="text-sm">{member.title}</h1>
+        </div>
       ))}
-    </Container>
+    </div>
   );
 };
 
@@ -48,7 +48,6 @@ const Member = styled.div`
     "name"
     "desc";
   transition: 200ms ease;
-  margin: 1rem 2rem;
   width: 10rem;
 
   @media (max-width: 600px) {
