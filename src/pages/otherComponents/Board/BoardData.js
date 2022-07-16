@@ -38,6 +38,12 @@ export const BoardData = [
     background: Matthew,
   },
   {
+    name: "Jeffrey",
+    title: <h1 className={`text-sm text-[#5badeb] font-mono`}>Secretary</h1>,
+    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    background: Farhan,
+  },
+  {
     name: "Boris",
     title: <h1 className={`text-sm text-[#fdb063] font-mono`}>Build Director</h1>,
     desc: "",
