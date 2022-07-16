@@ -14,7 +14,7 @@ export const achievementsData = [
     icon: <IoIcons.IoTrophyOutline />,
     number: "1st",
     description:
-      "We won first place at Regionals in 2020 and 11th place in States.",
+      "We won first place at Regionals in 2021 and 11th place at States in 2022.",
     break: <br />,
   },
   {

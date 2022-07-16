@@ -15,9 +15,11 @@ import Board from "./otherComponents/Board/Board";
 
 const TEXTS = [
   "Exploring the world of science",
-  "Scioly to the moon🚀🌑🌑",
+  "SCIOLY TO THE MOON!",
   "Competing since 2017",
-  "4x States qualifiers",
+  "5x States qualifiers",
+  "It's about time, It's about power!",
+  "We stay hungry, we devour!"
 ];
 
 const Home = () => {
@@ -74,7 +76,7 @@ const Home = () => {
         </div>
         <div className="flex flex-row items-center justify-center mt-16">
           <div className="relative w-full h-4/5 -rotate-3 group">
-            <div className=" absolute -inset-0.5 bg-gradient-to-r from-cyan-600 to-green-400 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
+            <div className=" absolute -inset-0.5 bg-gradient-to-r from-gray-700 to-gray-700 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
             <img src={scioly2} className="relative rounded-xl" />
           </div>
           <div className="ml-20 text-right text-white">
@@ -89,7 +91,7 @@ const Home = () => {
 
         <div className="flex flex-row items-center justify-center mt-48 mb-32">
           <div className="mr-20 text-left text-white">
-            <h1 className="mb-6 text-3xl font-bold ">A womderful community.</h1>
+            <h1 className="mb-6 text-3xl font-bold ">A wonderful community.</h1>
             <h1 className="font-mono text-lg text-gray-400">
               Whenever we do something, we do it together. From spamming each
               other cat pictures to supporting each other on the front lines of
@@ -98,7 +100,7 @@ const Home = () => {
             </h1>
           </div>
           <div className="relative w-full h-4/5 rotate-3 group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-700 to-gray-700 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
             <img src={scioly3} className="relative rounded-xl" />
           </div>
         </div>
