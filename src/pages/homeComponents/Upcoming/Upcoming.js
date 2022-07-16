@@ -3,20 +3,20 @@ import styled from "styled-components";
 import "./upcoming.css";
 
 const months = {
-  "1" : "Jan",
-  "2" : "Feb",
-  "3" : "Mar",
-  "4" : "Apr",
-  "5" : "May",
-  "6" : "Jun",
-  "7" : "Jul",
-  "8" : "Aug",
-  "9" : "Sep",
-  "10" : "Oct",
-  "11" : "Nov",
-  "12" : "Dec",
-}
-// 
+  1: "Jan",
+  2: "Feb",
+  3: "Mar",
+  4: "Apr",
+  5: "May",
+  6: "Jun",
+  7: "Jul",
+  8: "Aug",
+  9: "Sep",
+  10: "Oct",
+  11: "Nov",
+  12: "Dec",
+};
+//
 const Upcoming = () => {
   const [announcements, setAnnouncements] = useState(null);
   const [events, setEvents] = useState(null);
@@ -45,38 +45,36 @@ const Upcoming = () => {
   return (
     <div className="grid grid-cols-2 mt-[20px] mb-[40px]">
       <div className="bg-slate-50 p-12 shadow-lg rounded-xl mr-2">
-        <UpcomingTitle>
-          <h1 className="upcoming-title">Upcoming Events</h1>
-        </UpcomingTitle>
+        <h1 className="mb-[20px] text-[25px] py-2">Upcoming Events</h1>
         {events &&
           events.map((item) => (
-            <UpcomingWrap>
-              <DateDiv>
+            <div className="h-[100px] flex items-center p-[15px] border-b-2 border-slate-300">
+              <div className="w-[50px] flex justify-center items-center flex-col">
                 <h1 style={{ fontSize: "25px" }}>{item.date.split("/")[1]}</h1>
                 <h3 style={{ fontWeight: "200", fontSize: "20px" }}>
                   {months[item.date.split("/")[0]]}
                 </h3>
-              </DateDiv>
+              </div>
               <EventDiv>
                 <h3 style={{ fontWeight: "200", fontSize: "20px" }}>
                   {item.name}
                 </h3>
               </EventDiv>
-            </UpcomingWrap>
+            </div>
           ))}
       </div>
       <div className="bg-slate-50 p-12 shadow-lg rounded-xl ml-2">
-        <AnnouncementsTitleDiv>
-          <h1 className="announcements-title">Announcements</h1>
-        </AnnouncementsTitleDiv>
-        <AnnouncementsDescDiv>
-          <h3 className="announcements-subtitle">
+        <div>
+          <h1 className="text-[25px]">Announcements</h1>
+        </div>
+        <div>
+          <h3 className="font-[200] mb-[20px] text-[20px]">
             Check here every week for new updates!
           </h3>
-        </AnnouncementsDescDiv>
+        </div>
         {announcements &&
           announcements.map((item) => (
-            <h2 className="announcements-desc">
+            <h2 className="text-[17px] font-[200] mb-8">
               <span style={{ fontWeight: "700", fontSize: "20px" }}>
                 {item.title}:
               </span>{" "}
