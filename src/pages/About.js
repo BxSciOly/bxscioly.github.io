@@ -92,17 +92,16 @@ const About = () => {
         </TextDiv>
       </Header>
       <Divider />
-      <Title>Our Achievements</Title>
-      <AchievementsWrap>
-        <Grid />
+      <h1 className="text-4xl font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">Our Achievements</h1>
+      <div className="grid grid-cols-3">
         {achievementsData.map((item) => (
-          <Card>
-            <div className="item-icon">{item.icon}</div>
-            <div className="number">{item.number}</div>
-            <div className="descript">{item.description}</div>
-          </Card>
+          <div className="w-[500px] text-center text-white flex justify-around flex-col items-center p-[50px] m-[20px] bg-gray-900 rounded-lg">
+            <div className="text-7xl mb-4">{item.icon}</div>
+            <div className="text-4xl mb-5 text-yellow-400">{item.number}</div>
+            <div className="text-lg">{item.description}</div>
+          </div>
         ))}
-      </AchievementsWrap>
+      </div>
       <h2
         style={{
           fontWeight: "300",
@@ -116,7 +115,7 @@ const About = () => {
         - Carl Sagan
       </h2>
       <Divider />
-      <Title>Meet the board</Title>
+      <div className="text-4xl font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">Meet the board</div>
       <Board />
       <img src="/transparent.png" alt="logo" className="logo" />
     </Page>
