@@ -74,17 +74,6 @@ const Sidebar = () => {
             <img src="/transparent.png" alt="logo" className="w-[80px]" />
           </NavLink>
           <SidebarDiv>
-            <Links to="/home">
-              <SidebarItem
-                className={`${
-                  location.pathname === "/home"
-                    ? "whiteClassName"
-                    : "regularClassName"
-                }`}
-              >
-                Home
-              </SidebarItem>
-            </Links>
             <Links to="faqs">
               <SidebarItem
                 className={`${

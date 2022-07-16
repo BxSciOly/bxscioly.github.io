@@ -8,9 +8,6 @@ import TextTransition from "react-text-transition";
 import scioly2 from "../images/scioly2.jpg";
 import scioly3 from "../images/scioly3.jpg";
 import { achievementsData } from "./otherComponents/AchievementData";
-import BoardData from "./otherComponents/Board/BoardData";
-import { Fragment } from "react";
-import { Tab } from "@headlessui/react";
 import Board from "./otherComponents/Board/Board";
 
 const TEXTS = [
@@ -34,7 +31,7 @@ const Home = () => {
   return (
     <>
       <div className="flex items-start justify-center flex-col bg-[#0e0e0f] px-40 py-12">
-        <div className="z-40 flex flex-col justify-center mb-24 mt-14">
+        <div className="z-40 flex flex-col justify-center mb-16 mt-14">
           <div className="mt-8 mb-4 text-6xl font-bold text-white">
             The Bronx High School of Science
             <br />
@@ -71,7 +68,7 @@ const Home = () => {
             </a>
           </p>
         </div>
-        <div className="flex flex-col flex-wrap items-center w-full mb-32">
+        <div className="flex flex-col flex-wrap items-center w-full mb-20">
           <Info />
         </div>
         <div className="flex flex-row items-center justify-center mt-16">
@@ -90,7 +87,7 @@ const Home = () => {
         </div>
 
         <div className="flex flex-row items-center justify-center mt-48 mb-32">
-          <div className="mr-20 text-left text-white">
+          <div className="pl-6 mr-20 text-left text-white border-l-8 border-yellow-400">
             <h1 className="mb-6 text-3xl font-bold ">A wonderful community.</h1>
             <h1 className="font-mono text-lg text-gray-400">
               Whenever we do something, we do it together. From spamming each
