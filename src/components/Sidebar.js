@@ -46,7 +46,7 @@ const Sidebar = () => {
 
   const isPageWide = useMediaQuery("(max-width: 600px)");
   return (
-    <NavDiv>
+    <div className="px-6 border-b-2 border-gray-900 bg-none">
       {isPageWide ? (
         <>
           {/* className={navbar ? "navbar active" : "navbar"} */}
@@ -69,9 +69,9 @@ const Sidebar = () => {
           </SidebarWrap>
         </>
       ) : (
-        <NavBar>
+        <div className="flex items-center justify-center">
           <NavLink to="/home">
-            <img src="/transparent.png" alt="logo" className="navLogo" />
+            <img src="/transparent.png" alt="logo" className="w-[80px]" />
           </NavLink>
           <SidebarDiv>
             <Links to="/home">
@@ -129,9 +129,9 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
           ></a>
-        </NavBar>
+        </div>
       )}
-    </NavDiv>
+    </div>
   );
 };
 

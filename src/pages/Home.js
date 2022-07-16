@@ -124,6 +124,8 @@ const Home = () => {
           Meet the board
         </div>
         <Board />
+        <div className="flex items-center justify-center">
+        </div>
       </div>
     </>
   );

@@ -110,6 +110,7 @@ const Board = () => {
             </div>
           </Tab.Panel>
         </Tab.Panels>
+        
       </Tab.Group>
     </div>
   );
