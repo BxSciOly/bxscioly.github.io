@@ -85,17 +85,6 @@ const Sidebar = () => {
                 Home
               </SidebarItem>
             </Links>
-            <Links to="/about">
-              <SidebarItem
-                className={`${
-                  location.pathname === "/home"
-                    ? "whiteClassName"
-                    : "regularClassName"
-                }`}
-              >
-                About
-              </SidebarItem>
-            </Links>
             <Links to="faqs">
               <SidebarItem
                 className={`${
