@@ -11,21 +11,36 @@ const Info = () => {
     marginBottom: "20px",
   };
 
+  const data = [
+    {
+      desc: "Learn about a variety of STEM topics",
+      image: subjects
+    },
+    {
+      desc: "Participate and win in tournaments",
+      image: trophy
+    },
+    {
+      desc: "Participate and win in tournaments",
+      image: friends
+    }
+  ]
+
   return (
-    <Wrap>
-      <Column
-        icon={<img src={subjects} style={style} />}
-        desc="Learn about a variety of STEM topics"
-      />
-      <Column
-        icon={<img src={trophy} style={style} />}
-        desc="Participate and win in tournaments"
-      />
-      <Column
-        icon={<img src={friends} style={style} />}
-        desc="Meet new people and make friends"
-      />
-    </Wrap>
+    <div className="h-[300px] text-black bg-slate-50 p-[50px] flex justify-center z-0 mt-[-200px] shadow-md rounded-lg">
+      {
+        data.map((desc, i) => (
+          <div>
+            <Column
+              key={i}
+              icon={<img src={desc.image} className="h-[60px] mb-[20px]" />}
+              desc={desc.desc}
+            />
+          </div>
+        ))
+      }
+
+    </div>
   );
 };
 

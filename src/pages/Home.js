@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <>
       <div className="m-auto flex flex-col bg-slate-200 px-48 py-12">
-        <video autoPlay loop muted className="background">
+        <video autoPlay loop muted className="w-screen absolute top-0 left-0 object-cover h-[790px]">
           <source src={background} type="video/mp4" className="-z-10" />
         </video>
         <div className="flex z-40 justify-center flex-col mt-14 mb-52">
@@ -38,7 +38,7 @@ const Home = () => {
             <span className="text-yellow-400">Science</span> Olympiad
           </div>
           <TextTransition
-            className="text-white font-semibold text-x;"
+            className="text-white font-semibold text-xl"
             text={TEXTS[index % TEXTS.length]}
           >
             Exploring the world of science
@@ -50,8 +50,8 @@ const Home = () => {
               rel="noopener noreferrer"
               className="m-0 flex basis-auto"
             >
-              <button className=" mt-10 bg-none flex items-center border-none cursor-pointer duration-200 text-yellow-400 text-mg font-semibold hover:translate-x-1">
-                <p className="m-0 text-yellow-400 duration-200 hover:text-yellow-500">JOIN US</p>
+              <button className="mt-10 bg-none flex items-center border-none cursor-pointer duration-200 text-yellow-400 text-mg font-semibold hover:translate-x-1">
+                <p className="m-0 text-yellow-400 duration-200 hover:text-yellow-500 text-xl">JOIN US</p>
                 <img
                   src={arrow}
                   style={{ height: "15px", marginLeft: "15px" }}
