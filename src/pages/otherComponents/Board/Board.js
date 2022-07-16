@@ -59,13 +59,13 @@ const Board = () => {
         </Tab.List>
         <Tab.Panels>
           <Tab.Panel>
-            <div className="grid grid-cols-4">
+            <div className="flex flex-wrap items-center justify-center flex-1">
               {BoardData.map((member, i) => (
-                <div className="flex flex-col items-center justify-center mx-6 mb-5 text-center">
+                <div className="flex flex-col items-center justify-center mx-16 my-12 text-center w-[100px] h-[200px]">
                   <div>
                     <img
                       src={member.background}
-                      className="text-center w-[100px] h-[100px] rounded-full mb-4"
+                      className="mb-4 text-center rounded-full "
                       alt={member.name}
                     />
                   </div>
@@ -76,13 +76,13 @@ const Board = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel>
-            <div className="grid grid-cols-4">
+            <div className="flex flex-wrap items-center justify-center flex-1">
               {LogisticsData.map((member, i) => (
-                <div className="flex flex-col items-center justify-center mx-6 mb-5 text-center">
+                <div className="flex flex-col items-center justify-center mx-16 my-12 text-center w-[100px] h-[200px]">
                   <div>
                     <img
                       src={member.background}
-                      className="text-center w-[100px] h-[100px] rounded-full mb-4"
+                      className="mb-4 text-center rounded-full "
                       alt={member.name}
                     />
                   </div>
@@ -93,13 +93,13 @@ const Board = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel>
-            <div className="grid grid-cols-4">
+            <div className="flex flex-wrap items-center justify-center flex-1">
               {MarketingData.map((member, i) => (
-                <div className="flex flex-col items-center justify-center mx-6 mb-5 text-center">
+                <div className="flex flex-col items-center justify-center mx-16 my-12 text-center w-[100px] h-[200px]">
                   <div>
                     <img
                       src={member.background}
-                      className="text-center w-[100px] h-[100px] rounded-full mb-4"
+                      className="mb-4 text-center rounded-full "
                       alt={member.name}
                     />
                   </div>
@@ -110,7 +110,6 @@ const Board = () => {
             </div>
           </Tab.Panel>
         </Tab.Panels>
-        
       </Tab.Group>
     </div>
   );

@@ -16,7 +16,7 @@ import Board from "./otherComponents/Board/Board";
 const TEXTS = [
   "Exploring the world of science",
   "SCIOLY TO THE MOON!",
-  "Competing since 2017",
+  "Established in 2010",
   "5x States qualifiers",
   "It's about time, It's about power!",
   "We stay hungry, we devour!"
@@ -79,7 +79,7 @@ const Home = () => {
             <div className=" absolute -inset-0.5 bg-gradient-to-r from-gray-700 to-gray-700 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition duration-200 group-hover:duration-200 animate-tilt " />
             <img src={scioly2} className="relative rounded-xl" />
           </div>
-          <div className="ml-20 text-right text-white">
+          <div className="pr-6 ml-20 text-right text-white border-r-8 border-yellow-400">
             <h1 className="mb-6 text-3xl font-bold ">Always exploring.</h1>
             <h1 className="font-mono text-lg text-gray-400">
               We are a team dedicated to exploring the world of science in every

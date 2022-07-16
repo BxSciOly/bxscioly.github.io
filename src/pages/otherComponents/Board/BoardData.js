@@ -40,7 +40,7 @@ export const BoardData = [
   {
     name: "Jeffrey",
     title: <h1 className={`text-sm text-[#5badeb] font-mono`}>Secretary</h1>,
-    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
+    desc: "",
     background: Farhan,
   },
   {
