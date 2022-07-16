@@ -57,9 +57,9 @@ const Board = () => {
             </Tab.List>
             <Tab.Panels>
               <Tab.Panel>
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-4">
                   {BoardData.map((member, i) => (
-                    <div className="flex flex-col items-center justify-center mx-6 mb-2 text-center">
+                    <div className="flex flex-col items-center justify-center mx-6 mb-5 text-center">
                       <div>
                         <img
                           src={member.background}
@@ -67,8 +67,8 @@ const Board = () => {
                           alt={member.name}
                         />
                       </div>
-                      <h1 className="mb-2 text-xl">{member.name}</h1>
-                      <h1 className="text-sm">{member.title}</h1>
+                      <h1 className="my-2 text-xl">{member.name}</h1>
+                      {member.title}
                     </div>
                   ))}
                 </div>
