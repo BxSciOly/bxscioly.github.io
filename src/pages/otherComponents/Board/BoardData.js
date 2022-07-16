@@ -18,7 +18,7 @@ import Boris from "./boardImages/Boris.png";
 import Samuel from "./boardImages/Samuel.jpg";
 import Arnab from "./boardImages/Arnab.jpg";
 
-const BoardData = [
+export const BoardData = [
   {
     name: "Julianne",
     title: <h1 className={`text-sm text-[#1abc9c] font-mono`}>Co-Captain</h1>,
@@ -81,6 +81,22 @@ const BoardData = [
   },
 ];
 
-const LogisticsData = [];
+export const LogisticsData = [
+  {
+    name: "Serena",
+    title: <h1 className={`text-sm text-[#3498db] font-mono`}>Head of Logistics</h1>,
+    desc: "",
+    background: Serena,
+  },
+];
 
-export default BoardData;
+export const MarketingData = [
+  {
+    name: "Justin",
+    title: <h1 className={`text-sm text-[#e91e63] font-mono`}>Head of Marketing</h1>,
+    desc: "",
+    background: Farhan,
+  },
+];
+
+
