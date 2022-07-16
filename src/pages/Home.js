@@ -26,13 +26,13 @@ const Home = () => {
 
   return (
     <>
-      <div className="m-auto flex flex-col bg-[#0e0e0f] px-48 py-12">
-        <div className="flex z-40 justify-center flex-col mt-14 mb-52">
+      <div className="flex items-start justify-center flex-col bg-[#0e0e0f] px-48 py-12">
+        <div className="flex z-40 justify-center flex-col mt-14 mb-24">
           <div className="mb-4 mt-8 text-white text-6xl font-bold">
-            The Bronx High School of{" "}
-            <span className="text-yellow-400">Science</span>
+            The Bronx High School of
             <br />
-            <span className="text-yellow-400">Science</span> Olympiad
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">Science </span> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-400">Olympiad</span>
           </div>
           <TextTransition
             className="text-white font-semibold text-xl"
@@ -40,7 +40,7 @@ const Home = () => {
           >
             Exploring the world of science
           </TextTransition>
-          <p className="flex w-full mb-12">
+          <p className="flex w-full">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
               target="_blank"

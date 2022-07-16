@@ -22,12 +22,15 @@ const Info = () => {
   ];
 
   return (
-    <div className="h-[300px] text-white bg-[#1E1E21] p-[50px] flex justify-center z-0 mt-[-200px] shadow-lg rounded-lg mb-4">
-      {data.map((desc, i) => (
-        <div>
-          <Column key={i} icon={desc.image} desc={desc.desc} />
-        </div>
-      ))}
+    <div className="relative group w-full">
+      <div className=" p-[50px]  absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
+      <div className="relative text-white bg-[#1E1E21]  flex justify-center z-0 shadow-lg rounded-xl">
+        {data.map((desc, i) => (
+          <div>
+            <Column key={i} icon={desc.image} desc={desc.desc} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
