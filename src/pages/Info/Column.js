@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { IconContext } from "react-icons/lib";
-import "./infostyle.css";
 
 const Column = (props) => {
   return (
-    <Wrap style={props.style}>
-      <IconContext.Provider value={{ className: "icon" }}>
+    <div style={props.style} className="flex-col px-16 py-28 text-center h-full w-full flex justify-center items-center">
         {props.icon}
-      </IconContext.Provider>
-      <h1 className="description">{props.desc}</h1>
-    </Wrap>
+      <h1 className=" text-lg w-full mt-6">{props.desc}</h1>
+    </div>
   );
 };
 

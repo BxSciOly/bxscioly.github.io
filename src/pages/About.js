@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import scioly1 from "./images/scioly1.jpg";
-import scioly2 from "./images/scioly2.jpg";
-import scioly3 from "./images/scioly3.jpg";
-import scioly4 from "./images/scioly4.jpg";
-import scioly5 from "./images/scioly5.jpg";
-import scioly6 from "./images/scioly6.jpg";
-import * as BsIcons from "react-icons/bs";
-import * as IoIcons from "react-icons/io5";
-import * as RiIcons from "react-icons/ri";
+// import scioly1 from "./images/scioly1.jpg";
+// import scioly2 from "./images/scioly2.jpg";
+// import scioly3 from "./images/scioly3.jpg";
+// import scioly4 from "./images/scioly4.jpg";
+// import scioly5 from "./images/scioly5.jpg";
+// import scioly6 from "./images/scioly6.jpg";
+
 import "react-slideshow-image/dist/styles.css";
 import "./style/Homestyle.css";
 import Carousel from "react-bootstrap/Carousel";
@@ -42,7 +40,7 @@ const About = () => {
               most tight-knit, dedicated, and collaborative communities in Bronx
               Science.
             </h3>
-            <Wrapper>
+            {/* <Wrapper>
               <Carousel>
                 <Carousel.Item>
                   <img
@@ -87,22 +85,24 @@ const About = () => {
                   />
                 </Carousel.Item>
               </Carousel>
-            </Wrapper>
+            </Wrapper> */}
           </div>
         </TextDiv>
       </Header>
       <Divider />
-      <Title>Our Achievements</Title>
-      <AchievementsWrap>
-        <Grid />
+      <h1 className="text-4xl font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">Our Achievements</h1>
+      {/* <div className="grid grid-cols-3 gap-2 mb-6">
         {achievementsData.map((item) => (
-          <Card>
-            <div className="item-icon">{item.icon}</div>
-            <div className="number">{item.number}</div>
-            <div className="descript">{item.description}</div>
-          </Card>
+          <div className="relative group">
+            <div className="p-[50px] h-full m-[20px] absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" />
+            <div className="relative h-full text-center text-white flex justify-around flex-col items-center p-[50px] m-[20px] bg-black rounded-lg">
+              <div className="mb-4 text-7xl">{item.icon}</div>
+              <div className="mb-5 text-4xl text-yellow-400">{item.number}</div>
+              <div className="text-lg">{item.description}</div>
+            </div>
+          </div>
         ))}
-      </AchievementsWrap>
+      </div> */}
       <h2
         style={{
           fontWeight: "300",
@@ -116,35 +116,13 @@ const About = () => {
         - Carl Sagan
       </h2>
       <Divider />
-      <Title>Meet the board</Title>
+      <div className="text-4xl font-bold border-t-4 border-yellow-400 pt-[20px] mb-[50px] self-start">Meet the board</div>
       <Board />
       <img src="/transparent.png" alt="logo" className="logo" />
     </Page>
   );
 };
 
-const achievementsData = [
-  {
-    icon: <BsIcons.BsPerson />,
-    number: "200+",
-    description:
-      "We have over 200 members and over 20 events that cover all the branches of science.",
-    break: <br />,
-  },
-  {
-    icon: <IoIcons.IoTrophyOutline />,
-    number: "1st",
-    description:
-      "We won first place at Regionals in 2020 and 11th place in States.",
-    break: <br />,
-  },
-  {
-    icon: <RiIcons.RiLineChartLine />,
-    number: "2022",
-    description:
-      "Having just qualified for States in 2018, our team has now climbed from 40th place to 11th.",
-  },
-];
 
 const AchievementsWrap = styled.div`
   position: relative;
