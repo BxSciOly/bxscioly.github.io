@@ -28,38 +28,40 @@ const Home = () => {
   return (
     <>
       <div className=" bg-[#0e0e0f] px-40 py-12">
-        <div className="z-40 flex flex-col justify-center mb-16 font-sans mt-14">
-          <div className="mt-8 mb-4 text-4xl text-white">
-            Bronx High School of Science
-            <br className="mb-4" />
-            <div className="mt-6">
-              <span className="font-bold text-8xl text-[#F8CA55]">
-                SCIENCE{" "}
-              </span>
-              <span className="font-bold text-8xl text-[#F8CA55]">
-                OLYMPIAD
-              </span>
+        <div className="mb-20"> {/* add rocket image */}
+          <div className="z-40 flex flex-col justify-center mb-16 font-sans mt-14">
+            <div className="mt-8 mb-4 text-4xl text-white">
+              Bronx High School of Science
+              <br className="mb-4" />
+              <div className="mt-6">
+                <span className="font-bold text-8xl text-[#F8CA55]">
+                  SCIENCE{" "}
+                </span>
+                <span className="font-bold text-8xl text-[#F8CA55]">
+                  OLYMPIAD
+                </span>
+              </div>
             </div>
+            <TextTransition
+              className="text-3xl text-white font-slab "
+              text={TEXTS[index % TEXTS.length]}
+            >
+              Exploring the world of science
+            </TextTransition>
           </div>
-          <TextTransition
-            className="text-3xl text-white font-slab "
-            text={TEXTS[index % TEXTS.length]}
-          >
-            Exploring the world of science
-          </TextTransition>
+          <button className="px-6 py-2 mx-0 duration-150 bg-[#F8CA55] hover:bg-[#e0ac28] rounded-xl">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="m-0"
+            >
+              <p className="flex items-center justify-center m-0 text-xl font-semibold text-black duration-200 ">
+                Join us!
+              </p>
+            </a>
+          </button>
         </div>
-        <button className="px-6 py-2 mx-0 duration-150 bg-[#F8CA55] hover:bg-[#e0ac28] rounded-xl">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="m-0"
-          >
-            <p className="flex items-center justify-center m-0 text-xl font-semibold text-black duration-200 ">
-              Join us!
-            </p>
-          </a>
-        </button>
         <div className="flex flex-col flex-wrap items-center w-full mb-20">
           <Info />
         </div>

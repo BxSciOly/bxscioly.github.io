@@ -68,7 +68,7 @@ const Sidebar = () => {
             })}
           </SidebarWrap>
         </>
-      ) : (
+      ) : ( 
         <div className="flex items-center justify-center">
           <NavLink to="/home">
             <img src="/transparent.png" alt="logo" className="w-[80px]" />

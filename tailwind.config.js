@@ -7,12 +7,16 @@ module.exports = {
     extend: {
       rotate: {
         '3': '3deg'
-      }
+      },
+      backgroundImage: {
+        'rocket': 'url("/src/images/landing-bg.jpeg");', 
+      } 
     },
     fontFamily: {
       sans: ['Josefin Sans', 'sans-serif'],
       slab: ['Josefin Slab', 'serif']
-    }
+    },
+
   },
   plugins: [],
 }
