@@ -1,6 +1,3 @@
-const { default: NoWorkResult } = require('postcss/lib/no-work-result');
-const { FaLightbulb } = require('react-icons/fa');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,6 +9,10 @@ module.exports = {
         '3': '3deg'
       }
     },
+    fontFamily: {
+      sans: ['Josefin Sans', 'sans-serif'],
+      slab: ['Josefin Slab', 'serif']
+    }
   },
   plugins: [],
 }

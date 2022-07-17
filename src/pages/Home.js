@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "@react-hook/media-query";
-import styled from "styled-components";
 import "./style/Homestyle.css";
 import Info from "./Info/Info";
 import arrow from "./arrow.svg";
@@ -21,7 +19,6 @@ const TEXTS = [
 
 const Home = () => {
   const [index, setIndex] = useState(0);
-  const isPageWide = useMediaQuery("(max-width: 600px)");
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
@@ -31,41 +28,38 @@ const Home = () => {
   return (
     <>
       <div className=" bg-[#0e0e0f] px-40 py-12">
-        <div className="z-40 flex flex-col justify-center mb-16 mt-14">
-          <div className="mt-8 mb-4 text-6xl font-bold text-white">
-            The Bronx High School of Science
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
-              Science{" "}
-            </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-400">
-              Olympiad
-            </span>
+        <div className="z-40 flex flex-col justify-center mb-16 font-sans mt-14">
+          <div className="mt-8 mb-4 text-4xl text-white">
+            Bronx High School of Science
+            <br className="mb-4" />
+            <div className="mt-6">
+              <span className="font-bold text-8xl text-[#F8CA55]">
+                SCIENCE{" "}
+              </span>
+              <span className="font-bold text-8xl text-[#F8CA55]">
+                OLYMPIAD
+              </span>
+            </div>
           </div>
           <TextTransition
-            className="text-xl font-semibold text-white"
+            className="text-3xl text-white font-slab "
             text={TEXTS[index % TEXTS.length]}
           >
             Exploring the world of science
-          </TextTransition>     
+          </TextTransition>
         </div>
-        <button className="p-0 mx-0 duration-150 hover:translate-x-4">
+        <button className="px-6 py-2 mx-0 duration-150 bg-[#F8CA55] hover:bg-[#e0ac28] rounded-xl">
           <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-0"
-            >
-              <p className="inline ml-0 mr-4 text-xl text-yellow-400 duration-200 hover:text-yellow-500">
-                JOIN US
-              </p>
-              <img
-                src={arrow}
-                className=" h-[30px] w-[30px]"
-                alt="join"
-              />
-            </a>  
-            </button>
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="m-0"
+          >
+            <p className="flex items-center justify-center m-0 text-xl font-semibold text-black duration-200 ">
+              Join us!
+            </p>
+          </a>
+        </button>
         <div className="flex flex-col flex-wrap items-center w-full mb-20">
           <Info />
         </div>
