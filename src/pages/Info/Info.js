@@ -11,13 +11,13 @@ const Info = () => {
       <h1 className="text-6xl font-bold text-[#F8CA55] font-sans mb-12">
         ABOUT US
       </h1>
-      <p className="px-12 text-lg text-center font-slab">
+      <p className="px-12 text-xl text-center font-slab">
         nightmare nightmare nightmare nightmare nightmare nightmare nightmare
         nightmare nightmare nightmare nightmare nightmare nightmare nightmare
         nightmare nightmare nightmare nightmare nightmare nightmare nightmare
         nightmare nightmare nightmare nightmare nightmare nightmare nightmare
         nightmare nightmare nightmare nightmare nightmare nightmare nightmare
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare 
+        nightmare nightmare nightmare nightmare nightmare nightmare nightmare  
       </p>
     </div>
   );

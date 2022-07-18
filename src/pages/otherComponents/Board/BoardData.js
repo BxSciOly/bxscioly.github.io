@@ -23,19 +23,13 @@ export const BoardData = [
     name: "Julianne",
     title: <h1 className={`text-sm text-[#1abc9c] font-mono`}>Co-Captain</h1>,
     desc: "I'm Julianne, and I'm a rising junior excited to serve as your Knowledge Director this season. I've been a member of the team since freshman year, and my favorite events are Astronomy and Dynamic Planet. Outside of Science Olympiad, I enjoy doing competitive math, practicing the flute, and playing tennis.",
-    background: Julianne,
+    background: Farhan,
   },
   {
     name: "Alison",
     title: <h1 className={`text-sm text-[#1abc9c] font-mono`}>Co-Captain</h1>,
     desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
-    background: Alison,
-  },
-  {
-    name: "Matthew",
-    title: <h1 className={`text-sm text-[#1abc9c] font-mono`}>Co-Captain</h1>,
-    desc: "Hey! My name is Alison, and I am in the class of 2024. I'm thrilled to work with all of you during this season! As the Chemistry Subject Director, I will be supervising the progress in chemistry events (Chemistry Lab, Environmental Chemistry, and Forensics). In addition to Science Olympiad, I enjoy baking, gardening, and reading in my free time.",
-    background: Matthew,
+    background: Farhan,
   },
   {
     name: "Jeffrey",
@@ -47,7 +41,7 @@ export const BoardData = [
     name: "Boris",
     title: <h1 className={`text-sm text-[#fdb063] font-mono`}>Build Director</h1>,
     desc: "",
-    background: Boris,
+    background: Farhan,
   },
   {
     name: "Enes",
@@ -65,7 +59,7 @@ export const BoardData = [
     name: "Chair",
     title: <h1 className={`text-sm text-[#c4f3bd] font-mono`}>Biology Director</h1>,
     desc: "",
-    background: Chair,
+    background: Farhan,
   },
   {
     name: "Johann",
@@ -92,7 +86,7 @@ export const LogisticsData = [
     name: "Serena",
     title: <h1 className={`text-sm text-[#3498db] font-mono`}>Head of Logistics</h1>,
     desc: "",
-    background: Serena,
+    background: Farhan,
   },
 ];
 
