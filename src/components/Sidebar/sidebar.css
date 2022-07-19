@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  .whiteClassName {
+    transition: 0s all;
+  }
+
+  .navLogo {
+    color: var(--primary-color);
+    cursor: pointer;
+    height: 120px;
+    z-index: 999;
+    margin-left: auto;
+  }
+
+  .logo-title {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    
+    font-weight: 200;
+  }
+
+  .logo-title-moved {
+    cursor: pointer;
+    transition-delay: 37ms;
+    font-weight: 200;
+  }
+
+  .icon-logo {
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--primary-color);
+    min-width: 180px;
+    z-index: 999;
+    padding: 0;
+    top: 100%;
+    margin-top: -5px;
+    transition: 200ms ease;
+  }
+
+  .dropdown-content a {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+  }
+
+  .links {
+    height: 0px;
+    z-index: 999;
+  }
+
+  .eventlinks {
+    color: white;
+  }
+
+  .navIcon {
+    margin-left: 2rem;
+    font-size: 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .dropdown:hover .dropdown-content, .dropdown-content:hover {
+    display: block;
+  }
+  
+  @media (max-width: 600px) {
+    .logo-title {
+      display: none;
+      width: 0%;
+    }
+    
+    .logo-title-moved {
+        margin: 0;
+    }
+
+    .icon-logo {
+        display: inline-block;
+        position: relative;
+        display: initial;
+        font-size: 25px;
+        margin-left: 20px;
+        font-weight: 200;
+    }
+      
+  }
+  
+  

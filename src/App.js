@@ -1,27 +1,27 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
-import Home from "./pages/Home";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Home from "./pages/Home/Home";
 import {
   Biology,
   Build,
   Chemistry,
   EarthScience,
   Physics,
-} from "./pages/Events";
-import Faqs from "./pages/Faqs";
-import Footer from "./components/Footer";
-import About from "./pages/About";
+} from "./pages/Events/Events";
+import Faqs from "./pages/FAQs/Faqs";
+import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
-import BiologyData from "./pages/eventsData/BiologyData";
-import EarthScienceData from "./pages/eventsData/EarthScienceData";
-import PhysicsData from "./pages/eventsData/PhysicsData";
-import ChemistryData from "./pages/eventsData/ChemistryData";
-import BuildData from "./pages/eventsData/BuildData";
+import BiologyData from "./pages/Events/eventsData/BiologyData";
+import EarthScienceData from "./pages/Events/eventsData/EarthScienceData";
+import PhysicsData from "./pages/Events/eventsData/PhysicsData";
+import ChemistryData from "./pages/Events/eventsData/ChemistryData";
+import BuildData from "./pages/Events/eventsData/BuildData";
 
 function App() {
   return (

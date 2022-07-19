@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    color: black;
+}
+
+.desc {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+.rotated {
+    transform: rotate(-180deg);
+}
+
+.show-answer {
+    transform: translateY(-40px);
+}
+
+.page {
+    z-index: 880;
+    margin: 0;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.about-text {
+    font-weight: 300;
+    font-size: 20px;
+    width: 40%;
+    line-height: 1.4;
+}
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 450px;
+    border-radius: 30px;
+  }
+
+.about-title {
+    font-size: 40px;
+    padding-bottom: 4rem;
+    font-weight: 400;
+    width: 70%;
+}
+
+.innerdiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-icon {
+   font-size: 55px; 
+   color: black;
+}
+
+.number {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.descript {
+    font-size: 18px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.background {
+    width: 100vw;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 790px;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    margin: 3rem 0;
+}
+
+.join {
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.wrap {
+    display: flex;
+    width: 100%;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-header {
+    outline: none;
+}
+
+.accordion-body {
+    color: black;
+}
+
+.accordion-item {
+
+}
+
+
+@media (max-width: 600px) {
+    .page {
+        padding: 2rem;
+    }
+
+    .bxsci{
+        font-size: 35px;
+    }
+    .scioly{
+        font-size: 35px;
+    }
+    .desc{
+        font-size: 25px;
+    }
+    .rotated {
+        font-size: 20px;
+    }
+    .show-answer {
+        font-size: 20px;
+    }
+
+    .blob-1, .blob-2, .blob-3, .blob-4 {
+        display: none;
+    }
+
+    .about-text {
+        font-size: 16px;
+        text-align: left;
+    }
+
+}
