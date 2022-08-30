@@ -52,7 +52,7 @@ const Home = () => {
           </div>
           <button className="px-6 py-2 mx-0 duration-150 bg-[#F8CA55] hover:bg-[#e0ac28] rounded-xl">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdidklVH3t7vzymGo1uSvSvDrlLnfN4UMOyyeRGIg5WgVvtKw/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdqnKP9YR63cbR-_o9kay6BQy6DIIRCZCITayuihvCYkf_FgA/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className="m-0"
