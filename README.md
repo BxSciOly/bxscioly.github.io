@@ -1,3 +1,5 @@
+## This project is outdated. BSSO is in the process of making a new website!
+
 # BxScioly Webpage
 
 ## INSTALLATION ##
