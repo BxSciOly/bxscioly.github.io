@@ -7,12 +7,7 @@ const Info = () => {
         ABOUT US
       </h1>
       <p className="px-12 text-xl text-center font-slab">
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare
-        nightmare nightmare nightmare nightmare nightmare nightmare nightmare
+        test?
       </p>
     </div>
   );
